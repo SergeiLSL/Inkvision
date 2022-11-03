@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Техподдержка"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="support">
+					<div class="support__container">
+						<div class="support__box">
+							<div class="support__content">
+								<div class="support__header">
+									<div class="support__title title-setting">Задать вопрос</div>
+									<div class="support__text text-setting">
+										Чтобы мы могли вам помочь, опишите свой вопрос максимально подробно
+									</div>
+								</div>
+								<div  class="support__form form">
+									<form action="#" id="form" class="form__body">
+										<div class="form__info">
+											<div class="form__item">
+												<!-- <label for="formName" class="form__label">email:</label> -->
+												<input id="email" type="text" name="E-mail" placeholder="Адрес электронной почты" class="form__input _req">
+											</div>
+											<div class="form__item">
+												<!-- <label for="formName" class="form__label">Имя*:</label> -->
+												<input id="formName" type="text" name="name" placeholder="Имя" class="form__input _req">
+											</div>
+											<div class="form__item form__item_average">
+												<!-- <label for="formName" class="form__label">Тип обращения*:</label> -->
+												<input id="formLastName" type="text" name="appeal type" placeholder="Тип обращения" class="form__input _req">
+											</div>
+											<div class="form__item form__item_big">
+												<!-- <label for="formName" class="form__label">Имя*:</label> -->
+												<input id="message" type="area" name="Message" placeholder="Объясните ваш вопрос" class="form__input _req">
+											</div>	
+											<div class="form__item form__item_big">
+												<div class="checkbox">
+													<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+													<label for="formAgreement" class="checkbox__label"><span>Я согласен с политикой обработки данных и политикой использования сервиса.</span></label>
+												</div>
+											</div>		
+										</div>
+										<!-- <div class="support__footer">
+											<div class="support__checkbox checkbox">
+												<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+												<label for="formAgreement" class="checkbox__label"><span>Я согласен с политикой обработки данных и политикой использования сервиса.</span></label>
+											</div>
+										</div> -->
+										<button class="form__button button button_big">Отправить</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

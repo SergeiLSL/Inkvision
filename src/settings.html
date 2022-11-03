@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="page__setting setting">
+				<div class="setting__container">
+					<div class="setting__content">
+						<div data-tabs class="setting__tabs tabs">
+							<div class="tabs__box-navigation">
+								<nav data-tabs-titles class="tabs__navigation">
+									<button type="button" class="tabs__title _tab-active">
+										<div class="tabs__icon">
+											<img src="@img/settings-icons/person-01.svg" alt="Icon">
+										</div>
+										<div class="tabs__text">Персональная информация</div>
+									</button>
+									<button type="button" class="tabs__title">
+										<div class="tabs__icon">
+											<img src="@img/settings-icons/person-02.svg" alt="Icon">
+										</div>
+										<div class="tabs__text">Специализация</div>
+									</button>
+									<button type="button" class="tabs__title">
+										<div class="tabs__icon">
+											<img src="@img/settings-icons/person-03.svg" alt="Icon">
+										</div>
+										<div class="tabs__text">Стили работ</div>
+									</button>
+									<button type="button" class="tabs__title">
+										<div class="tabs__icon">
+											<img src="@img/settings-icons/person-04.svg" alt="Icon">
+										</div>
+										<div class="tabs__text">Стоимость</div>
+									</button>
+									<button type="button" class="tabs__title">
+										<div class="tabs__icon">
+											<img src="@img/settings-icons/person-05.svg" alt="Icon">
+										</div>
+										<div class="tabs__text">Дополнительные услуги</div>
+									</button>
+									<button type="button" class="tabs__title">
+										<div class="tabs__icon">
+											<img src="@img/settings-icons/person-06.svg" alt="Icon">
+										</div>
+										<div class="tabs__text">Уведомления</div>
+									</button>
+									<button type="button" class="tabs__title">
+										<div class="tabs__icon">
+											<img src="@img/settings-icons/person-07.svg" alt="Icon">
+										</div>
+										<div class="tabs__text">Сменить пароль</div>
+									</button>
+								</nav>
+							</div>
+
+							<div data-tabs-body class="tabs__content content-tabs">
+								<!--? Персональная информация -->
+								<div class="content-tabs__body">
+									<div class="content-tabs__box-content box-person">
+										<div class="box-person__title title-setting">
+											Персональная информация
+										</div>
+										<div class="box-person__text text-setting">
+											Советуем указывать в блоке «персональная информация» ваши реальные
+											паспортные
+											данные, так как эта информация может использоваться для подтверждения
+											действий в
+											вашем аккаунте, при утере доступа. В этом случае, обратитесь в
+											<span>техническую
+												поддержку</span> за дальнейшими инструкциями
+										</div>
+
+										<div class="box-person__buttons">
+											<button class="box-person__button button _button-color button_big">Сохранить
+												и продолжить</button>
+										</div>
+									</div>
+								</div>
+								<!--? Специализация -->
+								<div class="content-tabs__body">
+									<div class="content-tabs__box-content box-specialization">
+										<div class="box-specialization__title title-setting">
+											Специализация
+										</div>
+
+										<div class="box-specialization__buttons">
+											<button class="box-specialization__button button">Предыдущий шаг</button>
+											<button class="box-specialization__button button _button-color">Сохранить и
+												продолжить</button>
+										</div>
+									</div>
+								</div>
+								<!--? Стили работ -->
+								<div class="content-tabs__body">
+									<div class="content-tabs__box-content box-styles">
+										<div class="box-styles__title title-setting">
+											Стили работ
+										</div>
+										<div class="box-styles__text text-setting">
+											Выберите все тату-стили, в которых вы исполняете работы
+										</div>
+
+										<div class="box-styles__gallery box-gallery">
+											<div class="box-gallery__row">
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/botanica.jpg"
+																alt="Ботаническая">
+														</div>
+														<div class="item__name">Ботаническая</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/anime.jpg" alt="Аниме">
+														</div>
+														<div class="item__name">Аниме</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/engraving.jpg" alt=engraving">
+														</div>
+														<div class="item__name">
+															Гравюра
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/bioorganics.jpg"
+																alt="Биоорганика">
+														</div>
+														<div class="item__name">
+															Биоорганика
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/minimalism.jpg"
+																alt="Минимализм">
+														</div>
+														<div class="item__name">
+															Минимализм
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/miniature.jpg" alt="Миниатюра">
+														</div>
+														<div class="item__name">
+															Миниатюра
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/linework.jpg" alt="Лайнворк">
+														</div>
+														<div class="item__name">
+															Лайнворк
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/realism.jpg" alt="Реализм">
+														</div>
+														<div class="item__name">
+															Реализм
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/neo-traditional.jpg"
+																alt="Нео-традишнл">
+														</div>
+														<div class="item__name">
+															Нео-традишнл
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/oriental.jpg" alt="Ориентал">
+														</div>
+														<div class="item__name">
+															Ориентал
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/chicano.jpg" alt="Чикано">
+														</div>
+														<div class="item__name">
+															Чикано
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/biomechanics.jpg"
+																alt="Биомеханика">
+														</div>
+														<div class="item__name">
+															Биомеханика
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/old-school.jpg" alt="Олд скул">
+														</div>
+														<div class="item__name">
+															Олд скул
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/tribal.jpg" alt="Трайбл">
+														</div>
+														<div class="item__name">
+															Трайбл
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/trash-polka.jpg"
+																alt="Треш-полька">
+														</div>
+														<div class="item__name">
+															Треш-полька
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/dotwork.jpg" alt="Дотворк">
+														</div>
+														<div class="item__name">
+															Дотворк
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/polynesia.jpg" alt="Полинезия">
+														</div>
+														<div class="item__name">
+															Полинезия
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/new-school.jpg" alt="Нью скул">
+														</div>
+														<div class="item__name">
+															Нью скул
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/traditional.jpg"
+																alt="Традишнл">
+														</div>
+														<div class="item__name">
+															Традишнл
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/blackwork.jpg" alt="Блэкворк">
+														</div>
+														<div class="item__name">
+															Блэкворк
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/ornamental.jpg"
+																alt="Орнаментал">
+														</div>
+														<div class="item__name">
+															Орнаментал
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/ethnicity.jpg" alt="Этника">
+														</div>
+														<div class="item__name">
+															Этника
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/sketch-style.jpg"
+																alt="Скетч стайл">
+														</div>
+														<div class="item__name">
+															Скетч стайл
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/watercolor.jpg" alt="Акварель">
+														</div>
+														<div class="item__name">
+															Акварель
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/graphic-arts.jpg"
+																alt="Графика">
+														</div>
+														<div class="item__name">
+															Графика
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/black-and-white.jpg"
+																alt="Черно-белая">
+														</div>
+														<div class="item__name">
+															Черно-белая
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/japanese.jpg" alt="Японский">
+														</div>
+														<div class="item__name">
+															Японский
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/handpoke.jpg" alt="Хендпоук">
+														</div>
+														<div class="item__name">
+															Хендпоук
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/lettering.jpg" alt="Леттеринг">
+														</div>
+														<div class="item__name">
+															Леттеринг
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/geometry.jpg" alt="Геометрия">
+														</div>
+														<div class="item__name">
+															Геометрия
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/celtic.jpg" alt="Кельтский">
+														</div>
+														<div class="item__name">
+															Кельтский
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/steampunk.jpg" alt="Стимпанк">
+														</div>
+														<div class="item__name">
+															Стимпанк
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/maori.jpg" alt="Маори">
+														</div>
+														<div class="item__name">
+															Маори
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/haida.jpg" alt="Хайда">
+														</div>
+														<div class="item__name">
+															Хайда
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/abstraction.jpg"
+																alt="Абстракция">
+														</div>
+														<div class="item__name">
+															Абстракция
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/baroque.jpg" alt="Барокко">
+														</div>
+														<div class="item__name">
+															Барокко
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/organic.jpg" alt="Органика">
+														</div>
+														<div class="item__name">
+															Органика
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/pagan.jpg" alt="Языческий">
+														</div>
+														<div class="item__name">
+															Языческий
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/shamanic.jpg" alt="Шаманская">
+														</div>
+														<div class="item__name">
+															Шаманская
+														</div>
+													</div>
+												</div>
+												<div class="box-gallery__style">
+													<div class="box-gallery__item item">
+														<div class="item__image">
+															<img data-src="@img/settings/maya-and-aztecs.jpg"
+																alt="Майя и ацтеки">
+														</div>
+														<div class="item__name">
+															Майя и ацтеки
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="box-styles__buttons">
+											<button class="box-styles__button button">Предыдущий шаг</button>
+											<button class="box-styles__button button _button-color">Сохранить и
+												продолжить</button>
+										</div>
+									</div>
+								</div>
+								<!--? Стоимость -->
+								<div class="content-tabs__body">
+									<div class="content-tabs__box-content box-price">
+										<div class="box-price__title title-setting">
+											Стоимость работ
+										</div>
+										<div class="box-price__text text-setting">
+											Расскажите сколько стоит ваша работа во всех выбранных стилях
+										</div>
+
+										<div class="box-price__buttons">
+											<button class="box-price__button button">Предыдущий шаг</button>
+											<button class="box-price__button button _button-color">Сохранить и
+												продолжить</button>
+										</div>
+									</div>
+								</div>
+								<!--? Дополнительные услуги -->
+								<div class="content-tabs__body">
+									<div class="content-tabs__box-content box-services">
+										<div class="box-services__title title-setting">
+											Дополнительные услуги
+										</div>
+										<div class="box-services__text text-setting">
+											Расскажите сколько стоят ваши дополнительные услуги
+										</div>
+
+										<div class="box-services__buttons">
+											<button class="box-services__button button">Предыдущий шаг</button>
+											<button class="box-services__button button _button-color">Сохранить и
+												продолжить</button>
+										</div>
+									</div>
+								</div>
+								<!--? Уведомления -->
+								<div class="content-tabs__body">
+									<div class="content-tabs__box-content box-notifications">
+										<div class="box-notifications__title title-setting">
+											Уведомления
+										</div>
+
+										<div class="box-notifications__buttons">
+											<button
+												class="box-notifications__button button _button-color button_big">Сохранить
+												и продолжить</button>
+										</div>
+									</div>
+								</div>
+								<!--? Сменить пароль -->
+								<div class="content-tabs__body">
+									<div class="content-tabs__box-content box-password">
+										<div class="box-password__title title-setting">
+											Сменить пароль
+										</div>
+
+										<div class="box-password__buttons">
+											<button
+												class="box-password__button button _button-color button_big">Сохранить и
+												продолжить</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.support {
+  display: flex;
+}
+.support__container {
+  background-color: #fdf8c7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: rem(80);
+  padding-bottom: rem(30);
+  padding: rem(80) rem(400) rem(94) rem(400);
+}
+.support__box {
+  display: flex;
+  flex: 0 1 rem(1440);
+}
+.support__content {
+  background-color: #c7fde8;
+}

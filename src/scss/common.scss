@@ -1,0 +1,203 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+//? Заголовки и тексты
+.title-setting {
+	font-weight: 700;
+	@include adaptiveValue("font-size", 40, 28);
+	line-height: math.div(49, 40);
+	color: $headerColor;
+	text-align: center;
+}
+
+.text-setting {
+	@include adaptiveValue("font-size", 18, 14);
+	line-height: math.div(24, 18);
+	color: $headerColor;
+	text-align: center;
+	& span {
+		color: $redColor;
+		text-align: justify;
+	}
+}
+//========================================================================================================================================================
+//? Формы
+.form {
+	// .form__body
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	// .form__info
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@include adaptiveValue("column-gap", 50, 20);
+		@media (max-width: $mobile) {
+			display: block;
+			width: 100%;
+		}
+	}
+	// .form__itemy
+	&__item {
+		display: flex;
+		flex: 1 1 40.6%;
+		background-color: #eefbe0;		
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+		&_big {
+			flex: 1 1 100%;
+		}
+
+		&_average {
+			flex: 0 0 rem(460);
+		}
+	}
+
+	// .form__input
+	&__input {
+		min-height: 50px;
+		padding: rem(15) rem(20) rem(15) rem(20);
+		border-radius: 5px;
+		width: 100%;
+		font-size: 16px;
+		line-height: math.div(20, 16);
+		color: $mainColor;
+		transition: all 0.5s ease 0s;
+		border-bottom: rem(2) solid $headerColor;
+		border-radius: 0 0 rem(5) rem(5);
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 2px;
+	}
+	// .form__row
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		column-gap: rem(50);
+	}
+	// .form__column
+	&__column {
+		flex: 0 1 50%;
+	}
+	// .form__label
+	&__label {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		color: #bbb7b7;
+	}
+	// .form__footer
+	&__footer {
+		//flex: 0 1 100%;
+		width: 100%;
+		min-height: rem(45);
+		margin-top: rem(30);
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .form__button
+	&__button {
+		margin-top: rem(20);
+	}
+}
+
+//====================================================================================================
+//? Кнопки
+.button {
+	max-width: rem(460);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: rem(50);
+	color: $mainColor;
+	background-color: #ffffff;
+	@include adaptiveValue("font-size", 16, 14);
+	line-height: math.div(20, 16);
+	font-weight: 500;
+	text-transform: uppercase;
+	white-space: nowrap;
+	border-radius: rem(2);
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+	transition: background-color 0.5s ease 0s;
+	position: relative;
+	top: 0;
+	padding: rem(15);
+	&_big {
+		max-width: rem(970);
+	}
+	&:active {
+		top: rem(3);
+	}
+	&._button-color {
+		color: #ffffff;
+		background-color: $redColor;
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+	}
+	&:hover {
+		background-color: #c72a2a97;
+		color: #ffffff;	
+	}
+}
+
+//========================================================================================================================================================
+//? Чекбоксы
+.checkbox {
+	width: 100%;
+	padding: 0 rem(10);
+	// .checkbox__input
+	&__input {
+		display: none;
+		&:checked + .checkbox__label::after {
+			transform: scale(1);
+		}
+	}
+	// .checkbox__label
+	&__label {
+		display: flex;
+		width: 100%;
+		flex: 1;
+		align-items: center;
+		position: relative;
+		& span {
+			text-align: justify;
+			& span {
+				color: $redColor;
+				text-align: justify;
+			}
+		}
+		&::before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 rem(30);
+			height: rem(30);
+			background-color: #7b2cfb;
+			border-radius: rem(4);
+			margin: 0 rem(15) 0 0;
+		}
+		&::after {
+			content: "";
+			transition: transform 0.5s ease 0s;
+			content: "";
+			width: rem(16);
+			height: rem(16);
+			position: absolute;
+			top: rem(7);
+			left: rem(7);
+			background-color: #fff;
+			border-radius: rem(4);
+			transform: scale(0);
+		}
+		&.__error .checkbox__label::before {
+			/* не скопировал*/
+			box-shadow: 0 0 rem(15) red;
+		}
+	}
+}
+
+//========================================================================================================================================================
