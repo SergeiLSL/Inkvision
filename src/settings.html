@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/_head.htm',{
-"title":"HomePage"
+"title":"Настройки"
 })
 
 <body>
@@ -10,56 +10,56 @@
 		<main class="page">
 			<section class="page__setting setting">
 				<div class="setting__container">
-					<div class="setting__content">
-						<div data-tabs class="setting__tabs tabs">
-							<div class="tabs__box-navigation">
-								<nav data-tabs-titles class="tabs__navigation">
-									<button type="button" class="tabs__title _tab-active">
-										<div class="tabs__icon">
+					<div class="setting__body">
+						<div data-tabs class="setting__tabs">
+							<div class="setting__box-navigation">
+								<nav data-tabs-titles class="setting__navigation tabs-box">
+									<button type="button" class="tabs-box__title _tab-active">
+										<div class="tabs-box__icon">
 											<img src="@img/settings-icons/person-01.svg" alt="Icon">
 										</div>
-										<div class="tabs__text">Персональная информация</div>
+										<div class="tabs-box__text">Персональная информация</div>
 									</button>
-									<button type="button" class="tabs__title">
-										<div class="tabs__icon">
+									<button type="button" class="tabs-box__title">
+										<div class="tabs-box__icon">
 											<img src="@img/settings-icons/person-02.svg" alt="Icon">
 										</div>
-										<div class="tabs__text">Специализация</div>
+										<div class="tabs-box__text">Специализация</div>
 									</button>
-									<button type="button" class="tabs__title">
-										<div class="tabs__icon">
+									<button type="button" class="tabs-box__title">
+										<div class="tabs-box__icon">
 											<img src="@img/settings-icons/person-03.svg" alt="Icon">
 										</div>
-										<div class="tabs__text">Стили работ</div>
+										<div class="tabs-box__text">Стили работ</div>
 									</button>
-									<button type="button" class="tabs__title">
-										<div class="tabs__icon">
+									<button type="button" class="tabs-box__title">
+										<div class="tabs-box__icon">
 											<img src="@img/settings-icons/person-04.svg" alt="Icon">
 										</div>
-										<div class="tabs__text">Стоимость</div>
+										<div class="tabs-box__text">Стоимость</div>
 									</button>
-									<button type="button" class="tabs__title">
-										<div class="tabs__icon">
+									<button type="button" class="tabs-box__title">
+										<div class="tabs-box__icon">
 											<img src="@img/settings-icons/person-05.svg" alt="Icon">
 										</div>
-										<div class="tabs__text">Дополнительные услуги</div>
+										<div class="tabs-box__text">Дополнительные услуги</div>
 									</button>
-									<button type="button" class="tabs__title">
-										<div class="tabs__icon">
+									<button type="button" class="tabs-box__title">
+										<div class="tabs-box__icon">
 											<img src="@img/settings-icons/person-06.svg" alt="Icon">
 										</div>
-										<div class="tabs__text">Уведомления</div>
+										<div class="tabs-box__text">Уведомления</div>
 									</button>
-									<button type="button" class="tabs__title">
-										<div class="tabs__icon">
+									<button type="button" class="tabs-box__title">
+										<div class="tabs-box__icon">
 											<img src="@img/settings-icons/person-07.svg" alt="Icon">
 										</div>
-										<div class="tabs__text">Сменить пароль</div>
+										<div class="tabs-box__text">Сменить пароль</div>
 									</button>
 								</nav>
 							</div>
-
-							<div data-tabs-body class="tabs__content content-tabs">
+						
+							<div data-tabs-body class="setting__box-content content-tabs">
 								<!--? Персональная информация -->
 								<div class="content-tabs__body">
 									<div class="content-tabs__box-content box-person">
@@ -76,22 +76,135 @@
 												поддержку</span> за дальнейшими инструкциями
 										</div>
 
-										<div class="box-person__buttons">
-											<button class="box-person__button button _button-color button_big">Сохранить
-												и продолжить</button>
+										<div class="box-person__form form">
+											<form action="#" id="form" class="form__body">
+												<div class="form__info">
+													<div class="form__item">
+														<label for="formName" class="form__label">Имя*:</label>
+														<input id="formName" type="text" name="name" placeholder="Имя"
+															class="form__input _req">
+													</div>
+													<div class="form__item">
+														<label for="formName" class="form__label">Имя*:</label>
+														<input id="formLastName" type="text" name="lastname"
+															placeholder="Фамилия" class="form__input _req">
+													</div>
+													<div class="form__item">
+														<label for="formName" class="form__label">Имя*:</label>
+														<input id="formDate" type="text" name="birth"
+															placeholder="Дата рождения" class="form__input _req">
+													</div>
+													<div class="form__item">
+														<label for="formName" class="form__label">Имя*:</label>
+														<input id="formCountry" type="text" name="country"
+															placeholder="Страна" class="form__input _req">
+													</div>
+													<div class="form__item">
+														<label for="formName" class="form__label">Имя*:</label>
+														<input id="formCity" type="text" name="city" placeholder="Город"
+															class="form__input _req">
+													</div>
+													<div class="form__item">
+														<label for="formName" class="form__label">Имя*:</label>
+														<input id="formPhone" type="text" name="phone"
+															placeholder="Номер телефона" class="form__input _req">
+													</div>
+													<div class="form__item">
+														<label for="formName" class="form__label">Пол*:</label>
+														<div class="form__gender">
+															<di class="form__label">Пол</di>
+															<div class="options">
+																<div class="options__item">
+																	<input id="formRightHanded" checked type="radio"
+																		value="female" name="gender"
+																		class="options__input">
+																	<label for="formRightHanded"
+																		class="options__label"><span>Женщина</span></label>
+																</div>
+																<div class="options__item">
+																	<input id="formLeftHanded" type="radio" value="male"
+																		name="gender" class="options__input">
+																	<label for="formLeftHanded"
+																		class="options__label"><span>Мужчина</span></label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form__item">
+														<label for="formName" class="form__label">Изменить фото*:</label>
+														<div class="form__photo">
+															<div class="form__label">Изменить фото</div>
+															<div class="file">
+																<div class="file__item">
+																	<input id="formImage" accept=".jpg, .png, .gif"
+																		type="file" name="image" class="file__input">
+																	<div class="file__button">Выбрать</div>
+																</div>
+																<div id="formPreview" class="file__preview"></div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+												<div class="form__footer">
+													<div class="checkbox">
+														<input id="formAgreement" checked type="checkbox"
+															name="agreement" class="checkbox__input _req">
+														<label for="formAgreement" class="checkbox__label"><span>Я
+																ознакомился с
+																условиями <span>пользовательского</span> соглашения и
+																<span>политикой обработки персональных
+																	данных</span></span></label>
+													</div>
+												</div>
+												<button class="form__button button button_color button_big">Сохранить и
+													продолжить</button>
+											</form>
 										</div>
 									</div>
 								</div>
 								<!--? Специализация -->
 								<div class="content-tabs__body">
-									<div class="content-tabs__box-content box-specialization">
-										<div class="box-specialization__title title-setting">
+									<div class="content-tabs__box-content specialization">
+										<div class="specialization__title title-setting">
 											Специализация
 										</div>
 
-										<div class="box-specialization__buttons">
-											<button class="box-specialization__button button">Предыдущий шаг</button>
-											<button class="box-specialization__button button _button-color">Сохранить и
+										<div class="specialization__box-tab">
+											<div data-tabs class="specialization__tabs">
+												<nav data-tabs-titles
+													class="specialization__navigation navigation-specialization">
+													<button type="button"
+														class="navigation-specialization__title _tab-active">Тату-Мастер</button>
+													<button type="button"
+														class="navigation-specialization__title">Тату-Студия</button>
+													<button type="button"
+														class="navigation-specialization__title">Клиент</button>
+													<button type="button" class="navigation-specialization__title">Опыт
+														работы</button>
+												</nav>
+												<div data-tabs-body
+													class="specialization__content content-specialization">
+													<div class="content-specialization__body">
+														О себе...
+													</div>
+													<div class="content-specialization__body">
+														Появляется, если выбрана Тату-Студия
+													</div>
+													<div class="content-specialization__body">
+														КЛИЕНТ
+													</div>
+													<div class="content-specialization__body">
+														КЛИЕНТ
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="specialization__buttons">
+											<button class="specialization__button button">Предыдущий шаг</button>
+											<button class="specialization__button button button_color">Сохранить и
 												продолжить</button>
 										</div>
 									</div>
@@ -521,7 +634,7 @@
 										</div>
 										<div class="box-styles__buttons">
 											<button class="box-styles__button button">Предыдущий шаг</button>
-											<button class="box-styles__button button _button-color">Сохранить и
+											<button class="box-styles__button button button_color">Сохранить и
 												продолжить</button>
 										</div>
 									</div>
@@ -538,7 +651,7 @@
 
 										<div class="box-price__buttons">
 											<button class="box-price__button button">Предыдущий шаг</button>
-											<button class="box-price__button button _button-color">Сохранить и
+											<button class="box-price__button button button_color">Сохранить и
 												продолжить</button>
 										</div>
 									</div>
@@ -555,7 +668,7 @@
 
 										<div class="box-services__buttons">
 											<button class="box-services__button button">Предыдущий шаг</button>
-											<button class="box-services__button button _button-color">Сохранить и
+											<button class="box-services__button button button_color">Сохранить и
 												продолжить</button>
 										</div>
 									</div>
@@ -563,14 +676,19 @@
 								<!--? Уведомления -->
 								<div class="content-tabs__body">
 									<div class="content-tabs__box-content box-notifications">
-										<div class="box-notifications__title title-setting">
-											Уведомления
+										<div class="box-notifications__title title-setting">Уведомления</div>
+										<div class="box-notifications__content">
+											<p class="text-setting">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit cupiditate minima consectetur voluptatibus ipsum architecto repellendus aliquam optio libero magni ducimus exercitationem aperiam animi hic quae, saepe aliquid, eum tempora?
+											</p>
+											<p class="text-setting">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit cupiditate minima consectetur voluptatibus ipsum architecto repellendus aliquam optio libero magni ducimus exercitationem aperiam animi hic quae, saepe aliquid, eum tempora?
+											</p>
 										</div>
-
 										<div class="box-notifications__buttons">
-											<button
-												class="box-notifications__button button _button-color button_big">Сохранить
-												и продолжить</button>
+											<button class="box-notifications__button button button_color button_big">
+												Сохранить и продолжить
+											</button>
 										</div>
 									</div>
 								</div>
@@ -580,11 +698,10 @@
 										<div class="box-password__title title-setting">
 											Сменить пароль
 										</div>
-
 										<div class="box-password__buttons">
-											<button
-												class="box-password__button button _button-color button_big">Сохранить и
-												продолжить</button>
+											<button class="box-password__button button button_color button_big">
+												Сохранить и продолжить
+											</button>
 										</div>
 									</div>
 								</div>
@@ -592,7 +709,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
@@ -601,3 +718,4 @@
 </body>
 
 </html>
+

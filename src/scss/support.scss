@@ -1,24 +1,20 @@
 .support {
 	background-color: #fff;
-	//@include adaptiveValue("padding-top", 125, 30);
-	//@include adaptiveValue("padding-bottom", 125, 30);
 	// .support__container
 	&__container {
 		padding: rem(160) rem(15) rem(94) rem(15);
 		@include adaptiveValue("padding-top", 160, 220);
 		@include adaptiveValue("padding-bottom", 94, 20);
-		
+
 		//margin: 0 auto;
 	}
 	// .support__box
 	&__box {
-		//background-color: #e8c7fc;
 		max-width: rem(1140);
 		margin: 0 auto;
 		background-color: #fff;
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-		//padding: rem(100) rem(100) rem(222) rem(100);
 		@include adaptiveValue("padding-left", 100, 15);
 		@include adaptiveValue("padding-right", 100, 15);
 		@include adaptiveValue("padding-top", 100, 30);
@@ -26,8 +22,6 @@
 	}
 	// .support__content
 	&__content {
-		// max-width: rem(940);
-		// width: 100%;
 		flex: 1;
 		border-radius: rem(25);
 		margin: 0 auto;
@@ -44,12 +38,96 @@
 	}
 	// .support__title
 	&__title {
-		color: #00020F;
+		color: #00020f;
 		&:not(:last-child) {
 			margin-bottom: rem(20);
 		}
 	}
 	// .support__text
 	&__text {
+	}
+}
+
+.form-support {
+	// .form__body
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	// .form__info
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@include adaptiveValue("column-gap", 50, 20);
+		@media (max-width: $mobile) {
+			display: block;
+			width: 100%;
+		}
+	}
+	// .form-support__itemy
+	&__item {
+		display: flex;
+		flex: 1 1 40.6%;
+		background-color: #eefbe0;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+		&_big {
+			flex: 1 1 100%;
+		}
+
+		&_average {
+			flex: 0 0 rem(460);
+		}
+	}
+
+	// .form__input
+	&__input {
+		min-height: 50px;
+		padding: rem(15) rem(20) rem(15) rem(20);
+		width: 100%;
+		font-size: 16px;
+		line-height: math.div(20, 16);
+		color: $mainColor;
+		transition: all 0.5s ease 0s;
+		border-bottom: rem(2) solid $headerColor;
+		border-radius: 0 0 rem(5) rem(5);
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 2px;
+	}
+	// .form__row
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		column-gap: rem(50);
+	}
+	// .form__column
+	&__column {
+		flex: 0 1 50%;
+	}
+	// .form__label
+	&__label {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		color: #bbb7b7;
+	}
+	// .form__footer
+	&__footer {
+		//flex: 0 1 100%;
+		width: 100%;
+		min-height: rem(45);
+		margin-top: rem(30);
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .form__button
+	&__button {
+		margin-top: rem(20);
 	}
 }

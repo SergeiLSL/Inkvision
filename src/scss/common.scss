@@ -21,90 +21,7 @@
 }
 //========================================================================================================================================================
 //? Формы
-.form {
-	// .form__body
-	&__body {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	// .form__info
-	&__info {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		@include adaptiveValue("column-gap", 50, 20);
-		@media (max-width: $mobile) {
-			display: block;
-			width: 100%;
-		}
-	}
-	// .form__itemy
-	&__item {
-		display: flex;
-		flex: 1 1 40.6%;
-		background-color: #eefbe0;		
-		&:not(:last-child) {
-			margin-bottom: rem(20);
-		}
-		&_big {
-			flex: 1 1 100%;
-		}
 
-		&_average {
-			flex: 0 0 rem(460);
-		}
-	}
-
-	// .form__input
-	&__input {
-		min-height: 50px;
-		padding: rem(15) rem(20) rem(15) rem(20);
-		border-radius: 5px;
-		width: 100%;
-		font-size: 16px;
-		line-height: math.div(20, 16);
-		color: $mainColor;
-		transition: all 0.5s ease 0s;
-		border-bottom: rem(2) solid $headerColor;
-		border-radius: 0 0 rem(5) rem(5);
-		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-		border-radius: 2px;
-	}
-	// .form__row
-	&__row {
-		display: flex;
-		justify-content: space-between;
-		column-gap: rem(50);
-	}
-	// .form__column
-	&__column {
-		flex: 0 1 50%;
-	}
-	// .form__label
-	&__label {
-		font-size: rem(16);
-		line-height: math.div(20, 16);
-		color: #bbb7b7;
-	}
-	// .form__footer
-	&__footer {
-		//flex: 0 1 100%;
-		width: 100%;
-		min-height: rem(45);
-		margin-top: rem(30);
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		&:not(:last-child) {
-			margin-bottom: rem(20);
-		}
-	}
-	// .form__button
-	&__button {
-		margin-top: rem(20);
-	}
-}
 
 //====================================================================================================
 //? Кнопки
@@ -134,7 +51,7 @@
 	&:active {
 		top: rem(3);
 	}
-	&._button-color {
+	&_color {
 		color: #ffffff;
 		background-color: $redColor;
 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
