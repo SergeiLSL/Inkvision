@@ -1,18 +1,17 @@
+//========================================================================================================================================================
 .support {
-	background-color: #fff;
+	background: url('@img/reperat.jpg'); 
 	// .support__container
 	&__container {
 		padding: rem(160) rem(15) rem(94) rem(15);
 		@include adaptiveValue("padding-top", 160, 220);
 		@include adaptiveValue("padding-bottom", 94, 20);
-
-		//margin: 0 auto;
 	}
 	// .support__box
 	&__box {
 		max-width: rem(1140);
 		margin: 0 auto;
-		background-color: #fff;
+		background: url('@img/reperat.jpg'); 
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 		@include adaptiveValue("padding-left", 100, 15);
@@ -37,24 +36,108 @@
 		}
 	}
 	// .support__title
-	&__title {
-		color: #00020f;
-		&:not(:last-child) {
-			margin-bottom: rem(20);
-		}
+	&__title {		
 	}
 	// .support__text
 	&__text {
 	}
+	// .support__form
+	&__form {
+	}
+}
+
+.text {
+	// .text_big
+	&_big {
+		max-width: rem(970);
+		width: 100%;
+	}
+	// .text__label
+	&__label {
+		display: none;
+	}
+	&__aicon {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 0;
+		bottom: 0;		
+		width: 1.25rem;
+		right: 1.25rem;
+		//cursor: pointer;
+		color: #bdbdbd;
+		transition: color 0.15s ease-in-out;
+		&:hover {
+			color: #212529;
+		}
+	}
+	// .text__icon
+	&__icon {
+		max-width: rem(940);
+		width: 100%;
+		position: relative;
+		&::before {
+			content: "";
+			//color: #bdbdbd;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			top: 0;
+			bottom: 0;
+			right: rem(20);
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		// .text-field__icon_email
+		&_email {
+			&:before {
+				content: "";
+				width: rem(28);
+				background-image: url("@img/support/email.svg");
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+		&_name {
+			&:before {
+				content: "";
+				width: rem(28);
+				background-image: url("@img/support/user.svg");
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+		&_arrow {
+			&:before {
+				content: "";
+				width: rem(28);
+				background-image: url("@img/support/arrow.svg");
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+		&_question {
+			&:before {
+				content: "";
+				width: rem(28);
+				background-image: url("@img/support/question.svg");
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+	}
+	// .text__input
+	&__input {
+	}
 }
 
 .form-support {
-	// .form__body
+	display: flex;
+	flex-wrap: wrap;
+	// .form-support__body
 	&__body {
-		display: flex;
-		flex-wrap: wrap;
 	}
-	// .form__info
+	// .form-support__info
 	&__info {
 		display: flex;
 		flex-wrap: wrap;
@@ -65,69 +148,28 @@
 			width: 100%;
 		}
 	}
-	// .form-support__itemy
+	// .form-support__item
 	&__item {
-		display: flex;
-		flex: 1 1 40.6%;
-		background-color: #eefbe0;
-		&:not(:last-child) {
-			margin-bottom: rem(20);
-		}
-		&_big {
-			flex: 1 1 100%;
-		}
-
-		&_average {
-			flex: 0 0 rem(460);
-		}
-	}
-
-	// .form__input
-	&__input {
-		min-height: 50px;
-		padding: rem(15) rem(20) rem(15) rem(20);
 		width: 100%;
-		font-size: 16px;
-		line-height: math.div(20, 16);
-		color: $mainColor;
-		transition: all 0.5s ease 0s;
-		border-bottom: rem(2) solid $headerColor;
-		border-radius: 0 0 rem(5) rem(5);
-		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-		border-radius: 2px;
 	}
-	// .form__row
-	&__row {
-		display: flex;
-		justify-content: space-between;
-		column-gap: rem(50);
+	// .form-support__textarea
+	&__textarea {
 	}
-	// .form__column
-	&__column {
-		flex: 0 1 50%;
+	// .form-support__aicon
+	&__aicon {
 	}
-	// .form__label
-	&__label {
-		font-size: rem(16);
-		line-height: math.div(20, 16);
-		color: #bbb7b7;
-	}
-	// .form__footer
+	// .form-support__footer
 	&__footer {
-		//flex: 0 1 100%;
-		width: 100%;
-		min-height: rem(45);
-		margin-top: rem(30);
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		&:not(:last-child) {
-			margin-bottom: rem(20);
-		}
 	}
-	// .form__button
+	// .form-support__checkbox
+	&__checkbox {
+	}
+	// .form-support__button
 	&__button {
 		margin-top: rem(20);
 	}
 }
+
+
+
+
