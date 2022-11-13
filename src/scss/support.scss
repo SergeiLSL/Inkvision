@@ -1,17 +1,105 @@
 //========================================================================================================================================================
+
+// .text {
+// 	// .text_big
+// 	&_big {
+// 		max-width: rem(970);
+// 		width: 100%;
+// 	}
+// 	// .text__label
+// 	&__label {
+// 		display: none;
+// 	}
+// 	&__aicon {
+// 		position: absolute;
+// 		display: flex;
+// 		align-items: center;
+// 		top: 0;
+// 		bottom: 0;
+// 		width: 1.25rem;
+// 		right: 1.25rem;
+// 		//cursor: pointer;
+// 		color: #bdbdbd;
+// 		transition: color 0.15s ease-in-out;
+// 		&:hover {
+// 			color: #212529;
+// 		}
+// 	}
+// 	// .text__icon
+// 	&__icon {
+// 		max-width: rem(940);
+// 		width: 100%;
+// 		position: relative;
+// 		&::before {
+// 			content: "";
+// 			//color: #bdbdbd;
+// 			position: absolute;
+// 			display: flex;
+// 			align-items: center;
+// 			top: 0;
+// 			bottom: 0;
+// 			right: rem(20);
+// 			top: 50%;
+// 			transform: translateY(-50%);
+// 		}
+// 		// .text-field__icon_email
+// 		&_email {
+// 			&:before {
+// 				content: "";
+// 				width: rem(28);
+// 				background-image: url("@img/support/email.svg");
+// 				background-repeat: no-repeat;
+// 				background-position: center;
+// 			}
+// 		}
+// 		&_name {
+// 			&:before {
+// 				content: "";
+// 				width: rem(28);
+// 				background-image: url("@img/support/user.svg");
+// 				background-repeat: no-repeat;
+// 				background-position: center;
+// 			}
+// 		}
+// 		&_arrow {
+// 			&:before {
+// 				content: "";
+// 				width: rem(28);
+// 				background-image: url("@img/support/arrow.svg");
+// 				background-repeat: no-repeat;
+// 				background-position: center;
+// 			}
+// 		}
+// 		&_question {
+// 			&:before {
+// 				content: "";
+// 				width: rem(28);
+// 				background-image: url("@img/support/question.svg");
+// 				background-repeat: no-repeat;
+// 				background-position: center;
+// 			}
+// 		}
+// 	}
+// 	// .text__input
+// 	&__input {
+// 	}
+// }
+
+//========================================================================================================================================================
+
 .support {
-	background: url('@img/reperat.jpg'); 
+	background: url("@img/reperat.jpg");
 	// .support__container
 	&__container {
-		padding: rem(160) rem(15) rem(94) rem(15);
+		padding: 0 rem(15);
 		@include adaptiveValue("padding-top", 160, 220);
 		@include adaptiveValue("padding-bottom", 94, 20);
 	}
-	// .support__box
-	&__box {
+	// .support__body
+	&__body {
 		max-width: rem(1140);
 		margin: 0 auto;
-		background: url('@img/reperat.jpg'); 
+		background: url("@img/reperat.jpg");
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 		@include adaptiveValue("padding-left", 100, 15);
@@ -24,8 +112,12 @@
 		flex: 1;
 		border-radius: rem(25);
 		margin: 0 auto;
+		margin-bottom: rem(20);
 	}
-	// .support__header
+}
+
+.question {
+	// .question__header
 	&__header {
 		max-width: rem(460);
 		margin: 0 auto;
@@ -35,109 +127,19 @@
 			margin-bottom: rem(30);
 		}
 	}
-	// .support__title
-	&__title {		
+	// .question__title
+	&__title {
 	}
-	// .support__text
+	// .question__text
 	&__text {
 	}
-	// .support__form
+	// .question__form
 	&__form {
 	}
 }
 
-.text {
-	// .text_big
-	&_big {
-		max-width: rem(970);
-		width: 100%;
-	}
-	// .text__label
-	&__label {
-		display: none;
-	}
-	&__aicon {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		top: 0;
-		bottom: 0;		
-		width: 1.25rem;
-		right: 1.25rem;
-		//cursor: pointer;
-		color: #bdbdbd;
-		transition: color 0.15s ease-in-out;
-		&:hover {
-			color: #212529;
-		}
-	}
-	// .text__icon
-	&__icon {
-		max-width: rem(940);
-		width: 100%;
-		position: relative;
-		&::before {
-			content: "";
-			//color: #bdbdbd;
-			position: absolute;
-			display: flex;
-			align-items: center;
-			top: 0;
-			bottom: 0;
-			right: rem(20);
-			top: 50%;
-			transform: translateY(-50%);
-		}
-		// .text-field__icon_email
-		&_email {
-			&:before {
-				content: "";
-				width: rem(28);
-				background-image: url("@img/support/email.svg");
-				background-repeat: no-repeat;
-				background-position: center;
-			}
-		}
-		&_name {
-			&:before {
-				content: "";
-				width: rem(28);
-				background-image: url("@img/support/user.svg");
-				background-repeat: no-repeat;
-				background-position: center;
-			}
-		}
-		&_arrow {
-			&:before {
-				content: "";
-				width: rem(28);
-				background-image: url("@img/support/arrow.svg");
-				background-repeat: no-repeat;
-				background-position: center;
-			}
-		}
-		&_question {
-			&:before {
-				content: "";
-				width: rem(28);
-				background-image: url("@img/support/question.svg");
-				background-repeat: no-repeat;
-				background-position: center;
-			}
-		}
-	}
-	// .text__input
-	&__input {
-	}
-}
-
-.form-support {
-	display: flex;
-	flex-wrap: wrap;
-	// .form-support__body
-	&__body {
-	}
-	// .form-support__info
+.form {
+	// .form__info
 	&__info {
 		display: flex;
 		flex-wrap: wrap;
@@ -147,29 +149,179 @@
 			display: block;
 			width: 100%;
 		}
+		margin-bottom: rem(20);
 	}
-	// .form-support__item
+	// .form__item
 	&__item {
-		width: 100%;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: rem(0);
+			left: 0;
+			height: rem(2);
+			width: 100%;
+			background: $headerColor;
+			border-radius: 2px;
+		}
 	}
-	// .form-support__textarea
-	&__textarea {
+	// .form__input
+	&__input {
 	}
-	// .form-support__aicon
+	// .form__aicon
 	&__aicon {
 	}
-	// .form-support__footer
-	&__footer {
+	// .form__icon
+	&__icon {
+		// .form__icon_email1
+		&_email1 {
+		}
+		// .form__icon_user
+		&_user {
+		}
+		// .form__icon_question
+		&_question {
+		}
 	}
-	// .form-support__checkbox
-	&__checkbox {
+	// .form__textarea
+	&__textarea {
 	}
-	// .form-support__button
+	// .form__button
 	&__button {
 		margin-top: rem(20);
 	}
 }
 
+// .sel {
+// 	margin-bottom: rem(50);
+// }
+// //========================================================================================================================================================
+// Снипет (HTML): sel
+// .select {
+// 	position: relative;
+// 	// .select__body
+// 	&__body {
+// 		position: relative;
+// 	}
+// 	// .select__title
+// 	&__title {
+// 		color: inherit;
+// 		text-align: left;
+// 		border: 1px solid #d9d9d9;
+// 		background-color: #fff;
+// 		cursor: pointer;
+// 		width: 100%;
+// 		border-radius: 4px;
+// 	}
+// 	// .select__value
+// 	&__value {
+// 		display: flex;
+// 		align-items: center;
+// 		height: rem(30);
+// 		padding: 0 rem(15);
+// 		gap: rem(10);
+// 		> * {
+// 			flex: 1 1 auto;
+// 		}
+// 		&:after {
+// 			content: "";
+// 			align-self: stretch;
+// 			flex: 0 0 10px;
+// 			transition: all 0.3s ease 0s;
+// 			display: flex;
+// 			justify-content: center;
+// 			align-items: center;
+// 			._select-open & {
+// 				transform: rotate(-180deg);
+// 			}
+// 		}
+// 		&._select-pseudo-label {
+// 			&::before {
+// 				content: attr(data-pseudo-label);
+// 				opacity: 0.5;
+// 			}
+// 		}
+// 	}
+// 	// .select__text
+// 	&__text {
+// 		flex: 1 1 auto;
+// 	}
+// 	&__input {
+// 		width: 100%;
+// 		background-color: transparent;
+// 		height: 100%;
+// 	}
+// 	// .select__options
+// 	&__options {
+// 		color: #000;
+// 		position: absolute;
+// 		top: 29px;
+// 		border-radius: 0 0 4px 4px;
+// 		min-width: 100%;
+// 		left: 0;
+// 		background-color: #fff;
+// 		border-top: 0;
+// 		border: 1px solid #d9d9d9;
+// 		border-top: 0;
+// 		padding: 10px 0px 5px 0px;
+// 	}
+// 	// .select__scroll
+// 	&__scroll {
+// 		overflow-y: auto;
+// 		overflow-x: hidden;
+// 		// Максимальная высота
+// 		max-height: 200px;
+// 		// Стили скроллбара
+// 		.simplebar-scrollbar {
+// 			&::before {
+// 				//opacity: 1;
+// 			}
+// 		}
+// 	}
+// 	// .select__option
+// 	&__option {
+// 		width: 100%;
+// 		text-align: left;
+// 		cursor: pointer;
+// 		padding: 5px 15px;
+// 		color: inherit;
+// 		&._select-selected {
+// 			background-color: #eee;
+// 		}
+// 		@media (any-hover: hover) {
+// 			&:hover {
+// 				background: #d9d9d9;
+// 			}
+// 		}
+// 	}
 
+// 	// Конструкция дополнительных данных
+// 	&__row {
+// 		display: inline-flex;
+// 		align-items: center;
+// 	}
+// 	&__asset {
+// 	}
+// 	&__text {
+// 	}
 
+// 	// Состояния селекта
+// 	&._select-open {
+// 		z-index: 5;
+// 	}
+// 	&._select-disabled {
+// 	}
+// 	&._select-active {
+// 	}
+// 	&._select-focus {
+// 	}
+// 	&._select-multiple {
+// 	}
+// 	&._select-checkbox {
+// 	}
+// }
 
+// // Тег
+// ._select-tag {
+// 	cursor: pointer;
+// }

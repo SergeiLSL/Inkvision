@@ -2,6 +2,7 @@
 	font-family: "icons";
 	font-style: normal;
 	font-weight: normal;
+	//font-size: rem(23);
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
@@ -15,3 +16,69 @@
 	}
 }
 
+._icon-user:before {
+	content: "\e900";
+}
+._icon-specialization:before {
+	content: "\e901";
+}
+._icon-work-styles:before {
+	content: "\e902";
+}
+._icon-person-04:before {
+	content: "\e903";
+}
+._icon-price:before {
+	content: "\e904";
+}
+._icon-notifications:before {
+	content: "\e905";
+}
+._icon-change-password:before {
+	content: "\e906";
+}
+._icon-eser-small:before {
+	content: "\e907";
+}
+._icon-calendar:before {
+	content: "\e908";
+}
+._icon-country:before {
+	content: "\e909";
+}
+._icon-phone:before {
+	content: "\e90a";
+}
+._icon-city:before {
+	content: "\e90b";
+}
+._icon-picture:before {
+	content: "\e90c";
+}
+._icon-arrow-up:before {
+	content: "\e90d";
+}
+._icon-email1:before {
+	content: "\e90f";
+}
+._icon-select:before {
+	content: "\e910";
+}
+._icon-question:before {
+	content: "\e911";
+}
+._icon-plus:before {
+	content: "\e912";
+}
+._icon-eye-regular:before {
+	content: "\e913";
+}
+._icon-eye-slash-regular:before {
+	content: "\e914";
+}
+._icon-eye:before {
+	content: "\e915";
+}
+._icon-eye-slash:before {
+	content: "\e916";
+}

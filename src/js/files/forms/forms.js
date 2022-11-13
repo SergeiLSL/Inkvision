@@ -112,6 +112,14 @@ export let formValidate = {
 		} else if (formRequiredItem.type === "checkbox" && !formRequiredItem.checked) {
 			this.addError(formRequiredItem);
 			error++;
+		} else if (formRequiredItem.dataset.required === "password") {
+			formRequiredItem.value = formRequiredItem.value.replace(" ", "");
+			if (this.passwordTest(formRequiredItem)) {
+				this.addError(formRequiredItem);
+				error++;
+			} else {
+				this.removeError(formRequiredItem);
+			}
 		} else {
 			if (!formRequiredItem.value.trim()) {
 				this.addError(formRequiredItem);
@@ -168,6 +176,32 @@ export let formValidate = {
 	},
 	emailTest(formRequiredItem) {
 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
+	},
+	
+	passwordTest(formRequiredItem) {
+		//проверка пароля - первая (Дениса)
+		// var lowerCaseLetters = /[a-z]/g;
+		// var upperCaseLetters = /[A-Z]/g;
+		// var numbers = /[0-9]/g;
+		// var minLength=6
+		// console.log("passwordTest")
+		// var error=false
+		// if (!formRequiredItem.value.match(lowerCaseLetters)) {
+		// 	error=true
+		// } 
+		// if (!formRequiredItem.value.match(upperCaseLetters)) {
+		// 	error=true
+		// } 
+		// if (!formRequiredItem.value.match(numbers)) {
+		// 	error=true
+		// } 
+		// if (!(formRequiredItem.value.length>=minLength)) {
+		// 	error=true
+		// } 
+		// return error
+	//или проверка пароля вторая (Дениса)
+		return !/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(formRequiredItem.value);
+
 	}
 }
 /* Отправка форм */
@@ -271,7 +305,7 @@ export function formQuantity() {
 		}
 	});
 }
-/* Модуь звездного рейтинга */
+/* Модуль звездного рейтинга */
 export function formRating() {
 	const ratings = document.querySelectorAll('.rating');
 	if (ratings.length > 0) {
