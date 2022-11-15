@@ -18,7 +18,7 @@
 		}
 		@media (max-width: $mobileSmall) {
 			padding-top: rem(220);
-		}	
+		}
 		@include adaptiveValue("padding-bottom", 30, 15);
 	}
 	// .setting__body
@@ -103,7 +103,7 @@
 		align-items: center;
 		color: #fff;
 		margin-left: rem(10);
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			margin-left: rem(20);
 		}
 	}
@@ -181,18 +181,6 @@
 	}
 	// .form__item
 	&__item {
-		// &::after {
-		// 	display: none;
-		// }
-
-		// &::before {
-		// 	content: "\e908";
-		// 	height: rem(20);
-		// 	width: rem(20);
-		// 	font-size: rem(15);
-		// 	//font-family: icon;
-		// 	//font-size: rem(20);
-		// }
 	}
 
 	// .form__label
@@ -223,7 +211,9 @@
 	}
 	// .form__gender
 	&__gender {
+		//max-width: rem(460);
 	}
+
 	// .form__photo
 	&__photo {
 	}
@@ -238,6 +228,62 @@
 	}
 	// .form__button
 	&__button {
+	}
+}
+
+.gender {
+	max-width: rem(440);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	column-gap: rem(20);
+	@include adaptiveValue("column-gap", 20, 10);
+	justify-content: space-between;
+	// .gender__title
+	&__title {
+		display: inline-block;
+		font-weight: 500;
+		font-size: rem(16);
+		color: #BBB7B7;
+		@include adaptiveValue("margin-left", 20, 10);
+	}
+	// .gender__radio-btn
+	&__radio-btn {
+		display: inline-block;
+		font-weight: 500;
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		transition: background-color 0.5s ease 0s;
+		//margin-right: 10px;
+		& input[type="radio"] {
+			display: none;
+			&:checked + label {
+				background-color: $redColor;
+				color: #fff;
+			}
+		}
+		& label {
+			display: inline-block;
+			cursor: pointer;
+			// max-width: rem(180);
+			// width: 100%;
+			padding: 0 rem(50);
+			@include adaptiveValue("padding-left", 54, 12);
+			@include adaptiveValue("padding-right", 54, 12);
+			line-height: rem(50);
+			// border: 1px solid #999;
+			border-radius: 6px;
+			user-select: none;
+			&:hover {
+				background-color: #c72a2acb;
+				color: #ffffff;
+			}
+			&:active {
+				top: rem(3);
+				background-color: $redColor;
+				box-shadow: 0 rem(2) 0 $redColor;
+			}
+		}
 	}
 }
 
@@ -689,9 +735,6 @@
 	}
 }
 
-.form-pass {
-}
-
 .form {
 	// .form__input
 	&__input {
@@ -705,16 +748,6 @@
 	}
 	// .form__item
 	&__item {
-	}
-	// .form__aicon
-	&__aicon {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		top: 0;
-		bottom: 0;
-		right: 0.1rem;
-		width: 2.75rem;
 	}
 	&__error {
 		position: absolute;
@@ -731,6 +764,16 @@
 			margin-bottom: rem(40);
 		}
 	}
+	// .form__aicon
+	&__aicon {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 0;
+		bottom: 0;
+		right: 0.1rem;
+		width: 2.75rem;
+	}
 	// .form__icon
 	&__icon {
 		// .form__icon_user
@@ -743,6 +786,17 @@
 	// .form__label
 	&__label {
 	}
+	// .form__viewpass
+	&__viewpass {
+		position: absolute;
+		top: rem(11);
+		right: rem(10);
+		width: rem(26);
+		height: rem(22);
+		object-fit:cover;
+		display: inline-block;
+	}
+	
 	// .form__buttons
 	&__buttons {
 		display: flex;
@@ -764,42 +818,3 @@
 	}
 }
 
-.form__line {
-	position: relative;
-	padding: rem(15);
-	width: rem(250);
-	font-size: rem(18);
-	background: #ceeefa;
-}
-
-.form__viewpass {
-	//position: absolute;
-	position: relative;
-	//height: rem(50);
-	top: 15px;
-	right: 0;
-	//left: 0;
-	display: inline-block;
-	width: 100px;
-	height: 20px;
-	&::after {
-		top: 0;
-		right: 0;
-		background: url("@img/settings-icons/eye.svg") 0 0 no-repeat;
-	}
-}
-.form__viewpass ._viewpass-active {
-	background: url("@img/settings-icons/eye-slash.svg") 0 0 no-repeat;
-}
-
-.item {
-}
-.input {
-}
-.icon {
-}
-.button {
-	// .button_color
-	&_color {
-	}
-}

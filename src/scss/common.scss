@@ -34,8 +34,8 @@
 	background: url("@img/reperat.jpg");
 	border-radius: rem(25);
 	filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-	@include adaptiveValue("padding-left", 100, 15);
-	@include adaptiveValue("padding-right", 100, 15);
+	@include adaptiveValue("padding-left", 81, 15);
+	@include adaptiveValue("padding-right", 82, 15);
 	@include adaptiveValue("padding-top", 100, 30);
 	@include adaptiveValue("padding-bottom", 60, 20);
 	@media (max-width: $tablet) {
@@ -89,6 +89,8 @@ form * {
 		background: $headerColor;
 		border-radius: 2px;
 	}
+	&_gender {
+	}
 }
 
 .input {
@@ -114,13 +116,13 @@ form * {
 	position: relative;
 	width: 100%;
 	resize: vertical;
-	padding: rem(15) rem(20);
+	padding: rem(24) rem(20)rem(15) rem(20);
 	font-size: rem(16);
 	line-height: math.div(20, 16);
 	color: $mainColor;
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 2px;
-	height: rem(120);
+	min-height: rem(120);
 	&:hover {
 		border: 1px solid $redColor;
 	}
@@ -166,7 +168,6 @@ form * {
 //====================================================================================================
 //? Кнопки
 .button {
-	max-width: rem(460);
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -184,7 +185,7 @@ form * {
 	transition: background-color 0.5s ease 0s;
 	position: relative;
 	top: 0;
-	padding: rem(15);
+	//padding: 0 rem(15);
 	&_big {
 		max-width: rem(970);
 		width: 100%;
@@ -200,7 +201,7 @@ form * {
 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 	}
 	&:hover {
-		background-color: #c72a2ae5;
+		background-color: #c72a2ac3;
 		color: #ffffff;
 	}
 }
@@ -214,8 +215,7 @@ form * {
 	min-height: 60px;
 	background-color: #fff;
 	color: $mainColor;
-	font-size: rem(16);
-	//@include adaptiveValue("font-size", 16, 14);
+	@include adaptiveValue("font-size", 16, 14);
 	line-height: math.div(20, 16);
 	font-weight: 500;
 	text-transform: uppercase;

@@ -90,7 +90,7 @@
 														<input class="form__input input" type="text" placeholder="Имя"
 															name=form[name]>
 														<span class="form__aicon">
-															<div class="_icon-user form__icon form__icon_user icon">
+															<div class="_icon-user icon">
 															</div>
 														</span>
 													</div>
@@ -99,7 +99,7 @@
 														<input class="form__input input" type="text"
 															placeholder="Фамилия" name=form[lastname]>
 														<span class="form__aicon">
-															<div class="_icon-user form__icon form__icon_user icon">
+															<div class="_icon-user icon">
 															</div>
 														</span>
 													</div>
@@ -109,7 +109,7 @@
 															placeholder="Дата рождения" name=form[dateuser]>
 														<span class="form__aicon">
 															<div
-																class="_icon-calendar form__icon form__icon_calendar icon">
+																class="_icon-date icon">
 															</div>
 														</span>
 													</div>
@@ -119,7 +119,7 @@
 															placeholder="Страна" name=form[Nationalite]>
 														<span class="form__aicon">
 															<div
-																class="_icon-country form__icon form__icon_country icon">
+																class="_icon-country icon">
 															</div>
 														</span>
 													</div>
@@ -128,7 +128,7 @@
 														<input class="form__input input" type="text" placeholder="Город"
 															name=form[city]>
 														<span class="form__aicon">
-															<div class="_icon-city form__icon form__icon_city icon">
+															<div class="_icon-city icon">
 															</div>
 														</span>
 													</div>
@@ -137,7 +137,7 @@
 														<input class="form__input input" type="phone"
 															placeholder="Номер телефона" name=form[phone]>
 														<span class="form__aicon">
-															<div class="_icon-phone form__icon form__icon_phone icon">
+															<div class="_icon-phone icon">
 															</div>
 														</span>
 													</div>
@@ -217,7 +217,7 @@
 														<!-- О себе... -->
 														<div class="form__item">
 															<textarea id="About" type="area" name=form[about]
-																class="form__textarea textarea"
+																class="form__textarea textarea" data-autoheight
 																placeholder="О себе..."></textarea>
 															<span class="form__aicon">
 																<div
@@ -228,7 +228,7 @@
 														<!-- Адрес тату-студии -->
 														<div class="form__item">
 															<textarea id="About" type="area" name=form[address]
-																class="form__textarea input textarea"
+																class="form__textarea input textarea" data-autoheight
 																placeholder="Адрес тату-студии"></textarea>
 															<span class="form__aicon">
 																<div class="_icon-city form__icon form__icon_city icon">
@@ -238,7 +238,7 @@
 														<!-- Клиент -->
 														<div class="form__item">
 															<textarea id="client" type="area" name=form[client]
-																class="form__textarea input textarea"
+																class="form__textarea input textarea" data-autoheight
 																placeholder="Клиент"></textarea>
 															<span class="form__aicon">
 																<div class="_icon-user form__icon form__icon_user icon">
@@ -249,7 +249,7 @@
 														<div class="form__item">
 															<textarea id="work-experience" type="area"
 																name=form[work-experience]
-																class="form__textarea input textarea"
+																class="form__textarea input textarea" data-autoheight
 																placeholder="Опыт работы"></textarea>
 															<span class="form__aicon">
 																<div class="_icon-user form__icon form__icon_user icon">
@@ -726,17 +726,20 @@
 								</div>
 								<!--? Дополнительные услуги -->
 								<div class="content-tabs__body body-tabs">
-									<div class="content-tabs__box-content box-services">
-										<div class="box-services__title title-setting">
+									<div class="content-tabs__box-content box-price price">
+										<div class="box-price__title title-setting">
 											Дополнительные услуги
 										</div>
-										<div class="box-services__text text-setting">
+										<div class="box-price__text text-setting">
 											Расскажите сколько стоят ваши дополнительные услуги
 										</div>
-
-										<div class="box-services__buttons">
-											<button class="box-services__button button">Предыдущий шаг</button>
-											<button class="box-services__button button button_color">Сохранить и
+										<form action="#" id="price-form" class="price-form">
+											<div class="price__range">
+											</div>
+										</form>
+										<div class="box-price__buttons">
+											<button class="box-price__button button">Предыдущий шаг</button>
+											<button class="box-price__button button button_color">Сохранить и
 												продолжить</button>
 										</div>
 									</div>
@@ -774,43 +777,34 @@
 											Сменить пароль
 										</div>
 										<div class="password__form form-pass">
-											<form action="#" id="form-pass" class="form__input form">
+											<form action="#" id="form-pass" data-dev class="form__input form">
 												<div class="form__items">
 													<div class="form__item item">
-														<input class="form__input input" type="text" placeholder="Имя"
+														<input data-validate class="form__input input" type="text" placeholder="Имя"
 															name=form[username]>
 														<span class="form__aicon">
 															<div class="_icon-user form__icon form__icon_user icon">
 															</div>
 														</span>
 													</div>
-
 													<div class="form__item item">
-														<label for="formOldpass" class="form__label">Старый
-															пароль*:</label>
-														<input data-validate data-error="Введен неверный пароль!"
-															data-required="password" type="text" id="oldpass"
+														<label for="formOldpass" class="form__label">Старый пароль*:</label>
+														<input autocomplete="off" data-validate data-error="Введен неверный пароль!"
+															data-required="password" type="password" id="oldpass"
 															name="form[passwordOld]" placeholder="Старый пароль"
 															class="form__input input _req">
-														<span class="form__aicon">
-															<div class="_icon-eye form__icon form__icon_eye icon"></div>
-														</span>
+														<button class="form__viewpass _icon-psw-view" type="button"></button>
 													</div>
-
 													<div class="form__item item">
 														<label for="formNewpass" class="form__label">Новый
 															пароль*:</label>
-														<input data-validate
-															data-error="Введен неверный пароль!"
-															data-required="password" type="text" id="newpass1"
+														<input autocomplete="off" data-validate data-error="Введен неверный пароль!"
+														data-required="password" type="password" id="newpass1"
 															name="form[passwordNew1]" placeholder="Новый пароль"
-															class="form__input input _req">
-														<span class="form__aicon">
-															<div class="_icon-eye form__icon form__icon_eye icon"></div>
-														</span>
+															class="form__input input _req">															
+														<button class="form__viewpass _icon-psw-view" type="button"></button>
 														<!-- Пароль должен быть не менее 8 символов, содержать минимум 1 строчную, 1 прописную букву и минимум 1 цифру. -->
 													</div>
-													<!-- Пароль As123456 -->
 													<div class="form__item item">
 														<label for="formNewpass" class="form__label">Подтвердите новый
 															пароль*:</label>
@@ -819,9 +813,7 @@
 															name="form[passwordNew2]"
 															placeholder="Подтвердите новый пароль"
 															class="form__input input _req">
-														<span class="form__aicon">
-															<div class="_icon-eye form__icon form__icon_eye icon"></div>
-														</span>
+														<button class="form__viewpass _icon-psw-view" type="button"></button>
 													</div>
 												</div>
 

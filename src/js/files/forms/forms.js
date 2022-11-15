@@ -52,6 +52,7 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 		}
 	});
 	// Если включено, добавляем функционал "Показать пароль"
+	// Если включено, добавляем функционал "Показать/закрыть пароль через кнопку"
 	if (options.viewPass) {
 		document.addEventListener("click", function (e) {
 			let targetElement = e.target;
@@ -59,6 +60,8 @@ export function formFieldsInit(options = { viewPass: false, autoHeight: false })
 				let inputType = targetElement.classList.contains('_viewpass-active') ? "password" : "text";
 				targetElement.parentElement.querySelector('input').setAttribute("type", inputType);
 				targetElement.classList.toggle('_viewpass-active');
+				targetElement.classList.toggle('_icon-psw-view');
+				targetElement.classList.toggle('_icon-psw-close');
 			}
 		});
 	}
@@ -113,11 +116,13 @@ export let formValidate = {
 			this.addError(formRequiredItem);
 			error++;
 		} else if (formRequiredItem.dataset.required === "password") {
+			
 			formRequiredItem.value = formRequiredItem.value.replace(" ", "");
-			if (this.passwordTest(formRequiredItem)) {
+			if (!this.passwordTest(formRequiredItem) || !this.passwordMatch(formRequiredItem)) {
 				this.addError(formRequiredItem);
 				error++;
-			} else {
+			} 
+			else {
 				this.removeError(formRequiredItem);
 			}
 		} else {
@@ -200,8 +205,26 @@ export let formValidate = {
 		// } 
 		// return error
 	//или проверка пароля вторая (Дениса)
-		return !/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(formRequiredItem.value);
+		return /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(formRequiredItem.value);
 
+	},
+
+	passwordMatch(formRequiredItem){
+		const passwordOld = document.querySelectorAll('#oldpass')[0].value;
+		const passwordNew1 = document.querySelectorAll('#newpass1')[0].value;
+		const passwordNew2 = document.querySelectorAll('#newpass2')[0].value;
+		console.log(passwordNew1,passwordNew2, passwordOld)
+		if (!(passwordNew1===""||passwordOld==="")) {
+		console.log("1+",passwordNew1===passwordOld)
+			return !(passwordNew1===passwordOld)
+		}
+		if (!(passwordNew1===""||passwordNew2==="")) {
+			console.log("2+",passwordNew1===passwordNew2)
+	
+				return (passwordNew1===passwordNew2)
+			}
+
+		
 	}
 }
 /* Отправка форм */

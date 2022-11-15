@@ -34,13 +34,7 @@
 ._icon-notifications:before {
 	content: "\e905";
 }
-._icon-change-password:before {
-	content: "\e906";
-}
-._icon-eser-small:before {
-	content: "\e907";
-}
-._icon-calendar:before {
+._icon-date:before {
 	content: "\e908";
 }
 ._icon-country:before {
@@ -58,7 +52,10 @@
 ._icon-arrow-up:before {
 	content: "\e90d";
 }
-._icon-email1:before {
+._icon-arrow:before {
+	content: "\e90e";
+}
+._icon-email:before {
 	content: "\e90f";
 }
 ._icon-select:before {
@@ -70,15 +67,13 @@
 ._icon-plus:before {
 	content: "\e912";
 }
-._icon-eye-regular:before {
-	content: "\e913";
-}
-._icon-eye-slash-regular:before {
-	content: "\e914";
-}
-._icon-eye:before {
+._icon-psw-view:before {
 	content: "\e915";
+	color: #b7bbb7;
+	font-size: rem(20);
 }
-._icon-eye-slash:before {
+._icon-psw-close:before {
 	content: "\e916";
+	color: #b7bbb7;
+	font-size: rem(20);
 }
