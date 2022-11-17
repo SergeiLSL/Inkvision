@@ -103,13 +103,14 @@
 															</div>
 														</span>
 													</div>
-													<!--? Дата не закончено -->
+													<!-- День рождения -->
 													<div class="form__item item">
-														<input class="form__input input" type="text"
-															placeholder="Дата рождения" name=form[dateuser]>
+														<!-- Starting Date: -->
+														<input class="form__input input" onfocus="this.type='date'"
+															onblur="this.type='text',this.placeholder='День рождения'"
+															type="text" placeholder="День рождения">
 														<span class="form__aicon">
-															<div
-																class="_icon-date icon">
+															<div class="_icon-date icon">
 															</div>
 														</span>
 													</div>
@@ -118,8 +119,7 @@
 														<input class="form__input input" type="nationalite"
 															placeholder="Страна" name=form[Nationalite]>
 														<span class="form__aicon">
-															<div
-																class="_icon-country icon">
+															<div class="_icon-country icon">
 															</div>
 														</span>
 													</div>
@@ -780,29 +780,34 @@
 											<form action="#" id="form-pass" data-dev class="form__input form">
 												<div class="form__items">
 													<div class="form__item item">
-														<input data-validate class="form__input input" type="text" placeholder="Имя"
-															name=form[username]>
+														<input data-validate class="form__input input" type="text"
+															placeholder="Имя" name=form[username]>
 														<span class="form__aicon">
 															<div class="_icon-user form__icon form__icon_user icon">
 															</div>
 														</span>
 													</div>
 													<div class="form__item item">
-														<label for="formOldpass" class="form__label">Старый пароль*:</label>
-														<input autocomplete="off" data-validate data-error="Введен неверный пароль!"
+														<label for="formOldpass" class="form__label">Старый
+															пароль*:</label>
+														<input autocomplete="off" data-validate
+															data-error="Введен неверный пароль!"
 															data-required="password" type="password" id="oldpass"
 															name="form[passwordOld]" placeholder="Старый пароль"
 															class="form__input input _req">
-														<button class="form__viewpass _icon-psw-view" type="button"></button>
+														<button class="form__viewpass _icon-psw-view"
+															type="button"></button>
 													</div>
 													<div class="form__item item">
 														<label for="formNewpass" class="form__label">Новый
 															пароль*:</label>
-														<input autocomplete="off" data-validate data-error="Введен неверный пароль!"
-														data-required="password" type="password" id="newpass1"
+														<input autocomplete="off" data-validate
+															data-error="Введен неверный пароль!"
+															data-required="password" type="password" id="newpass1"
 															name="form[passwordNew1]" placeholder="Новый пароль"
-															class="form__input input _req">															
-														<button class="form__viewpass _icon-psw-view" type="button"></button>
+															class="form__input input _req">
+														<button class="form__viewpass _icon-psw-view"
+															type="button"></button>
 														<!-- Пароль должен быть не менее 8 символов, содержать минимум 1 строчную, 1 прописную букву и минимум 1 цифру. -->
 													</div>
 													<div class="form__item item">
@@ -813,7 +818,8 @@
 															name="form[passwordNew2]"
 															placeholder="Подтвердите новый пароль"
 															class="form__input input _req">
-														<button class="form__viewpass _icon-psw-view" type="button"></button>
+														<button class="form__viewpass _icon-psw-view"
+															type="button"></button>
 													</div>
 												</div>
 
