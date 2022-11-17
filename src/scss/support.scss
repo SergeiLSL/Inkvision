@@ -64,10 +64,14 @@
 			display: block;
 			width: 100%;
 		}
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
 	}
 	// .form__item
 	&__item {
 	}
+
 	// .form__input
 	&__input {
 	}
@@ -94,7 +98,6 @@
 		margin-top: rem(20);
 	}
 }
-
 
 .sel {
 	margin-bottom: rem(50);
