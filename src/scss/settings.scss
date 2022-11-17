@@ -230,63 +230,98 @@
 	&__button {
 	}
 }
-
+// +/////////////////
+// .gender
 .gender {
-	max-width: rem(440);
-	width: 100%;
+	margin-bottom: rem(20);
 	display: flex;
+	max-width: rem(460);
+	width: 100%;
 	align-items: center;
-	column-gap: rem(20);
-	@include adaptiveValue("column-gap", 20, 10);
-	justify-content: space-between;
-	// .gender__title
-	&__title {
-		display: inline-block;
+	// .gender__text
+	&__text {
+		//@include adaptiveValue("margin-left", 20, 5);
 		font-weight: 500;
-		font-size: rem(16);
-		color: #BBB7B7;
-		@include adaptiveValue("margin-left", 20, 10);
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(20, 14);
+		text-align: center;
+		color: #bbb7b7;
+		margin-right: rem(22);
 	}
-	// .gender__radio-btn
-	&__radio-btn {
-		display: inline-block;
-		font-weight: 500;
-		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-		border-radius: 10px;
-		transition: background-color 0.5s ease 0s;
-		//margin-right: 10px;
-		& input[type="radio"] {
-			display: none;
-			&:checked + label {
-				background-color: $redColor;
-				color: #fff;
-			}
-		}
-		& label {
-			display: inline-block;
-			cursor: pointer;
-			// max-width: rem(180);
-			// width: 100%;
-			padding: 0 rem(50);
-			@include adaptiveValue("padding-left", 54, 12);
-			@include adaptiveValue("padding-right", 54, 12);
-			line-height: rem(50);
-			// border: 1px solid #999;
-			border-radius: 6px;
-			user-select: none;
-			&:hover {
-				background-color: #c72a2acb;
-				color: #ffffff;
-			}
-			&:active {
-				top: rem(3);
-				background-color: $redColor;
-				box-shadow: 0 rem(2) 0 $redColor;
-			}
-		}
+	// .gender__r-all
+	&__r-all {
+		display: flex;
+		flex: 0 1 100%;
+		//justify-content: space-between;
 	}
 }
 
+.r-all {
+	background: #f6f7f7;
+	//border: solid 2px #ffbffb;
+	//border-radius: 10px;
+	position: relative;
+	display: flex;
+	//margin: 20px 0;
+	max-width: rem(400);
+	width: 100%;
+}
+.r-all .r-group {
+	width: calc(100% - 20px);
+	display: flex;
+	background: #ffffff;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	transition: box-shadow 0.2s ease;
+}
+.r-group:first-child {
+	margin-right: rem(20);
+}
+
+.r-all .r-group input {
+	opacity: 0;
+	position: absolute;
+}
+.r-all .r-group input + label {
+	border-radius: 10px;
+	flex: 1 1 100%;
+	font-size: rem(16);
+	@include adaptiveValue("font-size", 16, 14);
+	line-height: rem(50);
+	font-weight: 500;
+	margin: 0;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+	transition: color 0.4s ease;
+	cursor: pointer;
+}
+.r-all::before {
+	background: $redColor;
+	border-radius: 10px;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+	color: #fff;
+	content: "";
+	display: block;
+	//height: calc(100% - 20px);
+	height: rem(50);
+	position: absolute;
+	//top: 10px;
+	left: 0px;
+	transform: translateX(calc((100% + (10px * 2)) * (var(--options-active) - 1)));
+	transition: transform cubic-bezier(0.8, 0.34, 0.28, 1.15) 0.35s;
+	width: calc((100% - ((var(--options) * 5px) * 2)) / var(--options));
+}
+.r-all .r-group input:checked + label {
+	color: #fff;
+}
+.r-all .r-group:hover {
+	background: #c72a2a7d;
+	color: #fff;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+// +/////////////////
 .options {
 	//position: relative;
 	//display: flex;

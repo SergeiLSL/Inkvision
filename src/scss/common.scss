@@ -71,7 +71,7 @@ form * {
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 	transition: all 0.5s ease 0s;
 	&:not(:last-child) {
-		margin-bottom: rem(25);
+		margin-bottom: rem(20);
 	}
 	&_big {
 		flex: 1 1 100%;
@@ -275,7 +275,7 @@ form * {
 .checkbox {
 	position: relative;
 	width: 100%;
-	margin-bottom: rem(20);
+	//margin-bottom: rem(20);
 	// .checkbox__input
 	&__input {
 		position: absolute;
