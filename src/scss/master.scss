@@ -115,8 +115,22 @@
 	// .about-master__styles
 	&__styles {
 		&:not(:last-child) {
-			margin-bottom: rem(25);
+			margin-bottom: rem(10);
 		}
+	}
+	// .about-master__style
+	&__style {
+		display: inline-block;
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		color: #ffffff;
+		background: $redColor;
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		padding: rem(5) rem(10);
+		margin-right: rem(6);
+		margin-bottom: rem(10);
 	}
 	// .about-master__residence
 	&__residence {
@@ -154,9 +168,66 @@
 	}
 	// .about-master__button
 	&__button {
+		display: flex;
+		max-width: rem(400);
+		width: 100%;
+		background: #369248;
+		box-shadow: 0 rem(4) rem(4) rgba(54, 146, 72, 0.25);
+		border-radius: rem(25);
+		padding: rem(13) rem(72);
+		align-items: center;
+		position: relative;
+		top: 0;
+		transition: background-color 0.5s ease 0s;
 		&:not(:last-child) {
-			margin-bottom: rem(22);
+			margin-bottom: rem(20);
 		}
+		&:hover {
+			background-color: #c72a2ac3;
+			color: #ffffff;
+		}
+		&:active {
+			top: rem(3);
+			background-color: $redColor;
+			//box-shadow: 0 rem(5) 0 $redColor;
+		}
+	}
+	// .about-master__icon
+	&__icon {
+		display: flex;
+		flex: 0 0 rem(40);
+		max-width: rem(40);
+		height: rem(40);
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		margin-right: rem(9);
+	}
+	// .about-master__title
+	&__title {
+		font-weight: 500;
+		font-size: rem(30);
+		line-height: math.div(37, 30);
+		color: #ffffff;
+	}
+
+	// .about-master__links
+	&__links {
+		display: flex;
+		max-width: rem(400);
+		width: 100%;
+		justify-content: center;
+	}
+	// .about-master__icon
+	&__icon-link {
+		display: flex;
+		flex: 0 0 rem(23);
+		max-width: rem(23);
+		height: rem(23);
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		margin-right: rem(4);
 	}
 	// .about-master__link
 	&__link {
@@ -173,12 +244,15 @@
 	}
 	// .tab-master__navigation
 	&__navigation {
+		justify-content: space-between;
 		&:not(:last-child) {
 			margin-bottom: rem(40);
 		}
 	}
 	// .tab-master__title
 	&__title {
+		max-width: rem(426);
+		width: 100%;
 		font-weight: 900;
 		font-size: rem(32);
 		line-height: math.div(39, 32);
@@ -188,9 +262,13 @@
 		background: #ffffff;
 		box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 0.25);
 		border-radius: 0px 8px 8px 0px;
-		transition: all 0.3 ease;
+		transition: all 0.5 ease;
 		&:hover {
-			color: #fff;
+			color: $redColor;
+			//background: $redColor;
+		}
+		&._tab-active {
+			color: #ffffff;
 			background: $redColor;
 		}
 	}

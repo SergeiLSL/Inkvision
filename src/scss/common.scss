@@ -193,7 +193,6 @@ form * {
 	&:active {
 		top: rem(3);
 		background-color: $redColor;
-		box-shadow: 0 rem(5) 0 $redColor;
 	}
 	&_color {
 		color: #ffffff;
@@ -233,7 +232,6 @@ form * {
 	&:active {
 		top: rem(3);
 		background-color: $redColor;
-		box-shadow: 0 rem(5) 0 $redColor;
 	}
 }
 
