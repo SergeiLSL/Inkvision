@@ -50,16 +50,16 @@ form * {
 }
 // Иконки с иконочным шрифтом
 .icon {
+	position: relative;
 	font-family: "icons";
 	padding: 10px;
-	background: #fff;
+	//background: #fff;
 	color: #bbb7b7;
 	text-align: center;
 	font-size: rem(22);
-	align-self: self-start;
+	align-self: start;
 	right: 0rem;
-	top: 0.2rem;
-	//align-items: center;
+	top: 0.3rem;
 }
 
 .item {
@@ -76,6 +76,9 @@ form * {
 	&_big {
 		flex: 1 1 100%;
 	}
+	&__textarea {
+		flex: 1 1 rem(1280);
+	}
 	&_average {
 		flex: 0 0 rem(460);
 	}
@@ -87,7 +90,7 @@ form * {
 		height: rem(2);
 		width: 100%;
 		background: $headerColor;
-		border-radius: 2px;
+		border-radius: 0 0 rem(2) rem(2);
 	}
 	&_gender {
 	}
@@ -120,15 +123,35 @@ form * {
 	font-size: rem(16);
 	line-height: math.div(20, 16);
 	color: $mainColor;
-	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: rem(1) rem(1) rem(4) rgba(0, 0, 0, 0.25);
+	border-radius: rem(2);
 	min-height: rem(120);
+	// transition: all 0.5s ease 0s;
 	&:hover {
-		border: 1px solid $redColor;
+		border: 1px solid $redColor;			
 	}
 	&.aicon {
-		align-items: start;
 	}
+	&::after {
+	}
+}
+
+.area {
+	flex: 1 1 100%;
+	position: relative;
+	transition: all 0.5s ease 0s;
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: rem(-1);
+		left: 0;
+		height: rem(2);
+		width: 100%;
+		background-color: $headerColor;
+		border-radius: 0 0 rem(2) rem(2);
+	}
+
 }
 
 .aicon {
@@ -138,8 +161,6 @@ form * {
 	top: 0;
 	bottom: 0;
 	right: 0.5rem;
-	//width: 2.25rem;
-	//cursor: pointer;
 	color: #bdbdbd;
 	transition: color 0.15s ease-in-out;
 	&:hover {

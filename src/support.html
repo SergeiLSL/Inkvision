@@ -21,11 +21,9 @@
 							<div class="form__info">
 								<!-- Почта -->
 								<div class="form__item item">
-									<input data-validate data-error="Введен неверный пароль!" data-required="password"
-										type="text" id="oldpass" name="form[password]" placeholder="Адрес эл.почты"
-										class="form__input input _req">
+									<input class="form__input input" data-error="Введен не верный E-mail" data-required="email" type="text" placeholder="Адрес эл.почты" name="form[useremail]">
 									<span class="form__aicon">
-										<div class="_icon-email1 form__icon form__icon_email1 icon">
+										<div class="_icon-email form__icon form__icon_user icon">
 										</div>
 									</span>
 								</div>
@@ -48,9 +46,9 @@
 
 								<!-- Тип обращения -->
 								<!-- Вопрос -->
-								<div class="form__item item_big">
+								<div class="form__area area">
 									<textarea id="question" type="area" name=form[question]
-										class="form__textarea input textarea" data-autoheight
+										class="form__textarea textarea" data-autoheight
 										placeholder="Объясните ваш вопрос"></textarea>
 									<span class="form__aicon">
 										<div class="_icon-question form__icon form__icon_question icon">

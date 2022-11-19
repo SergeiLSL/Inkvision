@@ -46,7 +46,6 @@
 								</div>
 								<div class="about-master__title">Подписаться</div>
 							</button>
-
 							<a href="#" class="about-master__links">
 								<div class="about-master__icon-link">
 									<img src="@img/master/ban.svg" alt="Icon">
@@ -73,7 +72,8 @@
 													<div class="box-gallery__style">
 														<div class="box-gallery__item">
 															<div class="item__image">
-																<img data-src="@img/settings/botanica.jpg" alt="Ботаническая">
+																<img data-src="@img/settings/botanica.jpg"
+																	alt="Ботаническая">
 															</div>
 															<div class="item__name">Ботаническая</div>
 														</div>
@@ -89,7 +89,8 @@
 													<div class="box-gallery__style">
 														<div class="box-gallery__item">
 															<div class="item__image">
-																<img data-src="@img/settings/engraving.jpg" alt=engraving">
+																<img data-src="@img/settings/engraving.jpg"
+																	alt=engraving">
 															</div>
 															<div class="item__name">
 																Гравюра
@@ -99,7 +100,8 @@
 													<div class="box-gallery__style">
 														<div class="box-gallery__item">
 															<div class="item__image">
-																<img data-src="@img/settings/bioorganics.jpg" alt="Биоорганика">
+																<img data-src="@img/settings/bioorganics.jpg"
+																	alt="Биоорганика">
 															</div>
 															<div class="item__name">
 																Биоорганика
@@ -109,7 +111,8 @@
 													<div class="box-gallery__style">
 														<div class="box-gallery__item">
 															<div class="item__image">
-																<img data-src="@img/settings/minimalism.jpg" alt="Минимализм">
+																<img data-src="@img/settings/minimalism.jpg"
+																	alt="Минимализм">
 															</div>
 															<div class="item__name">
 																Минимализм
@@ -119,7 +122,8 @@
 													<div class="box-gallery__style">
 														<div class="box-gallery__item">
 															<div class="item__image">
-																<img data-src="@img/settings/miniature.jpg" alt="Миниатюра">
+																<img data-src="@img/settings/miniature.jpg"
+																	alt="Миниатюра">
 															</div>
 															<div class="item__name">
 																Миниатюра
@@ -129,7 +133,8 @@
 													<div class="box-gallery__style">
 														<div class="box-gallery__item">
 															<div class="item__image">
-																<img data-src="@img/settings/linework.jpg" alt="Лайнворк">
+																<img data-src="@img/settings/linework.jpg"
+																	alt="Лайнворк">
 															</div>
 															<div class="item__name">
 																Лайнворк
@@ -160,7 +165,8 @@
 													<div class="box-gallery__style">
 														<div class="box-gallery__item">
 															<div class="item__image">
-																<img data-src="@img/settings/oriental.jpg" alt="Ориентал">
+																<img data-src="@img/settings/oriental.jpg"
+																	alt="Ориентал">
 															</div>
 															<div class="item__name">
 																Ориентал
@@ -222,8 +228,8 @@
 															<!-- Пароль должен быть не менее 8 символов, содержать минимум 1 строчную, 1 прописную букву и минимум 1 цифру. -->
 														</div>
 														<div class="form__item item">
-															<label for="formNewpass" class="form__label">Подтвердите новый
-																пароль*:</label>
+															<label for="formNewpass" class="form__label">Подтвердите
+																новый пароль*:</label>
 															<input data-validate data-error="Введен неверный пароль!"
 																data-required="password" type="text" id="newpass2"
 																name="form[passwordNew2]"
@@ -233,7 +239,7 @@
 																type="button"></button>
 														</div>
 													</div>
-	
+
 													<div class="form__buttons">
 														<button type="reset" class="form__button button">Предыдущий
 															шаг</button>
@@ -247,22 +253,17 @@
 									</div>
 									<!--? Связаться -->
 									<div class="tab-master__body body-contact">
-										<div class="body-contact__content">
-											<div class="body-contact__text text-setting">
-												Вы можете задать вопрос мастеру через эту форму обратной связи
-											</div>
+										<div class="body-contact__text">
+											Вы можете задать вопрос мастеру через эту форму обратной связи
 										</div>
 
 										<form action="#" id="form" class="body-contact__form form">
 											<div class="form__info">
 												<!-- Почта -->
 												<div class="form__item item">
-													<input data-validate data-error="Введен неверный пароль!"
-														data-required="password" type="text" id="oldpass"
-														name="form[password]" placeholder="Адрес эл.почты"
-														class="form__input input _req">
+													<input class="form__input input" data-error="Введен не верный E-mail" data-required="email" type="text" placeholder="Адрес эл.почты" name="form[useremail]">
 													<span class="form__aicon">
-														<div class="_icon-email1 form__icon form__icon_email1 icon">
+														<div class="_icon-email form__icon form__icon_user icon">
 														</div>
 													</span>
 												</div>
@@ -276,9 +277,9 @@
 													</span>
 												</div>
 												<!-- Вопрос -->
-												<div class="form__item item_big">
+												<div class="form__area area">
 													<textarea id="question" type="area" name=form[question]
-														class="form__textarea input textarea" data-autoheight
+														class="form__textarea textarea" data-autoheight
 														placeholder="Объясните ваш вопрос"></textarea>
 													<span class="form__aicon">
 														<div class="_icon-question form__icon form__icon_question icon">
@@ -298,6 +299,15 @@
 											<button type="submit"
 												class="form__button button button_color button_big">Отправить</button>
 										</form>
+
+										<div class="body-contact__protection">
+											<div class="body-contact__title">Защита от спама</div>
+											<div class="body-contact__info">Для отображения полной версии
+												контактных данных, вам необходимо
+												<span><a href="#">Войти</a></span> или
+												<span><a href="#">Зарегистрироваться</a></span>.
+											</div>
+										</div>
 
 									</div>
 								</div>

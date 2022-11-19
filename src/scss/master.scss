@@ -1,60 +1,3 @@
-.page {
-	// .page__setting
-	&__setting {
-	}
-}
-// ? setting
-.setting {
-	// .setting__container
-	&__container {
-		padding: rem(110) rem(15) rem(30) rem(15);
-		// //background-color: #f4ffd2; // убрать
-		// @media (max-width: $tablet) {
-		// 	padding-top: rem(110);
-		// }
-		// @media (max-width: $mobile) {
-		// 	padding-top: rem(190);
-		// }
-		// @media (max-width: $mobileSmall) {
-		// 	padding-top: rem(220);
-		// }
-		// @include adaptiveValue("padding-bottom", 30, 15);
-	}
-	// .setting__body
-	&__body {
-	}
-	// .setting__tabs
-	&__tabs {
-		display: flex;
-		column-gap: rem(46);
-		@media (max-width: $tablet) {
-			display: block;
-		}
-	}
-	// .setting__box-navigation
-	&__box-navigation {
-		flex: 0 1 31.42%;
-		background: url("@img/reperat.jpg");
-		border-radius: rem(25);
-		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-		padding: rem(20) rem(14) rem(20) rem(26);
-		@media (max-width: $tablet) {
-			margin-bottom: rem(25);
-			display: none;
-		}
-	}
-	&__box-content {
-		flex: 0 1 65.68%;
-		padding: rem(0) rem(0) rem(20) rem(0);
-	}
-	// .setting__navigation
-	&__navigation {
-		display: flex;
-		flex-wrap: wrap;
-		column-gap: rem(50);
-	}
-}
-
 //========================================================================================================================================================
 .page {
 	background: url("@img/reperat.jpg");
@@ -189,7 +132,6 @@
 		&:active {
 			top: rem(3);
 			background-color: $redColor;
-			//box-shadow: 0 rem(5) 0 $redColor;
 		}
 	}
 	// .about-master__icon
@@ -210,7 +152,6 @@
 		line-height: math.div(37, 30);
 		color: #ffffff;
 	}
-
 	// .about-master__links
 	&__links {
 		display: flex;
@@ -259,17 +200,29 @@
 		color: #00020f;
 		text-align: justify;
 		padding: rem(22) rem(116);
-		background: #ffffff;
-		box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, 0.25);
-		border-radius: 0px 8px 8px 0px;
+		background-color: #ffffff;
+		box-shadow: rem(4) rem(4) rem(8) rem(-2) rgba(0, 0, 0, 0.25);
+		border-radius: rem(0);
 		transition: all 0.5 ease;
+		position: relative;
+		top: 0;
+		&:first-child {
+			border-radius: rem(8) rem(0) rem(0) rem(8);
+		}
+		&:last-child {
+			border-radius: rem(0) rem(8) rem(8) rem(0);
+		}
 		&:hover {
 			color: $redColor;
-			//background: $redColor;
 		}
 		&._tab-active {
 			color: #ffffff;
-			background: $redColor;
+			background-color: $redColor;
+		}
+		&:active {
+			top: rem(3);
+			color: #ffffff;
+			background-color: $redColor;
 		}
 	}
 	// .tab-master__content
@@ -301,10 +254,10 @@
 
 .box-styles {
 	// .box-styles__gallery
-
 	&__gallery {
 	}
 }
+
 .box-gallery {
 	// .box-gallery__row
 
@@ -321,157 +274,151 @@
 	&__item {
 	}
 }
+
 .item {
 	// .item_big
-
 	&_big {
 	}
-
 	// .item__image
-
 	&__image {
 	}
-
 	// .item__name
-
 	&__name {
 	}
 }
+
 .body-price {
 }
+
 .password {
 	// .password__title
-
 	&__title {
 	}
-
 	// .password__form
-
 	&__form {
 	}
 }
+
 .title-setting {
 }
+
 .form-pass {
 }
+
 .form {
 	// .form__input
-
 	&__input {
 	}
-
 	// .form__items
-
 	&__items {
 	}
-
 	// .form__item
-
 	&__item {
 	}
-
 	// .form__aicon
-
 	&__aicon {
 	}
-
 	// .form__icon
-
 	&__icon {
 		// .form__icon_user
-
 		&_user {
 		}
-
 		// .form__icon_email1
-
 		&_email1 {
 		}
-
 		// .form__icon_question
-
 		&_question {
 		}
 	}
-
 	// .form__label
-
 	&__label {
 	}
-
 	// .form__viewpass
-
 	&__viewpass {
 	}
-
-	// .form__buttons
-
-	&__buttons {
-	}
-
 	// .form__button
-
 	&__button {
+		max-width: rem(1280);
+		width: 100%;
+		margin-top: rem(20);
 	}
-
 	// .form__info
-
 	&__info {
 	}
-
 	// .form__textarea
-
 	&__textarea {
 	}
 }
+
 .input {
 }
 .icon {
 }
+
 .button {
 	// .button_color
-
 	&_color {
 	}
-
 	// .button_big
-
 	&_big {
 	}
 }
+
 .body-contact {
-	// .body-contact__content
-
-	&__content {
-	}
-
+	max-width: rem(1280);
+	width: 100%;
 	// .body-contact__text
-
 	&__text {
+		font-size: rem(24);
+		line-height: math.div(29, 24);
+		color: $mainColor;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
 	}
-
 	// .body-contact__form
-
 	&__form {
+		&:not(:last-child) {
+			margin-bottom: rem(35);
+		}
+	}
+	// .body-contact__protection
+	&__protection {
+	}
+	// .body-contact__title
+	&__title {
+		font-weight: 700;
+		font-size: rem(32);
+		line-height: math.div(39, 32);
+		color: $mainColor;
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	// .body-contact__info
+	&__info {
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		color: $headerColor;
+		transition: color 0.5s ease;
+		span {
+			cursor: pointer;
+			text-decoration: underline;
+			&:hover {
+				color: $redColor;
+			}
+		}
 	}
 }
-.text-setting {
-}
-.textarea {
-}
+
 .checkbox {
 	// .checkbox__input
-
 	&__input {
 	}
-
 	// .checkbox__label
-
 	&__label {
 	}
-
 	// .checkbox__text
-
 	&__text {
 	}
 }

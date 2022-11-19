@@ -456,14 +456,21 @@
 		justify-content: center;
 		white-space: nowrap;
 		transition: background 0.3s ease;
+		position: relative;
+		top: 0;
 		&:hover {
 			//border-radius: rem(8);
 			color: #fff;
-			background: rgba(230, 49, 49, 0.815);
+			background: rgba(230, 49, 49, 0.815);			
+		}
+		&:active {
+			top: rem(3);
+			background-color: $redColor;
 		}
 		&._tab-active {
 			color: #fff;
 			background-color: $redColor;
+			
 		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 20, 15);
@@ -513,6 +520,7 @@
 		}
 		// .form__icon_question
 		&_question {
+		
 		}
 		// .form__icon_city
 		&_city {
@@ -523,17 +531,17 @@
 	}
 	// .form__item
 	&__item {
-		position: relative;
-		&::after {
-			position: absolute;
-			content: "";
-			bottom: rem(0);
-			left: 0;
-			height: rem(2);
-			width: 100%;
-			background: $headerColor;
-			border-radius: 2px;
-		}
+		// position: relative;
+		// &::after {
+		// 	position: absolute;
+		// 	content: "";
+		// 	bottom: rem(0);
+		// 	left: 0;
+		// 	height: rem(2);
+		// 	width: 100%;
+		// 	background: $headerColor;
+		// 	border-radius: 2px;
+		// }
 	}
 	// .form__textarea
 	&__textarea {
@@ -557,6 +565,7 @@
 	}
 	// .form__button
 	&__button {
+
 	}
 }
 
@@ -850,6 +859,7 @@
 		&:not(:last-child) {
 			margin-bottom: rem(10);
 		}
+
 	}
 }
 
