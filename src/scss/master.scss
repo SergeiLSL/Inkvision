@@ -1,6 +1,6 @@
 //========================================================================================================================================================
 .page {
-	background: url("@img/reperat.jpg");
+	background: url("@img/repeat.jpg");
 	// .page__master
 	&__master {
 	}
@@ -234,7 +234,42 @@
 }
 
 .body-portfolio {
+	// .body-portfolio__styles
+	&__styles {
+	}
+	// .body-portfolio__style
+	&__style {
+	}
+	// .body-portfolio__figure
+	&__figure {
+		display: flex;
+		flex-flow: column;
+		padding: 5px;
+		max-width:311px;
+		margin: auto;
+	}
+	// .body-portfolio__image
+	&__image {
+		max-width: rem(311);
+		height: rem(344);
+		width: 100%;
+		//max-height: 150px;
+	}
+	// .body-portfolio__figcaption
+	&__figcaption {
+		display: flex;
+		justify-content: center;
+		gap: rem(10);
+		background-color: #222;
+		border-radius: 0px 0px 10px 10px;
+		color: #fff;
+		padding: 3px;
+		text-align: center;
+	}
 }
+
+
+
 .item__image {
 	width: rem(311);
 	height: rem(346);
