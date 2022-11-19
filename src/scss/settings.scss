@@ -413,15 +413,7 @@
 .box-special {
 	// .box-special__title
 	&__title {
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 110, 20);
-		}
-		@media (max-width: $tablet) {
-			&:not(:last-child) {
-				margin-bottom: rem(0);
-			}
-			margin-top: rem(30);
-		}
+		margin-bottom: rem(20);
 	}
 	// .box-special__body
 	&__body {

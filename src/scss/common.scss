@@ -21,6 +21,10 @@
 	& span {
 		color: $redColor;
 		text-align: justify;
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;		}
+
 	}
 	&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 20, 10);
