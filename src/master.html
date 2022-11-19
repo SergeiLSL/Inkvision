@@ -261,7 +261,7 @@
 											<div class="form__info">
 												<!-- Почта -->
 												<div class="form__item item">
-													<input data-validate class="form__input input" data-error="Введен не верный E-mail" data-required="email" type="text" placeholder="Адрес почты" name="form[email]">
+													<input data-validate class="form__input input" data-error="Введен не верный E-mail" data-required="email" type="text" placeholder="Адрес почты" name="form[useremail]">
 													<span class="form__aicon">
 														<div class="_icon-email form__icon form__icon_user icon">
 														</div>
@@ -269,7 +269,7 @@
 												</div>
 												<!-- Имя -->
 												<div class="form__item item">
-													<input class="form__input input" type="text" placeholder="Имя"
+													<input data-validate class="form__input input" data-error="Введите имя" data-required="username" type="text" placeholder="Имя"
 														name=form[username]>
 													<span class="form__aicon">
 														<div class="_icon-user form__icon form__icon_user icon">
@@ -278,7 +278,7 @@
 												</div>
 												<!-- Вопрос -->
 												<div class="form__area area">
-													<textarea id="question" type="area" name=form[question]
+													<textarea data-validate id="question" data-error="Введите ваш вопрос" data-required="userquestion" type="area" name=form[userquestion]
 														class="form__textarea textarea" data-autoheight
 														placeholder="Объясните ваш вопрос"></textarea>
 													<span class="form__aicon">

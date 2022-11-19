@@ -84,7 +84,7 @@
 												<div class="form__info">
 													<!-- Имя -->
 													<div class="form__item item">
-														<input class="form__input input" type="text" placeholder="Имя"
+														<input data-validate class="form__input input" type="text" data-error="Введите имя" data-required="username" placeholder="Имя"
 															name=form[name]>
 														<span class="form__aicon">
 															<div class="_icon-user icon">
@@ -93,7 +93,7 @@
 													</div>
 													<!-- Фамилия -->
 													<div class="form__item item">
-														<input class="form__input input" type="text"
+														<input data-validate class="form__input input" type="text"  data-error="Введите фамилию" data-required="lastname"
 															placeholder="Фамилия" name=form[lastname]>
 														<span class="form__aicon">
 															<div class="_icon-user icon">
@@ -102,7 +102,6 @@
 													</div>
 													<!-- День рождения -->
 													<div class="form__item item">
-														<!-- Starting Date: -->
 														<input class="form__input input" onfocus="this.type='date'"
 															onblur="this.type='text',this.placeholder='День рождения'"
 															type="text" placeholder="День рождения">
@@ -113,7 +112,7 @@
 													</div>
 													<!-- Страна -->
 													<div class="form__item item">
-														<input class="form__input input" type="nationalite"
+														<input data-validate class="form__input input" type="nationalite" data-error="В какой стране вы живете?" data-required="nationalite"
 															placeholder="Страна" name=form[Nationalite]>
 														<span class="form__aicon">
 															<div class="_icon-country icon">
@@ -122,7 +121,7 @@
 													</div>
 													<!-- Город -->
 													<div class="form__item item">
-														<input class="form__input input" type="text" placeholder="Город"
+														<input data-validate class="form__input input" type="text" data-error="В каком городе вы живете?" data-required="city" placeholder="Город"
 															name=form[city]>
 														<span class="form__aicon">
 															<div class="_icon-city icon">
@@ -785,7 +784,7 @@
 											<form action="#" id="form-pass" data-dev class="form__input form">
 												<div class="form__items">
 													<div class="form__item item">
-														<input data-validate class="form__input input" type="text"
+														<input data-validate class="form__input input" data-error="Введите имя" data-required="username" type="text"
 															placeholder="Имя" name=form[username]>
 														<span class="form__aicon">
 															<div class="_icon-user form__icon form__icon_user icon">

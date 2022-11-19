@@ -62,8 +62,8 @@ form * {
 	text-align: center;
 	font-size: rem(22);
 	align-self: start;
-	right: 0rem;
-	top: 0.3rem;
+	right: 0.2rem;
+	top: 0.2rem;
 }
 
 .item {
@@ -75,7 +75,7 @@ form * {
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 	transition: all 0.5s ease 0s;
 	&:not(:last-child) {
-		margin-bottom: rem(20);
+		margin-bottom: rem(28);
 	}
 	&_big {
 		flex: 1 1 100%;
@@ -189,6 +189,24 @@ form * {
 		}
 	}
 }
+
+.form {
+	&__error {
+		position: absolute;
+		left: 0;
+		z-index: 2;
+		//background-color: #fbffe3;
+		//box-shadow: 0 0 15px red;
+		bottom: rem(-20);
+		left: rem(25);
+		padding: rem(3) rem(5) rem(0) rem(5);
+		color: $redColor;
+		.item {
+			margin-bottom: rem(40);
+		}
+	}
+}
+
 
 //====================================================================================================
 //? Кнопки
