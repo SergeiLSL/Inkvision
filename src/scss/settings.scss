@@ -279,7 +279,7 @@
 }
 
 .r-all .r-group input {
-	opacity: 0;
+	opacity: 1; // ? должно быть 0
 	position: absolute;
 }
 .r-all .r-group input + label {

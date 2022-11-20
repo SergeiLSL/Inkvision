@@ -7,6 +7,7 @@ import { flsModules } from "./modules.js";
 // .gender
 // ? Группа радио кнопок Определяем пол человека
 let all = document.querySelectorAll('.r-all');
+console.log('+++');
 for (let a = 0; a < all.length; a++){ 
     let radios = all[a].querySelectorAll('.r-input');
     let i = 1;
