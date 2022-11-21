@@ -10,33 +10,38 @@
 		<main class="page">
 			<div class="support">
 				<div class="support__container">
-					<div class="support__body body-tabs">
-						<div class="support__content question">
-							<div class="question__title title-setting">Задать вопрос</div>
-							<div class="question__text text-setting">
-								Чтобы мы могли вам помочь, опишите свой вопрос максимально подробно
+					<div class="support__box">
+						<div class="support__body body-tabs">
+							<div class="support__content question">
+								<div class="question__title title-setting">Задать вопрос</div>
+								<div class="question__text text-setting">
+									Чтобы мы могли вам помочь, опишите свой вопрос максимально подробно
+								</div>
 							</div>
-						</div>
-						<form action="#" id="form" class="question__form form">
-							<div class="form__info">
-								<!-- Почта -->
-								<div class="form__item item">
-									<input class="form__input input" data-error="Введен не верный E-mail" data-required="email" type="text" placeholder="Адрес эл.почты" name="form[useremail]">
-									<span class="form__aicon">
-										<div class="_icon-email form__icon form__icon_user icon">
-										</div>
-									</span>
-								</div>
-								<!-- Имя -->
-								<div class="form__item item">
-									<input class="form__input input" type="text" placeholder="Имя" name=form[username]>
-									<span class="form__aicon">
-										<div class="_icon-user form__icon form__icon_user icon">
-										</div>
-									</span>
-								</div>
-								<!-- Тип обращения -->
-								<!-- <div class="form__item item text item_average">
+							<form action="#" id="form" class="question__form">
+								<div class="question__info">
+									<!-- Почта -->
+									<div class="form__item item">
+										<input class="form__input input" data-error="Введен не верный E-mail"
+											data-validate data-required="email" type="text"
+											placeholder="example@domain.com" name="form[useremail]">
+										<span class="form__aicon">
+											<div class="_icon-email form__icon form__icon_user icon">
+											</div>
+										</span>
+									</div>
+									<!-- Имя -->
+									<div class="form__item item">
+										<input data-validate class="form__input input" data-error="Введите имя"
+											data-required="username" type="text" placeholder="Имя" name=form[username]>
+										<span class="form__aicon">
+											<div class="_icon-user form__icon form__icon_user icon">
+											</div>
+										</span>
+									</div>
+
+									<!-- Тип обращения -->
+									<!-- <div class="form__item item text item_average">
 										<label for="mappeal" class="text__label">Тип обращения*:</label>
 										<div class="text__icon text__icon_arrow">
 											<input id="Appeal" type="text" name="appeal" placeholder="Тип обращения"
@@ -44,37 +49,36 @@
 										</div>
 									</div> -->
 
-								<!-- Тип обращения -->
-								<!-- Вопрос -->
-								<div class="form__area area">
-									<textarea id="question" type="area" name=form[question]
-										class="form__textarea textarea" data-autoheight
-										placeholder="Объясните ваш вопрос"></textarea>
-									<span class="form__aicon">
-										<div class="_icon-question form__icon form__icon_question icon">
-										</div>
-									</span>
+									<!-- Вопрос -->
+									<div class="form__area area">
+										<textarea data-validate id="question" type="area" name=form[question]
+											data-error="Задайте вопрос" data-required="question"
+											class="form__textarea textarea" data-autoheight
+											placeholder="Объясните ваш вопрос"></textarea>
+										<span class="form__aicon">
+											<div class="_icon-question form__icon form__icon_question icon">
+											</div>
+										</span>
+									</div>
 								</div>
-							</div>
 
-							<div class="checkbox">
-								<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-									name="form[]">
-								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Я
-										согласен с политикой обработки данных и политикой использования
-										сервиса.</span></label>
-							</div>
+								<div class="checkbox">
+									<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox"
+										value="1" name="form[]">
+									<label for="c_1" class="checkbox__label"><span class="checkbox__text">Я
+											согласен с политикой обработки данных и политикой использования
+											сервиса.</span></label>
+								</div>
 
-							<button type="submit" class="form__button button button_color button_big">Отправить</button>
-						</form>
-
+								<button type="submit"
+									class="form__button button button_color button_big">Отправить</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
-	</div>
-
-	</main>
-	@@include('html/_footer.htm',{})
+		</main>
+		@@include('html/_footer.htm',{})
 	</div>
 	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})
