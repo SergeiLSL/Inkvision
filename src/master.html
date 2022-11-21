@@ -9,9 +9,10 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 			<div class="page__master master">
-				<div class="master__container">
-					<section class="master__body">
-						<div class="master__about-master about-master">
+				<div class="master__box">
+
+					<section class="master__body body-master">
+						<div class="body-master__about-master about-master">
 							<div class="about-master__image">
 								<img class="about-master__image" src="@img/master/master.jpg" alt="Master">
 							</div>
@@ -54,7 +55,7 @@
 							</a>
 						</div>
 
-						<div class="master__content tab-master">
+						<div class="body-master__content tab-master">
 							<div data-tabs="1200" data-tabs-animate="1000" class="tab-master__tabs">
 
 								<nav data-tabs-titles class="tab-master__navigation">
@@ -170,65 +171,9 @@
 									</div>
 									<!--? Стоимость -->
 									<div class="tab-master__body body-price">
-										<div class="content-tabs__box-content password">
-											<div class="password__title title">
-												Сменить пароль
-											</div>
-											<div class="password__form form-pass">
-												<form action="#" id="form-pass" data-dev class="form__input form">
-													<div class="form__items">
-														<div class="form__item item">
-															<input data-validate class="form__input input" type="text"
-																placeholder="Имя" name=form[username]>
-															<span class="form__aicon">
-																<div class="_icon-user form__icon form__icon_user icon">
-																</div>
-															</span>
-														</div>
-														<div class="form__item item">
-															<label for="formOldpass" class="form__label">Старый
-																пароль*:</label>
-															<input autocomplete="off" data-validate
-																data-error="Введен неверный пароль!"
-																data-required="password" type="password" id="oldpass"
-																name="form[passwordOld]" placeholder="Старый пароль"
-																class="form__input input _req">
-															<button class="form__viewpass _icon-psw-view"
-																type="button"></button>
-														</div>
-														<div class="form__item item">
-															<label for="formNewpass" class="form__label">Новый
-																пароль*:</label>
-															<input autocomplete="off" data-validate
-																data-error="Введен неверный пароль!"
-																data-required="password" type="password" id="newpass1"
-																name="form[passwordNew1]" placeholder="Новый пароль"
-																class="form__input input _req">
-															<button class="form__viewpass _icon-psw-view"
-																type="button"></button>
-															<!-- Пароль должен быть не менее 8 символов, содержать минимум 1 строчную, 1 прописную букву и минимум 1 цифру. -->
-														</div>
-														<div class="form__item item">
-															<label for="formNewpass" class="form__label">Подтвердите
-																новый пароль*:</label>
-															<input data-validate data-error="Введен неверный пароль!"
-																data-required="password" type="text" id="newpass2"
-																name="form[passwordNew2]"
-																placeholder="Подтвердите новый пароль"
-																class="form__input input _req">
-															<button class="form__viewpass _icon-psw-view"
-																type="button"></button>
-														</div>
-													</div>
-
-													<div class="form__buttons">
-														<button type="reset" class="form__button button">Предыдущий
-															шаг</button>
-														<button type="submit"
-															class="form__button button button_color">Сохранить и
-															продолжить</button>
-													</div>
-												</form>
+										<div class="body-price__box">
+											<div class="body-price__title title">
+												В РАБОТЕ!!!!!
 											</div>
 										</div>
 									</div>
@@ -238,43 +183,43 @@
 											Вы можете задать вопрос мастеру через эту форму обратной связи
 										</div>
 
-										<form action="#" id="form" data-dev class="form__input form">
-											<div class="form__info">
+										<form action="#" id="formcontact" data-dev class="form__input form-contact">										<form action="#" id="form" data-dev class="form__input form-contact">
+											<div class="form-contact__info">
 												<!-- Почта -->
-												<div class="form__item item">
-													<input data-validate class="form__input input"
+												<div class="form-contact__item item">
+													<input data-validate class="form-contact__input input"
 														data-error="Введен не верный E-mail" data-required="email"
 														type="text" placeholder="Адрес почты" name="form[useremail]">
-													<span class="form__aicon">
-														<div class="_icon-email form__icon form__icon_user icon">
+													<span class="form-contact__aicon acion">
+														<div class="_icon-email form-contact__icon form__icon_user icon">
 														</div>
 													</span>
 												</div>
 												<!-- Имя -->
-												<div class="form__item item">
-													<input data-validate class="form__input input"
+												<div class="form-contact__item item">
+													<input data-validate class="form-contact__input input"
 														data-error="Введите имя" data-required="username" type="text"
 														placeholder="Имя" name=form[username]>
-													<span class="form__aicon">
-														<div class="_icon-user form__icon form__icon_user icon">
+													<span class="form-contact__aicon aicon">
+														<div class="_icon-user form-contact__icon form__icon_user icon">
 														</div>
 													</span>
 												</div>
 												<!-- Вопрос -->
-												<div class="form__area area">
+												<div class="form-contact__area area">
 													<textarea data-validate id="question"
 														data-error="Введите ваш вопрос" data-required="userquestion"
 														type="area" name=form[userquestion]
-														class="form__textarea textarea" data-autoheight
+														class="form-contact__textarea textarea" data-autoheight
 														placeholder="Объясните ваш вопрос"></textarea>
-													<span class="form__aicon">
-														<div class="_icon-question form__icon form__icon_question icon">
+													<span class="form-contact__aicon aicon">
+														<div class="_icon-question form-contact__icon form__icon_question icon">
 														</div>
 													</span>
 												</div>
 											</div>
 
-											<div class="checkbox">
+											<div class="form-contact__checkbox checkbox">
 												<input id="c_1" data-error="Ошибка" class="checkbox__input"
 													type="checkbox" value="1" name="form[]">
 												<label for="c_1" class="checkbox__label"><span
@@ -283,7 +228,7 @@
 											</div>
 
 											<button type="submit"
-												class="form__button button button_color button_big">Отправить</button>
+												class="form-contact__button button button_color button_big">Отправить</button>
 										</form>
 
 										<div class="body-contact__protection">
@@ -368,7 +313,7 @@
 											</div>
 
 											<div class="form__item item">
-												<label for="formpsw" class="form__label">Пароль*:</label>
+												<label for="formpsw" class="form__label"></label>
 												<input autocomplete="off" data-validate
 													data-error="Введен неверный пароль!" data-required="password"
 													type="password" id="psw" name="form[psw]" placeholder="Пароль"

@@ -70,7 +70,7 @@
 								<!--? Персональная информация -->
 								<div class="content-tabs__body body-tabs">
 									<div class="content-tabs__box">
-										<div class="content-tabs__box-content box-person">
+										<div class="content-tabs__box-person box-person">
 											<div class="box-person__title title">
 												Персональная информация
 											</div>
@@ -82,77 +82,80 @@
 												обратитесь в <span><a href="#"></a>техническую поддержку</span> за
 												дальнейшими инструкциями
 											</div>
-											<div class="box-person__form form">
-												<form action="#" id="forminfo" class="form__body form">
-													<div class="form__info">
+
+											<div class="box-person__form">
+												<form action="#" id="formperson" class="form__input form-person">
+													<div class="form-person__info">
 														<!-- Имя -->
-														<div class="form__item item">
-															<input data-validate class="form__input input" type="text"
-																data-error="Введите имя" data-required="username"
-																placeholder="Имя" name=form[name]>
-															<span class="form__aicon">
+														<div class="form-person__item item">
+															<input data-validate class="form-person__input input"
+																type="text" data-error="Введите имя"
+																data-required="username" placeholder="Имя"
+																name=form[name]>
+															<span class="form-person__aicon aicon">
 																<div class="_icon-user icon">
 																</div>
 															</span>
 														</div>
 														<!-- Фамилия -->
-														<div class="form__item item">
-															<input data-validate class="form__input input" type="text"
-																data-error="Введите фамилию" data-required="lastname"
-																placeholder="Фамилия" name=form[lastname]>
-															<span class="form__aicon">
+														<div class="form-person__item item">
+															<input data-validate class="form-person__input input"
+																type="text" data-error="Введите фамилию"
+																data-required="lastname" placeholder="Фамилия"
+																name=form[lastname]>
+															<span class="form-person__aicon aicon">
 																<div class="_icon-user icon">
 																</div>
 															</span>
 														</div>
 														<!-- День рождения -->
-														<div class="form__item item">
-															<input class="form__input input" onfocus="this.type='date'"
+														<div class="form-person__item item">
+															<input class="form-person__input input"
+																onfocus="this.type='date'"
 																onblur="this.type='text',this.placeholder='День рождения'"
 																type="text" placeholder="День рождения">
-															<span class="form__aicon">
+															<span class="form-person__aicon aicon">
 																<div class="_icon-date icon">
 																</div>
 															</span>
 														</div>
 														<!-- Страна -->
-														<div class="form__item item">
-															<input data-validate class="form__input input"
+														<div class="form-person__item item">
+															<input data-validate class="form-person__input input"
 																type="nationalite"
 																data-error="В какой стране вы живете?"
 																data-required="nationalite" placeholder="Страна"
 																name=form[Nationalite]>
-															<span class="form__aicon">
+															<span class="form-person__aicon aicon">
 																<div class="_icon-country icon">
 																</div>
 															</span>
 														</div>
 														<!-- Город -->
-														<div class="form__item item">
-															<input data-validate class="form__input input" type="text"
-																data-error="В каком городе вы живете?"
+														<div class="form-person__item item">
+															<input data-validate class="form-person__input input"
+																type="text" data-error="В каком городе вы живете?"
 																data-required="city" placeholder="Город"
 																name=form[city]>
-															<span class="form__aicon">
+															<span class="form-person__aicon aicon">
 																<div class="_icon-city icon">
 																</div>
 															</span>
 														</div>
 														<!-- Номер телефона -->
-														<div class="form__item item">
-															<input class="form__input input" type="phone"
+														<div class="form-person__item item">
+															<input class="form-person__input input" type="phone"
 																placeholder="Номер телефона" name=form[phone]>
-															<span class="form__aicon">
+															<span class="form-person__aicon aicon">
 																<div class="_icon-phone icon">
 																</div>
 															</span>
 														</div>
 													</div>
-
 													<!--? Определяем пол человека (радио кнопки)-->
 													<!--? Есть код в script.js -->
 													<!-- https://atuin.ru/blog/plavnoe-pereklyuchenie-radioknopok/ -->
-													<div class="form__gender gender">
+													<div class="form-person__gender gender">
 														<div class="gender__text">Пол:</div>
 														<div class="r-all">
 															<span class="r-group">
@@ -168,29 +171,30 @@
 														</div>
 													</div>
 
-													<div class="checkbox">
+													<div class="form-person__checkbox checkbox">
 														<input id="c_1" data-error="Ошибка" class="checkbox__input"
 															type="checkbox" value="1" name="form[]">
 														<label for="c_1" class="checkbox__label"><span
 																class="checkbox__text"><span>Я ознакомился с
 																	условиями <span>пользовательского</span> соглашения
-																	и
-																	<span>политикой обработки персональных
-																		данных</span></span></span></label>
+																	и <span>политикой обработки персональных
+																		данных</span></span></span>
+														</label>
 													</div>
 
 													<button type="submit"
-														class="form__button button button_color button_big">
+														class="form-person__button button button_color button_big">
 														Сохранить и продолжить
 													</button>
 
 													<button type="submit"
-														class="form__button2 button2 button_big">Сохранить
+														class="form-person__button2 button2 button_big">Сохранить
 														2 и продолжить 2
 													</button>
 
 												</form>
 											</div>
+
 										</div>
 									</div>
 								</div>
@@ -230,63 +234,60 @@
 															</button>
 														</nav>
 													</div>
-													<form action="#" id="box-special-form"
-														class="box-special-form form">
-														<div data-tabs-body class="form__content content-form">
+
+													<form action="#" id="formspecial" class="form__input form-special">
+														<div data-tabs-body class="form-special__content">
 															<!-- О себе... -->
-															<div class="form__area area">
+															<div class="form-special__area area">
 																<textarea id="about" type="area" name=form[about]
-																	class="form__textarea textarea" data-autoheight
-																	placeholder="О себе..."></textarea>
-																<span class="form__aicon">
-																	<div
-																		class="_icon-question form__icon form__icon_question icon">
+																	class="form-special__textarea textarea"
+																	data-autoheight placeholder="О себе..."></textarea>
+																<span class="form-special__aicon aicon">
+																	<div class="_icon-question form-special__icon icon">
 																	</div>
 																</span>
 															</div>
 															<!-- Адрес тату-студии -->
-															<div class="form__area area">
+															<div class="form-special__area area">
 																<textarea id="address" type="area" name=form[address]
-																	class="form__textarea input textarea"
+																	class="form-special__textarea input textarea"
 																	data-autoheight
 																	placeholder="Адрес тату-студии"></textarea>
-																<span class="form__aicon">
-																	<div
-																		class="_icon-city form__icon form__icon_city icon">
+																<span class="form-special__aicon aicon">
+																	<div class="_icon-city form-special__icon icon">
 																	</div>
 																</span>
 															</div>
 															<!-- Клиент -->
-															<div class="form__area area">
+															<div class="form-special__area area">
 																<textarea id="client" type="area" name=form[client]
-																	class="form__textarea input textarea"
+																	class="form-special__textarea input textarea"
 																	data-autoheight placeholder="Клиент"></textarea>
-																<span class="form__aicon">
-																	<div
-																		class="_icon-user form__icon form__icon_user icon">
+																<span class="form-special__aicon aicon">
+																	<div class="_icon-user form-special__icon icon">
 																	</div>
 																</span>
 															</div>
 															<!-- Опыт работы -->
-															<div class="form__area area">
+															<div class="form-special__area area">
 																<textarea id="work-experience" type="area"
 																	name=form[work-experience]
-																	class="form__textarea textarea" data-autoheight
+																	class="form-person__textarea textarea"
+																	data-autoheight
 																	placeholder="Опыт работы"></textarea>
-																<span class="form__aicon">
+																<span class="form-special__aicon aicon">
 																	<div class="_icon-user icon">
 																	</div>
 																</span>
 															</div>
 														</div>
-
-														<div class="form__buttons">
-															<button type="reset" class="form__button button">Предыдущий
-																шаг
+														<div class="form-special__buttons">
+															<button type="reset"
+																class="form-special__button button">Предыдущий шаг
 															</button>
 															<button type="submit"
-																class="form__button button button_color">Сохранить
-																и продолжить
+																class="form-special__button button button_color">
+																Сохранить и продолжить
 															</button>
 														</div>
 													</form>
@@ -309,428 +310,428 @@
 											<div class="box-styles__gallery box-gallery">
 												<div class="box-gallery__row">
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/botanica.jpg"
 																	alt="Ботаническая">
 															</div>
-															<div class="item__name">Ботаническая</div>
+															<div class="item-style__name">Ботаническая</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/anime.jpg" alt="Аниме">
 															</div>
-															<div class="item__name">Аниме</div>
+															<div class="item-style__name">Аниме</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/engraving.jpg"
 																	alt=engraving">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Гравюра
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/bioorganics.jpg"
 																	alt="Биоорганика">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Биоорганика
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/minimalism.jpg"
 																	alt="Минимализм">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Минимализм
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/miniature.jpg"
 																	alt="Миниатюра">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Миниатюра
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/linework.jpg"
 																	alt="Лайнворк">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Лайнворк
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/realism.jpg" alt="Реализм">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Реализм
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/neo-traditional.jpg"
 																	alt="Нео-традишнл">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Нео-традишнл
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/oriental.jpg"
 																	alt="Ориентал">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Ориентал
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/chicano.jpg" alt="Чикано">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Чикано
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/biomechanics.jpg"
 																	alt="Биомеханика">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Биомеханика
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/old-school.jpg"
 																	alt="Олд скул">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Олд скул
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/tribal.jpg" alt="Трайбл">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Трайбл
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/trash-polka.jpg"
 																	alt="Треш-полька">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Треш-полька
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/dotwork.jpg" alt="Дотворк">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Дотворк
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/polynesia.jpg"
 																	alt="Полинезия">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Полинезия
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/new-school.jpg"
 																	alt="Нью скул">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Нью скул
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/traditional.jpg"
 																	alt="Традишнл">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Традишнл
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/blackwork.jpg"
 																	alt="Блэкворк">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Блэкворк
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/ornamental.jpg"
 																	alt="Орнаментал">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Орнаментал
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/ethnicity.jpg"
 																	alt="Этника">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Этника
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/sketch-style.jpg"
 																	alt="Скетч стайл">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Скетч стайл
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/watercolor.jpg"
 																	alt="Акварель">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Акварель
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/graphic-arts.jpg"
 																	alt="Графика">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Графика
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/black-and-white.jpg"
 																	alt="Черно-белая">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Черно-белая
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/japanese.jpg"
 																	alt="Японский">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Японский
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/handpoke.jpg"
 																	alt="Хендпоук">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Хендпоук
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/lettering.jpg"
 																	alt="Леттеринг">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Леттеринг
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/geometry.jpg"
 																	alt="Геометрия">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Геометрия
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/celtic.jpg"
 																	alt="Кельтский">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Кельтский
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/steampunk.jpg"
 																	alt="Стимпанк">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Стимпанк
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/maori.jpg" alt="Маори">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Маори
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/haida.jpg" alt="Хайда">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Хайда
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/abstraction.jpg"
 																	alt="Абстракция">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Абстракция
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/baroque.jpg" alt="Барокко">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Барокко
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/organic.jpg"
 																	alt="Органика">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Органика
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/pagan.jpg" alt="Языческий">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Языческий
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/shamanic.jpg"
 																	alt="Шаманская">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Шаманская
 															</div>
 														</div>
 													</div>
 													<div class="box-gallery__style">
-														<div class="box-gallery__item">
-															<div class="item__image">
+														<div class="box-gallery__item item-style">
+															<div class="item-style__image">
 																<img data-src="@img/settings/maya-and-aztecs.jpg"
 																	alt="Майя и ацтеки">
 															</div>
-															<div class="item__name">
+															<div class="item-style__name">
 																Майя и ацтеки
 															</div>
 														</div>
@@ -829,60 +830,59 @@
 											<div class="password__title title">
 												Сменить пароль
 											</div>
-											<div class="password__form form-pass">
-												<form action="#" id="form-pass" data-dev class="form__input form">
-													<div class="form__items">
-														<div class="form__item item">
-															<input data-validate class="form__input input"
+											<div class="password__form">
+												<form action="#" id="form-pass" data-dev class="password__input form-pass">
+													<div class="form-pass__items">
+														<div class="form-pass__item item">
+															<input data-validate class="form-pass__input input"
 																data-error="Введите имя" data-required="username"
 																type="text" placeholder="Имя" name=form[username]>
-															<span class="form__aicon">
-																<div class="_icon-user form__icon form__icon_user icon">
+															<span class="form-pass__aicon aicon">
+																<div
+																	class="_icon-user form-pass__icon icon">
 																</div>
 															</span>
 														</div>
-														
-														<div class="form__item item">
-															<label for="formOldpass" class="form__label">Старый
-																пароль*:</label>
+
+														<div class="form-pass__item item">
+															<label for="formOldpass" class="form__label"></label>
 															<input autocomplete="off" data-validate
-																data-error="Введен неверный пароль!"
-																data-required="password" type="password" id="oldpass"
-																name="form[passwordOld]" placeholder="Старый пароль"
+																data-error="Введен неверный пароль!" data-required="password"
+																type="password" id="oldpass" name="form[oldpass]" placeholder="Старый пароль"
 																class="form__input input _req">
-															<button class="form__viewpass _icon-psw-view"
-																type="button"></button>
+															<button class="form-pass__viewpass _icon-psw-view" type="button"></button>
 														</div>
-														<div class="form__item item">
-															<label for="formNewpass" class="form__label">Новый
-																пароль*:</label>
+
+														<div class="form-pass__item item">
+															<label for="formNewpass" class="form-pass__label"></label>
 															<input autocomplete="off" data-validate
 																data-error="Введен неверный пароль!"
 																data-required="password" type="password" id="newpass1"
 																name="form[passwordNew1]" placeholder="Новый пароль"
-																class="form__input input _req">
-															<button class="form__viewpass _icon-psw-view"
+																class="form-person__input input _req">
+															<button class="form-pass__viewpass _icon-psw-view"
 																type="button"></button>
 															<!-- Пароль должен быть не менее 8 символов, содержать минимум 1 строчную, 1 прописную букву и минимум 1 цифру. -->
 														</div>
-														<div class="form__item item">
-															<label for="formNewpass" class="form__label">Подтвердите новый
-																пароль*:</label>
+														<div class="form-pass__item item">
+															<label for="formNewpass"
+																class="form-pass__label"></label>
 															<input data-validate data-error="Введен неверный пароль!"
 																data-required="password" type="text" id="newpass2"
 																name="form[passwordNew2]"
 																placeholder="Подтвердите новый пароль"
-																class="form__input input _req">
-															<button class="form__viewpass _icon-psw-view"
+																class="form-pass__input input _req">
+															<button class="form-pass__viewpass _icon-psw-view"
 																type="button"></button>
 														</div>
 													</div>
-	
-													<div class="form__buttons">
-														<button type="reset" class="form__button button">Предыдущий
+
+													<div class="form-pass__buttons">
+														<button type="reset"
+															class="form-pass__button button">Предыдущий
 															шаг</button>
 														<button type="submit"
-															class="form__button button button_color">Сохранить и
+															class="form-pass__button button button_color">Сохранить и
 															продолжить</button>
 													</div>
 												</form>

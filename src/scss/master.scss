@@ -1,23 +1,12 @@
 //========================================================================================================================================================
+//========================================================================================================================================================
 .page {
 	background: url("@img/repeat.jpg");
-	// .page__master
-	&__master {
-	}
 }
-
+// ? master
 .master {
-	// .master__container
-	&__container {
-		padding: rem(160) rem(15) rem(30) rem(15);
-		@include adaptiveValue("padding-top", 160, 100);
-		@media (max-width: $mobile) {
-			padding-top: rem(200);
-		}
-		@media (max-width: $mobileSmall) {
-			padding-top: rem(230);
-		}
-	}
+	padding: rem(160) rem(15) rem(60) rem(15);
+	@include adaptiveValue("padding-top", 160, 100);
 	// .master__body
 	&__body {
 		display: flex;
@@ -29,29 +18,10 @@
 		&:not(:last-child) {
 			margin-bottom: rem(132);
 		}
-		@media (max-width: $tablet) {
+		@media (max-width: rem(1200)) {
 			&:not(:last-child) {
 				margin-bottom: rem(50);
 			}
-		}
-	}
-	// .master__about-master
-	&__about-master {
-		flex: 0 0 23.19%;
-		max-width: 23.19%;
-		@media (max-width: $tablet) {
-			flex: 0 1 100%;
-			max-width: 100%;
-		}
-	}
-	// .master__content
-	&__content {
-		flex: 0 0 74.21%;
-		max-width: 74.21%;
-		margin: 0 auto;
-		@media (max-width: $tablet) {
-			flex: 0 1 100%;
-			max-width: 100%;
 		}
 	}
 	// .master__start
@@ -61,7 +31,30 @@
 		width: 100%;
 	}
 }
-
+//==+++++++++++++++++++++++++++++++++++
+// ? Старт секции master__body body-master
+.body-master {
+	// .body-master__about-master
+	&__about-master {
+		flex: 0 0 23.19%;
+		max-width: 23.19%;
+		@media (max-width: $tablet) {
+			flex: 0 1 100%;
+			max-width: 100%;
+		}
+	}
+	// .body-master__content
+	&__content {
+		flex: 0 0 74.21%;
+		max-width: 74.21%;
+		margin: 0 auto;
+		@media (max-width: $tablet) {
+			flex: 0 1 100%;
+			max-width: 100%;
+		}
+	}
+}
+// ? about-master
 .about-master {
 	// .about-master__image
 	&__image {
@@ -223,13 +216,13 @@
 		color: #700000;
 	}
 }
-
+// ? tab-master
 .tab-master {
-	// .tab-master__body
+	// .content-master__body
 	&__body {
 		margin-top: rem(15);
 	}
-	// .tab-master__navigation
+	// .content-master__navigation
 	&__navigation {
 		display: flex;
 		justify-content: space-between;
@@ -237,7 +230,7 @@
 			margin-bottom: rem(40);
 		}
 	}
-	// .tab-master__title
+	// .content-master__title
 	&__title {
 		//display: flex;
 		max-width: rem(426);
@@ -285,14 +278,8 @@
 			background-color: $redColor;
 		}
 	}
-	// .tab-master__content
-	&__content {
-	}
-	// .tab-master__body
-	&__body {
-	}
 }
-
+// ? body-portfolio
 .body-portfolio {
 	// .body-portfolio__styles
 	&__styles {
@@ -354,53 +341,16 @@
 		text-align: center;
 	}
 }
-
-.form {
-	// .form__input
-	&__input {
+// ? body-price
+.body-price {
+	// .body-price__box
+	&__box {
 	}
-	// .form__items
-	&__items {
-	}
-	// .form__item
-	&__item {
-	}
-	// .form__aicon
-	&__aicon {
-	}
-	// .form__icon
-	&__icon {
-		// .form__icon_user
-		&_user {
-		}
-		// .form__icon_email1
-		&_email1 {
-		}
-		// .form__icon_question
-		&_question {
-		}
-	}
-	// .form__label
-	&__label {
-	}
-	// .form__viewpass
-	&__viewpass {
-	}
-	// .form__button
-	&__button {
-		max-width: rem(1280);
-		width: 100%;
-		margin-top: rem(20);
-	}
-	// .form__info
-	&__info {
-	}
-	// .form__textarea
-	&__textarea {
+	// .body-price__title
+	&__title {
 	}
 }
-
-
+// ? body-contact
 .body-contact {
 	max-width: rem(1280);
 	width: 100%;
@@ -418,9 +368,6 @@
 		&:not(:last-child) {
 			margin-bottom: rem(35);
 		}
-	}
-	// .body-contact__protection
-	&__protection {
 	}
 	// .body-contact__title
 	&__title {
@@ -448,15 +395,61 @@
 	}
 }
 
+// ? form-contact
+.form-contact {
+	// .form-contact__info
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: rem(25);
+		@include adaptiveValue("column-gap", 50, 20);
+		@media (max-width: $mobile) {
+			display: block;
+			width: 100%;
+			margin-bottom: rem(25);
+		}
+	}
+	// .form-contact__aicon
+	&__aicon {
+		position: absolute;
+		display: flex;
+		align-items: start;
+		top: 0;
+		bottom: 0;
+		right: 0.1rem;
+		//width: 2.25rem;
+		cursor: pointer;
+		color: #bdbdbd;
+		transition: color 0.15s ease-in-out;
+		&:hover {
+			color: #212529;
+		}
+	}
+	// .form-contact__icon
+	&__icon {
+	}
+	// .form-contact__checkbox
+	&__checkbox {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .form-contact__button
+	&__button {
+		max-width: 100%;
+	}
+}
+
+// ? Финиш секции master__body body-master
 //==+++++++++++++++++++++++++++++++++++
-//=+++++++++++++++++++
 //========================================================================================================================================================
 // ? Старт секции master__start start-master
-
 .start-master {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin: 0 auto;
 	@include adaptiveValue("gap", 60, 0);
 	@media (max-width: $tablet) {
 		display: block;
@@ -509,9 +502,6 @@
 		line-height: math.div(49, 40);
 		@include adaptiveValue("margin-bottom", 38, 10);
 	}
-	// .picture__items
-	&__items {
-	}
 	// .picture__item
 	&__item {
 		margin-left: 9.1%;
@@ -540,9 +530,6 @@
 	background: url("@img/repeat-form.jpg");
 	border-radius: rem(25);
 	filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-	// .registration__content
-	&__content {
-	}
 	// .registration__box
 	&__box {
 		max-width: rem(460);
@@ -550,16 +537,16 @@
 		margin: 0 auto;
 		@include adaptiveValue("padding-top", 100, 10);
 		@include adaptiveValue("padding-bottom", 100, 10);
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			max-width: rem(800);
 			width: 100%;
-			margin-top: rem(25);			
+			margin-top: rem(25);
 		}
 	}
 	// .registration__title
 	&__title {
 		&:not(:last-child) {
-			margin-bottom: rem(20);			
+			margin-bottom: rem(20);
 		}
 	}
 	// .registration__text
@@ -587,7 +574,7 @@
 		&:not(:last-child) {
 			margin-bottom: rem(20);
 		}
-		@media (max-width:$mobileSmall){
+		@media (max-width: $mobileSmall) {
 			display: block;
 		}
 	}
@@ -595,12 +582,12 @@
 	&__button {
 		//max-width: rem(220);
 		box-shadow: rem(1) rem(1) rem(4) rgba(0, 0, 0, 0.25);
-		border-radius: rem(10);	
-		@media (max-width:$mobileSmall){
+		border-radius: rem(10);
+		@media (max-width: $mobileSmall) {
 			&:not(:last-child) {
 				margin-bottom: rem(10);
-			} 
-		}	
+			}
+		}
 	}
 	// .form-registration__checkbox
 	&__checkbox {

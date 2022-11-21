@@ -18,24 +18,24 @@
 									Чтобы мы могли вам помочь, опишите свой вопрос максимально подробно
 								</div>
 							</div>
-							<form action="#" id="form" class="question__form form">
-								<div class="form__info">
+							<form action="#" id="question" class="question__input question">
+								<div class="question__info">
 									<!-- Почта -->
-									<div class="form__item item">
-										<input class="form__input input" data-error="Введен не верный E-mail"
+									<div class="question__item item">
+										<input class="question__input input" data-error="Введен не верный E-mail"
 											data-validate data-required="email" type="text"
 											placeholder="example@domain.com" name="form[useremail]">
-										<span class="form__aicon">
-											<div class="_icon-email form__icon form__icon_user icon">
+										<span class="question__aicon acion">
+											<div class="_icon-email question__icon form__icon_user icon">
 											</div>
 										</span>
 									</div>
 									<!-- Имя -->
-									<div class="form__item item">
+									<div class="question__item item">
 										<input data-validate class="form__input input" data-error="Введите имя"
 											data-required="username" type="text" placeholder="Имя" name=form[username]>
-										<span class="form__aicon">
-											<div class="_icon-user form__icon form__icon_user icon">
+										<span class="question__aicon acion">
+											<div class="_icon-user question__icon form__icon_user icon">
 											</div>
 										</span>
 									</div>
@@ -50,19 +50,19 @@
 									</div> -->
 
 									<!-- Вопрос -->
-									<div class="form__area area">
+									<div class="question__area area">
 										<textarea data-validate id="question" type="area" name=form[question]
 											data-error="Задайте вопрос" data-required="question"
-											class="form__textarea textarea" data-autoheight
+											class="question__textarea textarea" data-autoheight
 											placeholder="Объясните ваш вопрос"></textarea>
-										<span class="form__aicon">
-											<div class="_icon-question form__icon form__icon_question icon">
+										<span class="question__aicon acion">
+											<div class="_icon-question question__icon form__icon_question icon">
 											</div>
 										</span>
 									</div>
 								</div>
 
-								<div class="checkbox">
+								<div class="question__checkbox checkbox">
 									<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox"
 										value="1" name="form[]">
 									<label for="c_1" class="checkbox__label"><span class="checkbox__text">Я
@@ -71,7 +71,7 @@
 								</div>
 
 								<button type="submit"
-									class="form__button button button_color button_big">Отправить</button>
+									class="question__button button button_color button_big">Отправить</button>
 							</form>
 						</div>
 					</div>

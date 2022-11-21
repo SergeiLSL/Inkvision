@@ -38,7 +38,7 @@
 		background: url("@img/repeat-form.jpg");
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-		padding: rem(20) rem(14) rem(20) rem(26);
+		//padding: rem(20) rem(14) rem(20) rem(26);
 		@media (max-width: $tablet) {
 			margin-bottom: rem(25);
 			display: none;
@@ -58,6 +58,7 @@
 
 //++++++++++++++++++++++++++++
 // ? tabs-box
+// ! закончил
 .tabs-box {
 	// .tabs-box__title
 	&__title {
@@ -117,11 +118,9 @@
 		//@include adaptiveValue("padding", 20, 10);
 	}
 }
-
 //++++++++++++++++++++++++++++
-// ? tabs__content
+// ? tabs__content   content-tabs
 .content-tabs {
-	//max-width: rem(1134);
 	width: 100%;
 	// .content-tabs__body
 	&__body {
@@ -129,29 +128,39 @@
 		background: url("@img/repeat-form.jpg");
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+		padding: rem(20);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(15);
+		}
 	}
 	// .content-tabs__box
 	&__box {
 		max-width: rem(970);
 		margin: 0 auto;
-		padding: rem(20);
+		justify-content: center;
+		//padding: rem(20) rem(0);
+		@media (max-width: $tablet) {
+			//margin-bottom: rem(20);
+		}
 	}
-	// .content-tabs__box-content
-	&__box-content {
+	// .content-tabs__box-person
+	&__box-person {
+		padding: rem(20) rem(0);
 	}
 }
-//++++++++++++++++++++++++++++
+
 //========================================================================================================================================================
 //content-tabs__box-content
 // ? box-person
+// ! закончил
 .box-person {
-	// .box-person__title
+	// .box-form-persontitle
 	&__title {
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 20, 10);
 		}
 	}
-	// .box-person__text
+	// .box-form-persontext
 	&__text {
 		//max-width: rem(1060);
 		width: 100%;
@@ -159,89 +168,74 @@
 			margin-bottom: rem(20);
 		}
 	}
-	// .box-person__form
-	&__form {
-	}
-	// .box-person__buttons
-	&__buttons {
-	}
-	// .box-person__button
-	&__button {
-		&_big {
-		}
-	}
 }
 
-.form {
-	// .form__body
-	&__body {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	// .form__info
+//===+++++++++++++++++++++++++++++++++++++++++
+// ? START form-person
+// ! закончил  нет  поля выбрать фото
+.form-person {
+	// .form-person__info
 	&__info {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		margin-bottom: rem(25);
 		@include adaptiveValue("column-gap", 50, 20);
 		@media (max-width: $mobile) {
 			display: block;
 			width: 100%;
-			margin-bottom: rem(20);
+			margin-bottom: rem(25);
 		}
 	}
-	// .form__item
+	// .form-person__item
 	&__item {
 	}
-
-	// .form__label
-	&__label {
-		display: none;
-	}
-	&__icon {
-		position: relative;
-	}
-	// .form__input
+	// .form-person__input
 	&__input {
-		// padding-right: 2.5rem;
 	}
+	// .form-person__aicon
 	&__aicon {
 		position: absolute;
 		display: flex;
-		align-items: start;
+		align-items: flex-start;
 		top: 0;
 		bottom: 0;
 		right: 0.1rem;
-		//width: 2.25rem;
-		//cursor: pointer;
-		color: #bdbdbd;
-		transition: color 0.15s ease-in-out;
-		&:hover {
-			color: #212529;
-		}
+		width: 2.75rem;
+		// position: absolute;
+		// display: flex;
+		// align-items: start;
+		// top: 0;
+		// bottom: 0;
+		// right: 0.1rem;
+		// //width: 2.25rem;
+		// cursor: pointer;
+		// color: #bdbdbd;
+		// transition: color 0.15s ease-in-out;
+		// &:hover {
+		// 	color: #212529;
+		// }
 	}
-	// .form__gender
+	// .form-person__gender
 	&__gender {
-		//max-width: rem(460);
 	}
-
-	// .form__photo
-	&__photo {
-	}
-	// .form__footer
-	&__footer {
+	// .form-person__checkbox
+	&__checkbox {
 		&:not(:last-child) {
 			margin-bottom: rem(20);
 		}
 	}
-	// .form__buttons
-	&__buttons {
-	}
-	// .form__button
+	// .form-person__button
 	&__button {
 	}
+	// .form-person__button2
+	&__button2 {
+	}
 }
-// +/////////////////
+
+//===+++++++++++++++++++++++++++++++++++++++++
+// ? gender Определяем пол человека
+// ! закончил
 // .gender
 .gender {
 	margin-bottom: rem(20);
@@ -332,95 +326,14 @@
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
-// +/////////////////
-.options {
-	//position: relative;
-	//display: flex;
-	column-gap: rem(20);
-	justify-content: space-between;
-	align-items: center;
-	// .options__item
-	&__item {
-		min-height: rem(50);
-		align-items: center;
-		position: relative;
-	}
-	// .options__input
-	&__input {
-	}
-	&__text {
-		font-size: rem(16);
-		line-height: rem(50);
-		align-items: center;
-		color: $mainColor;
-	}
-	// .options__label
-	&__label {
-		display: none;
-	}
-	// .file__button3
-	&__button3 {
-		position: absolute;
-		width: rem(180);
-		// width: 100%;
-		top: 0;
-		left: 0;
-		border-radius: rem(10);
-		&_g {
-			// left: rem(50);
-		}
-		&_m {
-			// left: rem(238);
-		}
-	}
-}
-
-.file {
-	display: flex;
-	align-items: center;
-	column-gap: 20px;
-	background-color: #ddef7b;
-	// .file__item
-	&__item {
-		position: relative;
-		height: 50px;
-	}
-	// .file__input
-	&__input {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		font-size: 0;
-		cursor: pointer;
-	}
-	// .file__button
-	&__button3 {
-		// display: inline-flex;
-		// min-height: 40px;
-		//border-radius: rem(10);
-		// justify-content: center;
-		// align-items: center;
-		// color: #fff;
-		// background-color: #8a6ca4;
-		// padding: 0px 20px;
-	}
-	// .file__preview
-	&__preview {
-		display: inline-block;
-		max-width: 100px;
-		padding: 10px 0px 0px 0px;
-		& img {
-			max-width: 100%;
-		}
-	}
-}
-
+// ? finish gender Определяем пол человека
+// ? FINISH form-person
+// ===++++++++++++++++++++++++++++++++++++++++++++
 //========================================================================================================================================================
 //content-tabs__box-specialization
-// ? box-specialization
+// ? START box-specialization
+// ! закончил
+// ? box-special
 .box-special {
 	// .box-special__title
 	&__title {
@@ -441,7 +354,7 @@
 		column-gap: rem(10);
 	}
 }
-
+// ? box-navigation
 .box-navigation {
 	// .box-navigation__title
 	&__title {
@@ -475,7 +388,10 @@
 			background-color: $redColor;
 		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 20, 15);
+			margin-bottom: rem(25);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(10);
+			}
 		}
 		// .box-navigation__title_for
 		&_for {
@@ -485,7 +401,7 @@
 			padding-right: rem(35);
 			position: relative;
 			&:not(:last-child) {
-				margin-bottom: rem(20);
+				margin-bottom: rem(5);
 			}
 			&::after {
 				position: absolute;
@@ -499,7 +415,7 @@
 			}
 		}
 		@media (max-width: $tablet) {
-			margin-top: rem(20);
+			margin-top: rem(10);
 		}
 	}
 	// .box-navigation__aicon
@@ -513,67 +429,47 @@
 		width: 2.75rem;
 	}
 }
-
-.form {
-	// .form__icon
-	&__icon {
-		// .form__icon_user
-		&_user {
-		}
-		// .form__icon_question
-		&_question {
-		}
-		// .form__icon_city
-		&_city {
-		}
-	}
-	// .form__content
+//==++++++++++++++++++++++++++
+// ? form-special
+.form-special {
+	// .form-special__content
 	&__content {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
 	}
-	// .form__item
-	&__item {
-		// position: relative;
-		// &::after {
-		// 	position: absolute;
-		// 	content: "";
-		// 	bottom: rem(0);
-		// 	left: 0;
-		// 	height: rem(2);
-		// 	width: 100%;
-		// 	background: $headerColor;
-		// 	border-radius: 2px;
-		// }
+	// .form-special__area
+	&__area {
 	}
-	// .form__textarea
+	// .form-special__textarea
 	&__textarea {
-		//position: relative;
 	}
-	// .form__aicon
+	// .form-special__aicon
 	&__aicon {
-		position: absolute;
-		display: flex;
-		align-items: flex-start;
-		top: 0;
-		bottom: 0;
-		right: 0.1rem;
-		width: 2.75rem;
 	}
+	// .form-special__icon
 	&__icon {
-		background: none;
 	}
-	// .form__buttons
+	// .form-special__buttons
 	&__buttons {
+		display: flex;
+		@include adaptiveValue("column-gap", 50, 20);
+		@media (max-width: $mobile) {
+			display: block;
+		}
 	}
-	// .form__button
+	// .form-special__button
 	&__button {
 	}
 }
-
+// ! закончил
+// ? FINISH box-specialization
 //========================================================================================================================================================
-
 //++++++++++++++++++++++++++++
 //content-tabs__box-styles
-// ? box-styles    не трогать!!!
+// ? START box-styles !!!
+// ! закончил
+// ? box-styles
 .box-styles {
 	// .box-styles__title
 	&__title {
@@ -603,7 +499,7 @@
 		}
 	}
 }
-
+// ? box-gallery
 .box-gallery {
 	&:not(:last-child) {
 		margin-bottom: rem(20);
@@ -620,9 +516,9 @@
 		margin: 0 auto;
 	}
 }
-
-.item {
-	// .item__image
+// ? item-style
+.item-style {
+	// .item-style__image
 	&__image {
 		flex: 0 0 rem(114);
 		height: rem(114);
@@ -644,7 +540,7 @@
 			}
 		}
 	}
-	// .item__name
+	// .item-style__name
 	&__name {
 		font-size: rem(14);
 		line-height: math.div(17, 14);
@@ -653,8 +549,13 @@
 		text-align: center;
 	}
 }
-
+// ! закончил
+// ? FINISH box-styles !!!
 //++++++++++++++++++++++++++++
+//========================================================================================================================================================
+//++++++++++++++++++++++++++++
+// ? START box-price !!!
+// !  НЕ закончил, в работе
 //ccontent-tabs__box-content
 // ? box-price
 .box-price {
@@ -686,8 +587,13 @@
 		}
 	}
 }
-
+// ! НЕ закончил
+// ? FINISH box-price !!!
 //++++++++++++++++++++++++++++
+//========================================================================================================================================================
+//++++++++++++++++++++++++++++
+// ? START box-services !!!
+// !  НЕ закончил, в работе
 //ccontent-tabs__box-content
 // ? box-services
 .box-services {
@@ -719,8 +625,13 @@
 		}
 	}
 }
-
+// ! НЕ закончил
+// ? FINISH box-services !!!
 //++++++++++++++++++++++++++++
+//========================================================================================================================================================
+//++++++++++++++++++++++++++++
+// ? START box-notifications !!!
+// !  НЕ закончил, в работе
 //ccontent-tabs__box-content
 // ? box-notifications
 .box-notifications {
@@ -751,8 +662,13 @@
 	&__button {
 	}
 }
-
+// !  НЕ закончил, в работе
+// ? FINISH box-services !!!
 //++++++++++++++++++++++++++++
+//========================================================================================================================================================
+//++++++++++++++++++++++++++++
+// ? START password !!!
+// ! закончил
 //ccontent-tabs__box-content
 // ? password
 .password {
@@ -764,9 +680,6 @@
 	}
 	// .password__content
 	&__content {
-		// flex: 1;
-		// border-radius: rem(25);
-		// margin: 0 auto;
 	}
 	// .password__title
 	&__title {
@@ -778,19 +691,16 @@
 	&__form {
 	}
 }
-
+// ? form-pass
 .form-pass {
-	// .form__input
-	&__input {
-	}
-	// .form__items
+	// .form-pass__items
 	&__items {
 		flex: 0 1 40.6%;
 		max-width: rem(460);
 		width: 100%;
 		margin: 0 auto;
 	}
-	// .form__item
+	// .form-pass__item
 	&__item {
 	}
 	&__error {
@@ -798,7 +708,10 @@
 		// 	margin-bottom: rem(40);
 		// }
 	}
-	// .form__aicon
+	// .form-pass__input
+	&__input {
+	}
+	// .form-pass__aicon
 	&__aicon {
 		position: absolute;
 		display: flex;
@@ -808,30 +721,23 @@
 		right: 0.1rem;
 		width: 2.75rem;
 	}
-	// .form__icon
+	// .form-pass__icon
 	&__icon {
-		// .form__icon_user
-		&_user {
-		}
-		// .form__icon_eye
-		&_eye {
-		}
 	}
-	// .form__label
+	// .form-pass__label
 	&__label {
 	}
-	// .form__viewpass
+	// .form-pass__viewpass
 	&__viewpass {
-		position: absolute;
-		top: rem(11);
-		right: rem(10);
-		width: rem(26);
-		height: rem(22);
-		object-fit: cover;
-		display: inline-block;
+		// position: absolute;
+		// top: rem(11);
+		// right: rem(10);
+		// width: rem(26);
+		// height: rem(22);
+		// object-fit: cover;
+		// display: inline-block;
 	}
-
-	// .form__buttons
+	// .form-pass__buttons
 	&__buttons {
 		display: flex;
 		margin-top: rem(30);
@@ -844,10 +750,14 @@
 			margin-top: rem(30);
 		}
 	}
-	// .form__button
+	// .form-pass__button
 	&__button {
 		&:not(:last-child) {
 			margin-bottom: rem(10);
 		}
 	}
 }
+// !  закончил
+// ? FINISH  password !!!
+//++++++++++++++++++++++++++++
+//========================================================================================================================================================

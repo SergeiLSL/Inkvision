@@ -3,7 +3,7 @@
 //========================================================================================================================================================
 
 .support {
-	// background: url("@img/repeat.jpg");
+	background: url("@img/repeat.jpg");
 	// .support__container
 	&__container {
 		padding: 0 rem(15);
@@ -35,33 +35,59 @@
 	}
 }
 
+//==========================================
 .question {
-	// .question__header
-	&__header {
-		max-width: rem(460);
-		margin: 0 auto;
-		text-align: center;
-		align-items: center;
+	// .question__title
+	&__title {
 		&:not(:last-child) {
-			margin-bottom: rem(30);
+			margin-bottom: rem(20);
 		}
 	}
-	// .form__info
+	// .question__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .question__info
 	&__info {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		margin-bottom: rem(25);
 		@include adaptiveValue("column-gap", 50, 20);
 		@media (max-width: $mobile) {
 			display: block;
 			width: 100%;
-		}
-		&:not(:last-child) {
-			margin-bottom: rem(35);
+			margin-bottom: rem(25);
 		}
 	}
+	// .question__input
+	&__input {
+	}
+	// .question__aicon
+	&__aicon {
+		position: absolute;
+		display: flex;
+		align-items: start;
+		top: 0;
+		bottom: 0;
+		right: 0.1rem;
+		//cursor: pointer;
+		color: #bdbdbd;
+		transition: color 0.15s ease-in-out;
+		&:hover {
+			color: #212529;
+		}
+	}
+	// .question__checkbox
+	&__checkbox {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .question__button
+	&__button {
+		max-width: 100%;
+	}
 }
-
-//========================================================================================================================================================
-
-
