@@ -143,37 +143,37 @@ form * {
 	}
 }
 
-.aicon {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	top: 0;
-	bottom: 0;
-	right: 0.5rem;
-	color: #bdbdbd;
-	transition: color 0.15s ease-in-out;
-	&:hover {
-		color: #212529;
-	}
-	&_big {
-		align-items: start;
-		width: 1.5rem;
-		top: 1rem;
-		right: 1rem;
-	}
-	&_for {
-		right: 1.25rem;
-		@media (max-width: rem(1200)) {
-			right: 0.7rem;
-		}
-		@media (max-width: rem(1000)) {
-			right: 0.5rem;
-		}
-		@media (max-width: $tablet) {
-			right: 1.25rem;
-		}
-	}
-}
+// .aicon {
+// 	position: absolute;
+// 	display: flex;
+// 	align-items: center;
+// 	top: 0;
+// 	bottom: 0;
+// 	right: 0.5rem;
+// 	color: #bdbdbd;
+// 	transition: color 0.15s ease-in-out;
+// 	&:hover {
+// 		color: #212529;
+// 	}
+// 	&_big {
+// 		align-items: start;
+// 		width: 1.5rem;
+// 		top: 1rem;
+// 		right: 1rem;
+// 	}
+// 	&_for {
+// 		right: 1.25rem;
+// 		@media (max-width: rem(1200)) {
+// 			right: 0.7rem;
+// 		}
+// 		@media (max-width: rem(1000)) {
+// 			right: 0.5rem;
+// 		}
+// 		@media (max-width: $tablet) {
+// 			right: 1.25rem;
+// 		}
+// 	}
+// }
 
 .form {
 	&__error {

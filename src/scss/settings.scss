@@ -9,9 +9,9 @@
 	// .setting__container
 	&__container {
 		padding: rem(110) rem(15) rem(30) rem(15);
-		//background-color: #f4ffd2; // убрать
+		// @include adaptiveValue("padding-top", 150, 20);
 		@media (max-width: $tablet) {
-			padding-top: rem(110);
+			padding-top: rem(130);
 		}
 		@media (max-width: $mobile) {
 			padding-top: rem(190);
@@ -202,19 +202,6 @@
 		bottom: 0;
 		right: 0.1rem;
 		width: 2.75rem;
-		// position: absolute;
-		// display: flex;
-		// align-items: start;
-		// top: 0;
-		// bottom: 0;
-		// right: 0.1rem;
-		// //width: 2.25rem;
-		// cursor: pointer;
-		// color: #bdbdbd;
-		// transition: color 0.15s ease-in-out;
-		// &:hover {
-		// 	color: #212529;
-		// }
 	}
 	// .form-person__gender
 	&__gender {
@@ -446,6 +433,35 @@
 	}
 	// .form-special__aicon
 	&__aicon {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 0;
+		bottom: 0;
+		right: 0.5rem;
+		color: #bdbdbd;
+		transition: color 0.15s ease-in-out;
+		&:hover {
+			color: #212529;
+		}
+		&_big {
+			align-items: start;
+			width: 1.5rem;
+			top: 1rem;
+			right: 1rem;
+		}
+		&_for {
+			right: 1.25rem;
+			@media (max-width: rem(1200)) {
+				right: 0.7rem;
+			}
+			@media (max-width: rem(1000)) {
+				right: 0.5rem;
+			}
+			@media (max-width: $tablet) {
+				right: 1.25rem;
+			}
+		}
 	}
 	// .form-special__icon
 	&__icon {

@@ -7,7 +7,16 @@
 	// .support__container
 	&__container {
 		padding: 0 rem(15);
-		@include adaptiveValue("padding-top", 140, 220);
+		padding-top: rem(140);
+		@media (max-width:$tablet){
+			padding-top: rem(120);
+		}
+		@media (max-width:$mobile){
+			padding-top: rem(190);  
+		}
+		@media (max-width:$mobileSmall){
+			padding-top: rem(220);  
+		}
 		@include adaptiveValue("padding-bottom", 94, 20);
 	}
 	&__box {
