@@ -2,7 +2,7 @@
 // Заголовки, общие БЄМ блоки и проче...
 
 //? Заголовки и тексты
-.title-setting {
+.title {
 	font-weight: 700;
 	@include adaptiveValue("font-size", 40, 28);
 	line-height: math.div(49, 40);
@@ -13,7 +13,7 @@
 	}
 }
 
-.text-setting {
+.text {
 	@include adaptiveValue("font-size", 18, 14);
 	line-height: math.div(24, 18);
 	color: $headerColor;
@@ -23,30 +23,14 @@
 		text-align: justify;
 		cursor: pointer;
 		&:hover {
-			text-decoration: underline;		}
-
+			text-decoration: underline;
+		}
 	}
 	&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 20, 10);
 	}
 }
 
-.body-tabs {
-	// flex: 0 1 rem(1333);
-	// width: 100%;
-	// max-width: rem(1333);
-	// background: url("@img/repeat-form.jpg");
-	// border-radius: rem(25);
-	// filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-	// @include adaptiveValue("padding-left", 81, 15);
-	// @include adaptiveValue("padding-right", 82, 15);
-	// @include adaptiveValue("padding-top", 100, 30);
-	// @include adaptiveValue("padding-bottom", 60, 20);
-	// @media (max-width: $tablet) {
-	// 	margin-top: rem(30);
-	// 	margin-bottom: rem(30);
-	// }
-}
 //========================================================================================================================================================
 //? Формы
 form * {
@@ -123,7 +107,7 @@ form * {
 	position: relative;
 	width: 100%;
 	resize: vertical;
-	padding: rem(24) rem(20)rem(15) rem(20);
+	padding: rem(24) rem(20) rem(15) rem(20);
 	font-size: rem(16);
 	line-height: math.div(20, 16);
 	color: $mainColor;
@@ -133,7 +117,7 @@ form * {
 	min-height: rem(120);
 	// transition: all 0.5s ease 0s;
 	&:hover {
-		border: 1px solid $redColor;			
+		border: 1px solid $redColor;
 	}
 	&.aicon {
 	}
@@ -155,7 +139,6 @@ form * {
 		background-color: $headerColor;
 		border-radius: 0 0 rem(2) rem(2);
 	}
-
 }
 
 .aicon {
@@ -206,7 +189,6 @@ form * {
 		}
 	}
 }
-
 
 //====================================================================================================
 //? Кнопки
