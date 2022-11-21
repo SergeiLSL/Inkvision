@@ -121,9 +121,20 @@
 //++++++++++++++++++++++++++++
 // ? tabs__content
 .content-tabs {
-	max-width: rem(1134);
+	//max-width: rem(1134);
 	width: 100%;
+	// .content-tabs__body
 	&__body {
+		max-width: rem(1134);
+		background: url("@img/repeat-form.jpg");
+		border-radius: rem(25);
+		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+	}
+	// .content-tabs__box
+	&__box {
+		max-width: rem(970);
+		margin: 0 auto;
+		padding: rem(20);
 	}
 	// .content-tabs__box-content
 	&__box-content {
@@ -453,7 +464,7 @@
 		&:hover {
 			//border-radius: rem(8);
 			color: #fff;
-			background: rgba(230, 49, 49, 0.815);			
+			background: rgba(230, 49, 49, 0.815);
 		}
 		&:active {
 			top: rem(3);
@@ -462,7 +473,6 @@
 		&._tab-active {
 			color: #fff;
 			background-color: $redColor;
-			
 		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 20, 15);
@@ -512,7 +522,6 @@
 		}
 		// .form__icon_question
 		&_question {
-		
 		}
 		// .form__icon_city
 		&_city {
@@ -557,7 +566,6 @@
 	}
 	// .form__button
 	&__button {
-
 	}
 }
 
@@ -756,9 +764,9 @@
 	}
 	// .password__content
 	&__content {
-		flex: 1;
-		border-radius: rem(25);
-		margin: 0 auto;
+		// flex: 1;
+		// border-radius: rem(25);
+		// margin: 0 auto;
 	}
 	// .password__title
 	&__title {
@@ -771,7 +779,7 @@
 	}
 }
 
-.form {
+.form-pass {
 	// .form__input
 	&__input {
 	}
@@ -819,10 +827,10 @@
 		right: rem(10);
 		width: rem(26);
 		height: rem(22);
-		object-fit:cover;
+		object-fit: cover;
 		display: inline-block;
 	}
-	
+
 	// .form__buttons
 	&__buttons {
 		display: flex;
@@ -841,7 +849,5 @@
 		&:not(:last-child) {
 			margin-bottom: rem(10);
 		}
-
 	}
 }
-

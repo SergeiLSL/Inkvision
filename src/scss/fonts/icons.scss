@@ -70,10 +70,18 @@
 ._icon-psw-view:before {
 	content: "\e915";
 	color: #b7bbb7;
+	background-color: #fff;
 	font-size: rem(20);
+	margin-right: rem(16);
+	//padding-left: rem(15);
+	margin-left: rem(15);
 }
 ._icon-psw-close:before {
 	content: "\e916";
 	color: #b7bbb7;
+	background-color: #fff;
 	font-size: rem(20);
+	margin-right: rem(15);
+	//padding-left: rem(15);
+	margin-left: rem(15);
 }

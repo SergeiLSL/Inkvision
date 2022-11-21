@@ -91,15 +91,17 @@ form * {
 	font-size: rem(16);
 	line-height: math.div(20, 16);
 	color: $mainColor;
-	box-shadow: rem(1) rem(1) rem(1) rgba(0, 0, 0, 0.25);
+	//box-shadow: rem(1) rem(1) rem(1) rgba(0, 0, 0, 0.25);
 	border-radius: rem(2);
 	transition: all 0.5s ease 0s;
 	&:hover {
-		border: 2px solid $redColor;
+		//border: 2px solid $redColor;
+		box-shadow: rem(2) rem(2) rem(2) rgba(199, 42, 42, 0.6);
 	}
 	&:focus {
 		color: #00020f;
-		box-shadow: rem(1) rem(1) rem(4) rgba(199, 42, 42, 0.6);
+		//border: 2px solid $redColor;
+		box-shadow: rem(2) rem(2) rem(2) rgba(199, 42, 42, 0.6);
 	}
 }
 
