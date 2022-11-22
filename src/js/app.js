@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['FLS'] = true;
+window["FLS"] = true;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
@@ -72,18 +72,21 @@ flsFunctions.tabs();
 // Работа с формами ========================================================================================================================================================================================================================================================
 // ========================================================================================================================================================================================================================================================
 import * as flsForms from "./files/forms/forms.js";
+import * as flsValideteImge from "./files/forms/validateImage.js";
 
 /* Работа с полями формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
 flsForms.formFieldsInit({
 	viewPass: true,
-	autoHeight: true
+	autoHeight: true,
 });
-
 
 /* Oтправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
 flsForms.formSubmit();
+
+/* Модуль проверки загружаемого изображения */
+flsValideteImge.validateImage();
 
 /* Модуль формы "колличество" */
 // flsForms.formQuantity();
@@ -95,7 +98,7 @@ flsForms.formSubmit();
 // import './libs/select.js'
 
 /* Модуль работы с календарем */
-import './files/forms/datepicker.js'
+import "./files/forms/datepicker.js";
 
 /* (В работе) Модуль работы с масками.*/
 /*
@@ -151,7 +154,7 @@ import './files/forms/datepicker.js'
 // Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-lenivaya-podgruzka-lazy-loading.html
 // Документация плагина: https://github.com/verlok/vanilla-lazyload
 // Сниппет(HTML):
-import './files/scroll/lazyload.js';
+import "./files/scroll/lazyload.js";
 
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html

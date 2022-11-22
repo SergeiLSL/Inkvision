@@ -108,7 +108,7 @@
 																</div>
 															</span>
 														</div>
-														<!-- День рождения -->
+														<!--! День рождения data-datepicker  -->
 														<div class="form-person__item item">
 															<input data-datepicker class="form-person__input input"
 																onfocus="this.type='date'"
@@ -152,28 +152,46 @@
 															</span>
 														</div>
 													</div>
-													<!--? Определяем пол человека (радио кнопки)-->
-													<!--? Есть код в script.js -->
-													<!-- https://atuin.ru/blog/plavnoe-pereklyuchenie-radioknopok/ -->
-													<div class="form-person__gender gender">
-														<div class="gender__text">Пол:</div>
-														<div class="r-all">
-															<span class="r-group">
-																<input class="r-input" type="radio" name="gender"
-																	value="femile" id="femile" checked />
-																<label for="femile">Женщина</label>
-															</span>
-															<span class="r-group">
-																<input class="r-input" type="radio" name="gender"
-																	value="male" id="male" />
-																<label for="male">Мужчина</label>
-															</span>
+
+													<div class="form-person__appearance">
+														<!--? Определяем пол человека (радио кнопки)-->
+														<!--? Есть код в script.js -->
+														<!-- https://atuin.ru/blog/plavnoe-pereklyuchenie-radioknopok/ -->
+														<div class="form-person__gender gender">
+															<div class="gender__text">Пол:</div>
+															<div class="r-all">
+																<span class="r-group">
+																	<input class="r-input" type="radio" name="gender"
+																		value="femile" id="femile" checked />
+																	<label for="femile">Женщина</label>
+																</span>
+																<span class="r-group">
+																	<input class="r-input" type="radio" name="gender"
+																		value="male" id="male" />
+																	<label for="male">Мужчина</label>
+																</span>
+															</div>
+														</div>
+
+														<!--? Выбираем фотографию-->
+														<!--? Есть код в script.js -->
+														<div class="form-person__image image">
+															<!-- <div class="image__label file">Прикрепить фото</div> -->
+															<div class="file">
+																<div class="file__item">
+																	<input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+																	<div class="file__button">Изменить фото</div>
+																</div>
+																<div id="formPreview" class="file__preview"></div>
+															</div>
 														</div>
 													</div>
 
+													<!--? Чекбокс-->
+													<!--? Есть код в -->
 													<div class="form-person__checkbox checkbox">
-														<input id="c_1" data-error="Ошибка" class="checkbox__input"
-															type="checkbox" value="1" name="form[]">
+														<input data-validate id="c_1" data-error="Подтвердите согласие" class="checkbox__input"
+															type="checkbox" value="1" name="form[checkbox]" data-required="checkbox">
 														<label for="c_1" class="checkbox__label"><span
 																class="checkbox__text"><span>Я ознакомился с
 																	условиями <span>пользовательского</span> соглашения
