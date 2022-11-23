@@ -170,10 +170,10 @@ export function stickyBlock() {
 	}
 	stickyBlockInit();
 }
-// Модуль анімація цифрового лічильника
+// Модуль анимация цифрового счетчика
 export function digitsCounter() {
 
-	// Обнулення
+	// Обнуление
 	if (document.querySelectorAll("[data-digits-counter]").length) {
 		document.querySelectorAll("[data-digits-counter]").forEach(element => {
 			element.dataset.digitsCounter = element.innerHTML;
@@ -181,7 +181,7 @@ export function digitsCounter() {
 		});
 	}
 
-	// Функція ініціалізації
+	// Функция инициализации
 	function digitsCountersInit(digitsCountersItems) {
 		let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-digits-counter]");
 		if (digitsCounters.length) {
@@ -190,7 +190,7 @@ export function digitsCounter() {
 			});
 		}
 	}
-	// Функція анімації
+	// Функция анимации
 	function digitsCountersAnimate(digitsCounter) {
 		let startTimestamp = null;
 		const duration = parseInt(digitsCounter.dataset.digitsCounterSpeed) ? parseInt(digitsCounter.dataset.digitsCounterSpeed) : 1000;

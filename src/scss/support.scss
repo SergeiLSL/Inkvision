@@ -1,7 +1,5 @@
 //========================================================================================================================================================
 
-//========================================================================================================================================================
-
 .support {
 	background: url("@img/repeat.jpg");
 	// .support__container
@@ -19,6 +17,7 @@
 		}
 		@include adaptiveValue("padding-bottom", 94, 20);
 	}
+	// .support__box
 	&__box {
 		max-width: rem(1140);
 		margin: 0 auto;
@@ -42,22 +41,21 @@
 		margin: 0 auto;
 		margin-bottom: rem(20);
 	}
-}
-
-//==========================================
-.question {
-	// .question__title
+	// .support__title
 	&__title {
 		&:not(:last-child) {
 			margin-bottom: rem(20);
 		}
 	}
-	// .question__text
+	// .support__text
 	&__text {
 		&:not(:last-child) {
 			margin-bottom: rem(20);
 		}
 	}
+}
+//==========================================
+.question {
 	// .question__info
 	&__info {
 		display: flex;
