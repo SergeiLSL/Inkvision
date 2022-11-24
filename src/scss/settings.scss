@@ -1,17 +1,17 @@
 .page {
-	background: url("@img/reperat.jpg");
+	background: url("@img/repeat.jpg");
 	// .page__setting
 	&__setting {
 	}
 }
 // ? setting
-.setting {
+.setting {	
 	// .setting__container
 	&__container {
 		padding: rem(110) rem(15) rem(30) rem(15);
-		//background-color: #f4ffd2; // убрать
+		// @include adaptiveValue("padding-top", 150, 20);
 		@media (max-width: $tablet) {
-			padding-top: rem(110);
+			padding-top: rem(130);
 		}
 		@media (max-width: $mobile) {
 			padding-top: rem(190);
@@ -35,10 +35,10 @@
 	// .setting__box-navigation
 	&__box-navigation {
 		flex: 0 1 31.42%;
-		background: url("@img/reperat.jpg");
+		background: url("@img/repeat-form.jpg");
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-		padding: rem(20) rem(14) rem(20) rem(26);
+		//padding: rem(20) rem(14) rem(20) rem(26);
 		@media (max-width: $tablet) {
 			margin-bottom: rem(25);
 			display: none;
@@ -53,11 +53,13 @@
 		display: flex;
 		flex-wrap: wrap;
 		column-gap: rem(50);
+		
 	}
 }
 
 //++++++++++++++++++++++++++++
 // ? tabs-box
+// ! закончил
 .tabs-box {
 	// .tabs-box__title
 	&__title {
@@ -68,12 +70,12 @@
 		padding: rem(3) rem(0);
 		transition: background 0.3s ease;
 		&:hover {
-			border-radius: rem(8);
+			border-radius: rem(25);
 			background: rgba(230, 49, 49, 0.05);
 		}
 		&._tab-active {
 			background: rgba(199, 42, 42, 0.1);
-			border-radius: rem(8);
+			border-radius: rem(25);
 		}
 		&:not(:last-child) {
 			margin-bottom: rem(11);
@@ -117,30 +119,49 @@
 		//@include adaptiveValue("padding", 20, 10);
 	}
 }
-
 //++++++++++++++++++++++++++++
-// ? tabs__content
+// ? tabs__content   content-tabs
 .content-tabs {
-	max-width: rem(1134);
 	width: 100%;
+	// .content-tabs__body
 	&__body {
+		max-width: rem(1134);
+		background: url("@img/repeat-form.jpg");
+		border-radius: rem(25);
+		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
+		padding: rem(20);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(15);
+		}
 	}
-	// .content-tabs__box-content
-	&__box-content {
+	// .content-tabs__box
+	&__box {
+		max-width: rem(970);
+		margin: 0 auto;
+		justify-content: center;
+		//padding: rem(20) rem(0);
+		@media (max-width: $tablet) {
+			//margin-bottom: rem(20);
+		}
+	}
+	// .content-tabs__box-person
+	&__box-person {
+		padding: rem(20) rem(0);
 	}
 }
-//++++++++++++++++++++++++++++
+
 //========================================================================================================================================================
 //content-tabs__box-content
 // ? box-person
+// ! закончил
 .box-person {
-	// .box-person__title
+	// .box-form-persontitle
 	&__title {
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 20, 10);
 		}
 	}
-	// .box-person__text
+	// .box-form-persontext
 	&__text {
 		//max-width: rem(1060);
 		width: 100%;
@@ -148,26 +169,13 @@
 			margin-bottom: rem(20);
 		}
 	}
-	// .box-person__form
-	&__form {
-	}
-	// .box-person__buttons
-	&__buttons {
-	}
-	// .box-person__button
-	&__button {
-		&_big {
-		}
-	}
 }
 
-.form {
-	// .form__body
-	&__body {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	// .form__info
+//===+++++++++++++++++++++++++++++++++++++++++
+// ? START form-person
+// ! закончил  нет  поля выбрать фото
+.form-person {
+	// .form-person__info
 	&__info {
 		display: flex;
 		flex-wrap: wrap;
@@ -176,168 +184,163 @@
 		@media (max-width: $mobile) {
 			display: block;
 			width: 100%;
-			margin-bottom: rem(20);
+			margin-bottom: rem(25);
 		}
 	}
-	// .form__item
+	// .form-person__item
 	&__item {
 	}
-
-	// .form__label
-	&__label {
-		display: none;
-	}
-	&__icon {
-		position: relative;
-	}
-	// .form__input
+	// .form-person__input
 	&__input {
-		// padding-right: 2.5rem;
 	}
+	// .form-person__aicon
 	&__aicon {
 		position: absolute;
 		display: flex;
-		align-items: start;
+		align-items: flex-start;
 		top: 0;
 		bottom: 0;
 		right: 0.1rem;
-		//width: 2.25rem;
-		//cursor: pointer;
-		color: #bdbdbd;
-		transition: color 0.15s ease-in-out;
-		&:hover {
-			color: #212529;
-		}
+		width: 2.75rem;
 	}
-	// .form__gender
+	// .form-person__appearance
+	&__appearance {
+		display: flex;
+		gap: rem(50);
+	}
+	// .form-person__gender
 	&__gender {
-		//max-width: rem(460);
+		flex: 0 1 50%;
 	}
-
-	// .form__photo
-	&__photo {
-	}
-	// .form__footer
-	&__footer {
+	// .form-person__image
+	&__image {
+		flex: 0 1 50%;
+	}	
+	// .form-person__checkbox
+	&__checkbox {
 		&:not(:last-child) {
 			margin-bottom: rem(20);
 		}
 	}
-	// .form__buttons
-	&__buttons {
-	}
-	// .form__button
+	// .form-person__button
 	&__button {
 	}
+	// .form-person__button2
+	&__button2 {
+	}
 }
 
+//===+++++++++++++++++++++++++++++++++++++++++
+// ? gender Определяем пол человека
+// ! закончил
+// .gender
 .gender {
-	max-width: rem(440);
+	margin-bottom: rem(20);
+	display: flex;
+	max-width: rem(460);
 	width: 100%;
-	display: flex;
 	align-items: center;
-	column-gap: rem(20);
-	@include adaptiveValue("column-gap", 20, 10);
-	justify-content: space-between;
-	// .gender__title
-	&__title {
-		display: inline-block;
-		font-weight: 500;
-		font-size: rem(16);
-		color: #BBB7B7;
-		@include adaptiveValue("margin-left", 20, 10);
-	}
-	// .gender__radio-btn
-	&__radio-btn {
-		display: inline-block;
-		font-weight: 500;
-		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-		border-radius: 10px;
-		transition: background-color 0.5s ease 0s;
-		//margin-right: 10px;
-		& input[type="radio"] {
-			display: none;
-			&:checked + label {
-				background-color: $redColor;
-				color: #fff;
-			}
-		}
-		& label {
-			display: inline-block;
-			cursor: pointer;
-			// max-width: rem(180);
-			// width: 100%;
-			padding: 0 rem(50);
-			@include adaptiveValue("padding-left", 54, 12);
-			@include adaptiveValue("padding-right", 54, 12);
-			line-height: rem(50);
-			// border: 1px solid #999;
-			border-radius: 6px;
-			user-select: none;
-			&:hover {
-				background-color: #c72a2acb;
-				color: #ffffff;
-			}
-			&:active {
-				top: rem(3);
-				background-color: $redColor;
-				box-shadow: 0 rem(2) 0 $redColor;
-			}
-		}
-	}
-}
-
-.options {
-	//position: relative;
-	//display: flex;
-	column-gap: rem(20);
-	justify-content: space-between;
-	align-items: center;
-	// .options__item
-	&__item {
-		min-height: rem(50);
-		align-items: center;
-		position: relative;
-	}
-	// .options__input
-	&__input {
-	}
+	// .gender__text
 	&__text {
-		font-size: rem(16);
-		line-height: rem(50);
-		align-items: center;
-		color: $mainColor;
+		//@include adaptiveValue("margin-left", 20, 5);
+		font-weight: 500;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(20, 14);
+		text-align: center;
+		color: #bbb7b7;
+		margin-right: rem(22);
 	}
-	// .options__label
-	&__label {
-		display: none;
-	}
-	// .file__button3
-	&__button3 {
-		position: absolute;
-		width: rem(180);
-		// width: 100%;
-		top: 0;
-		left: 0;
-		border-radius: rem(10);
-		&_g {
-			// left: rem(50);
-		}
-		&_m {
-			// left: rem(238);
-		}
+	// .gender__r-all
+	&__r-all {
+		display: flex;
+		flex: 0 1 100%;
+		//justify-content: space-between;
 	}
 }
 
-.file {
+.r-all {
+	background: #f6f7f7;
+	//border: solid 2px #ffbffb;
+	//border-radius: 10px;
+	position: relative;
 	display: flex;
-	align-items: center;
-	column-gap: 20px;
-	background-color: #ddef7b;
+	//margin: 20px 0;
+	max-width: rem(400);
+	width: 100%;
+}
+.r-all .r-group {
+	width: calc(100% - 20px);
+	display: flex;
+	background: #ffffff;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	transition: box-shadow 0.2s ease;
+}
+.r-group:first-child {
+	margin-right: rem(20);
+}
+
+.r-all .r-group input {
+	opacity: 0; // ? должно быть 0
+	position: absolute;
+}
+.r-all .r-group input + label {
+	border-radius: 10px;
+	flex: 1 1 100%;
+	font-size: rem(16);
+	@include adaptiveValue("font-size", 16, 14);
+	line-height: rem(50);
+	font-weight: 500;
+	margin: 0;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+	transition: color 0.4s ease;
+	cursor: pointer;
+}
+.r-all::before {
+	background: $redColor;
+	border-radius: 10px;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+	color: #fff;
+	content: "";
+	display: block;
+	//height: calc(100% - 20px);
+	height: rem(50);
+	position: absolute;
+	//top: 10px;
+	left: 0px;
+	transform: translateX(calc((100% + (10px * 2)) * (var(--options-active) - 1)));
+	transition: transform cubic-bezier(0.8, 0.34, 0.28, 1.15) 0.35s;
+	width: calc((100% - ((var(--options) * 5px) * 2)) / var(--options));
+}
+.r-all .r-group input:checked + label {
+	color: #fff;
+}
+.r-all .r-group:hover {
+	background: #c72a2a7d;
+	color: #fff;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+// ? finish gender Определяем пол человека
+// ? FINISH form-person
+// ===++++++++++++++++++++++++++++++++++++++++++++
+// ? Выбираем фотографию-->
+// ! закончил
+.file {
+	max-width: rem(460);
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
 	// .file__item
 	&__item {
+		margin-bottom: rem(20);
+		display: flex;
+		max-width: rem(390);
+		width: 100%;
+		align-items: center;
 		position: relative;
-		height: 50px;
 	}
 	// .file__input
 	&__input {
@@ -351,42 +354,50 @@
 		cursor: pointer;
 	}
 	// .file__button
-	&__button3 {
-		// display: inline-flex;
-		// min-height: 40px;
-		//border-radius: rem(10);
-		// justify-content: center;
-		// align-items: center;
-		// color: #fff;
-		// background-color: #8a6ca4;
-		// padding: 0px 20px;
+	&__button {
+		display: inline-flex;
+		width: 100%;
+		min-height: rem(50);
+		border-radius: rem(10);
+		//justify-content: center;
+		align-items: center;
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+		color: $mainColor;
+		background: #ffffff;
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+		padding: 0 rem(20);
 	}
 	// .file__preview
 	&__preview {
 		display: inline-block;
-		max-width: 100px;
-		padding: 10px 0px 0px 0px;
-		& img {
-			max-width: 100%;
+		width: rem(50);
+		img {
+			width: 100%;
+			height: rem(50);
+			border-radius: 50%;
+			object-fit: cover;
+			&:hover {
+				transform: scale(1.5);
+			}
 		}
 	}
 }
+//++++++++++++++++++++
+
+
+
+
 
 //========================================================================================================================================================
 //content-tabs__box-specialization
-// ? box-specialization
+// ? START box-specialization
+// ! закончил
+// ? box-special
 .box-special {
 	// .box-special__title
 	&__title {
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 110, 20);
-		}
-		@media (max-width: $tablet) {
-			&:not(:last-child) {
-				margin-bottom: rem(0);
-			}
-			margin-top: rem(30);
-		}
+		margin-bottom: rem(20);
 	}
 	// .box-special__body
 	&__body {
@@ -403,7 +414,7 @@
 		column-gap: rem(10);
 	}
 }
-
+// ? box-navigation
 .box-navigation {
 	// .box-navigation__title
 	&__title {
@@ -421,17 +432,26 @@
 		justify-content: center;
 		white-space: nowrap;
 		transition: background 0.3s ease;
+		position: relative;
+		top: 0;
 		&:hover {
 			//border-radius: rem(8);
 			color: #fff;
 			background: rgba(230, 49, 49, 0.815);
+		}
+		&:active {
+			top: rem(3);
+			background-color: $redColor;
 		}
 		&._tab-active {
 			color: #fff;
 			background-color: $redColor;
 		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 20, 15);
+			margin-bottom: rem(25);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(10);
+			}
 		}
 		// .box-navigation__title_for
 		&_for {
@@ -441,7 +461,7 @@
 			padding-right: rem(35);
 			position: relative;
 			&:not(:last-child) {
-				margin-bottom: rem(20);
+				margin-bottom: rem(5);
 			}
 			&::after {
 				position: absolute;
@@ -455,7 +475,7 @@
 			}
 		}
 		@media (max-width: $tablet) {
-			margin-top: rem(20);
+			margin-top: rem(10);
 		}
 	}
 	// .box-navigation__aicon
@@ -469,67 +489,76 @@
 		width: 2.75rem;
 	}
 }
-
-.form {
-	// .form__icon
-	&__icon {
-		// .form__icon_user
-		&_user {
-		}
-		// .form__icon_question
-		&_question {
-		}
-		// .form__icon_city
-		&_city {
-		}
-	}
-	// .form__content
+//==++++++++++++++++++++++++++
+// ? form-special
+.form-special {
+	// .form-special__content
 	&__content {
-	}
-	// .form__item
-	&__item {
-		position: relative;
-		&::after {
-			position: absolute;
-			content: "";
-			bottom: rem(0);
-			left: 0;
-			height: rem(2);
-			width: 100%;
-			background: $headerColor;
-			border-radius: 2px;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
 		}
 	}
-	// .form__textarea
-	&__textarea {
-		//position: relative;
+	// .form-special__area
+	&__area {
 	}
-	// .form__aicon
+	// .form-special__textarea
+	&__textarea {
+	}
+	// .form-special__aicon
 	&__aicon {
 		position: absolute;
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		top: 0;
 		bottom: 0;
-		right: 0.1rem;
-		width: 2.75rem;
+		right: 0.5rem;
+		color: #bdbdbd;
+		transition: color 0.15s ease-in-out;
+		&:hover {
+			color: #212529;
+		}
+		&_big {
+			align-items: start;
+			width: 1.5rem;
+			top: 1rem;
+			right: 1rem;
+		}
+		&_for {
+			right: 1.25rem;
+			@media (max-width: rem(1200)) {
+				right: 0.7rem;
+			}
+			@media (max-width: rem(1000)) {
+				right: 0.5rem;
+			}
+			@media (max-width: $tablet) {
+				right: 1.25rem;
+			}
+		}
 	}
+	// .form-special__icon
 	&__icon {
-		background: none;
 	}
-	// .form__buttons
+	// .form-special__buttons
 	&__buttons {
+		display: flex;
+		@include adaptiveValue("column-gap", 50, 20);
+		@media (max-width: $mobile) {
+			display: block;
+		}
 	}
-	// .form__button
+	// .form-special__button
 	&__button {
 	}
 }
-
+// ! закончил
+// ? FINISH box-specialization
 //========================================================================================================================================================
-
 //++++++++++++++++++++++++++++
 //content-tabs__box-styles
-// ? box-styles    не трогать!!!
+// ? START box-styles !!!
+// ! закончил
+// ? box-styles
 .box-styles {
 	// .box-styles__title
 	&__title {
@@ -559,7 +588,7 @@
 		}
 	}
 }
-
+// ? box-gallery
 .box-gallery {
 	&:not(:last-child) {
 		margin-bottom: rem(20);
@@ -576,9 +605,9 @@
 		margin: 0 auto;
 	}
 }
-
-.item {
-	// .item__image
+// ? item-style
+.item-style {
+	// .item-style__image
 	&__image {
 		flex: 0 0 rem(114);
 		height: rem(114);
@@ -600,7 +629,7 @@
 			}
 		}
 	}
-	// .item__name
+	// .item-style__name
 	&__name {
 		font-size: rem(14);
 		line-height: math.div(17, 14);
@@ -609,8 +638,13 @@
 		text-align: center;
 	}
 }
-
+// ! закончил
+// ? FINISH box-styles !!!
 //++++++++++++++++++++++++++++
+//========================================================================================================================================================
+//++++++++++++++++++++++++++++
+// ? START box-price !!!
+// !  НЕ закончил, в работе
 //ccontent-tabs__box-content
 // ? box-price
 .box-price {
@@ -642,8 +676,13 @@
 		}
 	}
 }
-
+// ! НЕ закончил
+// ? FINISH box-price !!!
 //++++++++++++++++++++++++++++
+//========================================================================================================================================================
+//++++++++++++++++++++++++++++
+// ? START box-services !!!
+// !  НЕ закончил, в работе
 //ccontent-tabs__box-content
 // ? box-services
 .box-services {
@@ -675,8 +714,13 @@
 		}
 	}
 }
-
+// ! НЕ закончил
+// ? FINISH box-services !!!
 //++++++++++++++++++++++++++++
+//========================================================================================================================================================
+//++++++++++++++++++++++++++++
+// ? START box-notifications !!!
+// !  НЕ закончил, в работе
 //ccontent-tabs__box-content
 // ? box-notifications
 .box-notifications {
@@ -707,8 +751,13 @@
 	&__button {
 	}
 }
-
+// !  НЕ закончил, в работе
+// ? FINISH box-services !!!
 //++++++++++++++++++++++++++++
+//========================================================================================================================================================
+//++++++++++++++++++++++++++++
+// ? START password !!!
+// ! закончил
 //ccontent-tabs__box-content
 // ? password
 .password {
@@ -720,9 +769,6 @@
 	}
 	// .password__content
 	&__content {
-		flex: 1;
-		border-radius: rem(25);
-		margin: 0 auto;
 	}
 	// .password__title
 	&__title {
@@ -734,37 +780,27 @@
 	&__form {
 	}
 }
-
-.form {
-	// .form__input
-	&__input {
-	}
-	// .form__items
+// ? form-pass
+.form-pass {
+	// .form-pass__items
 	&__items {
 		flex: 0 1 40.6%;
 		max-width: rem(460);
 		width: 100%;
 		margin: 0 auto;
 	}
-	// .form__item
+	// .form-pass__item
 	&__item {
 	}
 	&__error {
-		position: absolute;
-		left: 0;
-		z-index: 2;
-		background-color: #fbffe3;
-		border: 1px solid #303233;
-		border-radius: 5px;
-		top: rem(55);
-		left: rem(25);
-		padding: rem(10) rem(20);
-		color: $redColor;
-		.item {
-			margin-bottom: rem(40);
-		}
+		// .item {
+		// 	margin-bottom: rem(40);
+		// }
 	}
-	// .form__aicon
+	// .form-pass__input
+	&__input {
+	}
+	// .form-pass__aicon
 	&__aicon {
 		position: absolute;
 		display: flex;
@@ -774,30 +810,23 @@
 		right: 0.1rem;
 		width: 2.75rem;
 	}
-	// .form__icon
+	// .form-pass__icon
 	&__icon {
-		// .form__icon_user
-		&_user {
-		}
-		// .form__icon_eye
-		&_eye {
-		}
 	}
-	// .form__label
+	// .form-pass__label
 	&__label {
 	}
-	// .form__viewpass
+	// .form-pass__viewpass
 	&__viewpass {
-		position: absolute;
-		top: rem(11);
-		right: rem(10);
-		width: rem(26);
-		height: rem(22);
-		object-fit:cover;
-		display: inline-block;
+		// position: absolute;
+		// top: rem(11);
+		// right: rem(10);
+		// width: rem(26);
+		// height: rem(22);
+		// object-fit: cover;
+		// display: inline-block;
 	}
-	
-	// .form__buttons
+	// .form-pass__buttons
 	&__buttons {
 		display: flex;
 		margin-top: rem(30);
@@ -810,11 +839,14 @@
 			margin-top: rem(30);
 		}
 	}
-	// .form__button
+	// .form-pass__button
 	&__button {
 		&:not(:last-child) {
 			margin-bottom: rem(10);
 		}
 	}
 }
-
+// !  закончил
+// ? FINISH  password !!!
+//++++++++++++++++++++++++++++
+//========================================================================================================================================================

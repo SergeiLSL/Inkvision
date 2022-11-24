@@ -2,7 +2,7 @@
 // Заголовки, общие БЄМ блоки и проче...
 
 //? Заголовки и тексты
-.title-setting {
+.title {
 	font-weight: 700;
 	@include adaptiveValue("font-size", 40, 28);
 	line-height: math.div(49, 40);
@@ -13,7 +13,7 @@
 	}
 }
 
-.text-setting {
+.text {
 	@include adaptiveValue("font-size", 18, 14);
 	line-height: math.div(24, 18);
 	color: $headerColor;
@@ -21,28 +21,16 @@
 	& span {
 		color: $redColor;
 		text-align: justify;
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 	&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 20, 10);
 	}
 }
 
-.body-tabs {
-	flex: 0 1 rem(1333);
-	width: 100%;
-	max-width: rem(1333);
-	background: url("@img/reperat.jpg");
-	border-radius: rem(25);
-	filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
-	@include adaptiveValue("padding-left", 81, 15);
-	@include adaptiveValue("padding-right", 82, 15);
-	@include adaptiveValue("padding-top", 100, 30);
-	@include adaptiveValue("padding-bottom", 60, 20);
-	@media (max-width: $tablet) {
-		margin-top: rem(30);
-		margin-bottom: rem(30);
-	}
-}
 //========================================================================================================================================================
 //? Формы
 form * {
@@ -50,16 +38,16 @@ form * {
 }
 // Иконки с иконочным шрифтом
 .icon {
+	position: relative;
 	font-family: "icons";
 	padding: 10px;
-	background: #fff;
+	//background: #fff;
 	color: #bbb7b7;
 	text-align: center;
 	font-size: rem(22);
-	align-self: self-start;
-	right: 0rem;
+	align-self: start;
+	right: 0.2rem;
 	top: 0.2rem;
-	//align-items: center;
 }
 
 .item {
@@ -71,10 +59,13 @@ form * {
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 	transition: all 0.5s ease 0s;
 	&:not(:last-child) {
-		margin-bottom: rem(25);
+		margin-bottom: rem(28);
 	}
 	&_big {
 		flex: 1 1 100%;
+	}
+	&__textarea {
+		flex: 1 1 rem(1280);
 	}
 	&_average {
 		flex: 0 0 rem(460);
@@ -87,7 +78,7 @@ form * {
 		height: rem(2);
 		width: 100%;
 		background: $headerColor;
-		border-radius: 2px;
+		border-radius: 0 0 rem(2) rem(2);
 	}
 	&_gender {
 	}
@@ -100,15 +91,17 @@ form * {
 	font-size: rem(16);
 	line-height: math.div(20, 16);
 	color: $mainColor;
-	box-shadow: rem(1) rem(1) rem(1) rgba(0, 0, 0, 0.25);
+	//box-shadow: rem(1) rem(1) rem(1) rgba(0, 0, 0, 0.25);
 	border-radius: rem(2);
 	transition: all 0.5s ease 0s;
 	&:hover {
-		border: 2px solid $redColor;
+		//border: 2px solid $redColor;
+		box-shadow: rem(2) rem(2) rem(2) rgba(199, 42, 42, 0.6);
 	}
 	&:focus {
 		color: #00020f;
-		box-shadow: rem(1) rem(1) rem(4) rgba(199, 42, 42, 0.6);
+		//border: 2px solid $redColor;
+		box-shadow: rem(2) rem(2) rem(2) rgba(199, 42, 42, 0.6);
 	}
 }
 
@@ -116,52 +109,90 @@ form * {
 	position: relative;
 	width: 100%;
 	resize: vertical;
-	padding: rem(24) rem(20)rem(15) rem(20);
+	padding: rem(24) rem(20) rem(15) rem(20);
 	font-size: rem(16);
 	line-height: math.div(20, 16);
 	color: $mainColor;
-	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: rem(1) rem(1) rem(4) rgba(0, 0, 0, 0.25);
+	border-radius: rem(2);
 	min-height: rem(120);
+	// transition: all 0.5s ease 0s;
 	&:hover {
 		border: 1px solid $redColor;
 	}
 	&.aicon {
-		align-items: start;
+	}
+	&::after {
 	}
 }
 
-.aicon {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	top: 0;
-	bottom: 0;
-	right: 0.5rem;
-	//width: 2.25rem;
-	//cursor: pointer;
-	color: #bdbdbd;
-	transition: color 0.15s ease-in-out;
-	&:hover {
-		color: #212529;
+.area {
+	flex: 1 1 100%;
+	position: relative;
+	transition: all 0.5s ease 0s;
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: rem(-1);
+		left: 0;
+		height: rem(2);
+		width: 100%;
+		background-color: $headerColor;
+		border-radius: 0 0 rem(2) rem(2);
 	}
-	&_big {
-		align-items: start;
-		width: 1.5rem;
-		top: 1rem;
-		right: 1rem;
-	}
-	&_for {
-		right: 1.25rem;
-		@media (max-width: rem(1200)) {
-			right: 0.7rem;
+}
+
+// .aicon {
+// 	position: absolute;
+// 	display: flex;
+// 	align-items: center;
+// 	top: 0;
+// 	bottom: 0;
+// 	right: 0.5rem;
+// 	color: #bdbdbd;
+// 	transition: color 0.15s ease-in-out;
+// 	&:hover {
+// 		color: #212529;
+// 	}
+// 	&_big {
+// 		align-items: start;
+// 		width: 1.5rem;
+// 		top: 1rem;
+// 		right: 1rem;
+// 	}
+// 	&_for {
+// 		right: 1.25rem;
+// 		@media (max-width: rem(1200)) {
+// 			right: 0.7rem;
+// 		}
+// 		@media (max-width: rem(1000)) {
+// 			right: 0.5rem;
+// 		}
+// 		@media (max-width: $tablet) {
+// 			right: 1.25rem;
+// 		}
+// 	}
+// }
+
+.form {
+	&__error {
+		position: absolute;
+		left: 0;
+		z-index: 2;
+		//background-color: #fbffe3;
+		//box-shadow: 0 0 15px red;
+		bottom: rem(-20);
+		left: rem(25);
+		padding: rem(3) rem(5) rem(0) rem(5);
+		color: $redColor;
+		.item {
+			margin-bottom: rem(40);
 		}
-		@media (max-width: rem(1000)) {
-			right: 0.5rem;
+		.area{
+			margin-bottom: rem(40);
 		}
-		@media (max-width: $tablet) {
-			right: 1.25rem;
-		}
+
 	}
 }
 
@@ -193,7 +224,6 @@ form * {
 	&:active {
 		top: rem(3);
 		background-color: $redColor;
-		box-shadow: 0 rem(5) 0 $redColor;
 	}
 	&_color {
 		color: #ffffff;
@@ -233,7 +263,6 @@ form * {
 	&:active {
 		top: rem(3);
 		background-color: $redColor;
-		box-shadow: 0 rem(5) 0 $redColor;
 	}
 }
 
@@ -269,13 +298,13 @@ form * {
 		//box-shadow: 0 rem(5) 0 $redColor;
 	}
 }
-
+//========================================================================================================================================================
 //========================================================================================================================================================
 //? Чекбоксы
 .checkbox {
 	position: relative;
 	width: 100%;
-	margin-bottom: rem(20);
+	//margin-bottom: rem(20);
 	// .checkbox__input
 	&__input {
 		position: absolute;
