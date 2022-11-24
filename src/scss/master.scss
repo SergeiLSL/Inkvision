@@ -488,6 +488,18 @@
 			left: 0;
 			object-fit: cover;
 		}
+		&:after {
+			content: "";
+			display: block;    
+			width: 100%;
+			height: 100%;    
+			position: absolute;
+			top: 0;      
+			left: 0;   
+			background: transparent;
+			background-image: linear-gradient(to top, #00020F, #634E92);
+			opacity: 0.5;
+		}	
 	}
 	// .picture__text
 	&__text {
