@@ -1,16 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
 			<main class="page">
+				<div class="page__home home">
+					<div class="home__content">
+
+						<section class="home__body body-master">
+						</section>
+
+						<section class="home__start start-home">
+							<div class="start-home__picture picture">
+								<div class="picture__image-ibg">
+									<img src="@img/master/start.jpg" alt="Image with numbers">
+									<div class="picture__text">
+										<div class="picture__title">Готовы начать?</div>
+										<div class="picture__items">
+											<div class="picture__item">
+												<div class="picture__numbers">30 000</div>
+												<div class="picture__comment">эскизов на сайте</div>
+											</div>
+											<div class="picture__item">
+												<div class="picture__numbers">2 000</div>
+												<div class="picture__comment">продаж</div>
+											</div>
+											<div class="picture__item">
+												<div class="picture__numbers">110 000</div>
+												<div class="picture__comment">пользователей в месяц</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="start-home__registration registration-home">
+								<div class="registration-home__content">
+									<div class="registration-home__box">
+										<div class="registration-home__title">
+											Бесплатно опубликуй портфолио, и клиенты сами тебя найдут
+										</div>
+
+										<form action="#" id="form-portfolio" data-dev
+											class="form-portfolio__input form-portfolio">
+											<div class="form-portfolio__info">
+												<div class="form-portfolio__buttons">
+													<button type="submit" class="form-portfolio__button button">Ищу
+														мастера
+													</button>
+													<button type="submit"
+														class="form-portfolio__button button button_color">Тату-мастер
+													</button>
+												</div>
+												<!-- Почта -->
+												<div class="form-portfolio__item item">
+													<input class="form-portfolio__input input"
+														data-error="Введен не верный E-mail" data-validate
+														data-required="homeemail" type="text"
+														placeholder="example@domain.com" name="form[homeemail]">
+													<span class="form-portfolio__aicon">
+														<div class="_icon-email form-portfolio__icon icon">
+														</div>
+													</span>
+												</div>
+												<div class="form-portfolio__location">
+													<!-- Имя -->
+													<div class="form-portfolio__item item">
+														<input data-validate class="form-portfolio__input input"
+															data-error="Введите имя" data-required="homename"
+															type="text" placeholder="Имя" name=form[homename]>
+														<span class="form-portfolio__aicon">
+															<div class="_icon-user form-portfolio__icon icon">
+															</div>
+														</span>
+													</div>
+													<!-- Город -->
+													<div class="form-portfolio__item item">
+														<input data-validate class="form-portfolio__input input"
+															type="text" data-error="Город вы живете?"
+															data-required="homecity" placeholder="Город" name=form[homecity]>
+														<span class="form-portfolio__aicon aicon">
+															<div class="_icon-city icon">
+															</div>
+														</span>
+													</div>
+												</div>
+												<!-- Пароль -->
+												<div class="form-portfolio__item item">
+													<label for="homepsw" class="form-portfolio__label"></label>
+													<input autocomplete="off" data-validate
+														data-error="Введен неверный пароль!" data-required="password"
+														type="password" id="homepsw" name="form[homepsw]" placeholder="Пароль"
+														class="form-portfolio__input input _req">
+													<button class="form-portfolio__viewpass _icon-psw-view"
+														type="button"></button>
+												</div>
+											</div>
+
+											<div class="checkbox form-portfolio__checkbox">
+												<input id="ch_2" data-error="Ошибка" class="checkbox__input"
+													type="checkbox" value="2" name="form[]">
+												<label for="ch_2" class="checkbox__label"><span
+														class="checkbox__text">Регистрируясь, я принимаю условия
+														<span>конфиденциальности</span> и порядок <span>обработки
+															данных</span></label>
+											</div>
+
+											<button type="submit"
+												class="form-portfolio__button-footer button button_color button_big">зарегистрироваться
+											</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+
+				</div>
 			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

@@ -35,7 +35,7 @@
 	// .master__start
 	&__start {
 		flex: 0 0 100%;
-		max-width: rem(1725);
+		//max-width: rem(1725);
 		width: 100%;
 	}
 }
@@ -456,7 +456,7 @@
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
-	@include adaptiveValue("gap", 60, 0);
+	//@include adaptiveValue("gap", 60, 0);
 	@media (max-width: $tablet) {
 		display: block;
 	}
