@@ -386,9 +386,6 @@
 //++++++++++++++++++++
 
 
-
-
-
 //========================================================================================================================================================
 //content-tabs__box-specialization
 // ? START box-specialization
@@ -614,8 +611,7 @@
 		width: rem(114);
 		position: relative;
 		cursor: pointer;
-		transition: all 0.5s ease;
-		// background: url("../img/loading.gif") center / 50px no-repeat;
+		transition: all 0.5s ease;		
 		& img {
 			border-radius: 50%;
 			position: absolute;
