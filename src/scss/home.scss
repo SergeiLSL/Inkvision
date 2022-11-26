@@ -126,6 +126,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 rem(-20);
+		row-gap: rem(40);
 		@media (max-width: $tablet) {
 			flex-direction: column;
 		}
@@ -135,8 +136,10 @@
 		display: flex;
 		flex: 0 1 33.333%;
 		padding: 0 rem(20);
-		gap: rem(40);
-		@include adaptiveValue("gap", 40, 20);
+		//@include adaptiveValue("padding-left", 20, 10);
+		//@include adaptiveValue("padding-right", 20, 10);
+		//gap: rem(40);
+		@include adaptiveValue("gap", 40, 10);
 		//flex-wrap: wrap;
 	}
 	// .styles-home__card
@@ -172,9 +175,9 @@
 		// .card-styles__column_1
 		&_1 {
 			flex: 0 1 math.div(270, 547) * 100%;
-			@media (max-width: $mobile) {
-				flex: 1 1 100%;
-			}
+			// @media (max-width: $mobile) {
+			// 	flex: 1 1 100%;
+			// }
 		}
 		// .card-styles__column_2
 		&_2 {
@@ -188,6 +191,9 @@
 			@media (max-width: $mobile) {
 				flex: 1 1 100%;
 			}
+		}
+		&_4 {
+			flex: 0 1 100%;
 		}
 	}
 	// .card-styles__image
@@ -213,7 +219,7 @@
 			padding: rem(0) rem(0) 123.41% rem(0);
 		}
 		&_4 {
-			margin: 0;
+			padding: rem(0) rem(0) 29.91% rem(0);
 		}
 	}
 	// .card-styles__text
