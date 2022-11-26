@@ -31,6 +31,9 @@
 			}
 		}
 	}
+	// .home__attention
+	&__attention {
+	}
 	// .master__start
 	&__start {
 		flex: 0 0 100%;
@@ -45,7 +48,205 @@
 	}
 }
 
-//==+++++++++++++++++++++++++++++++++++
+//===================================================================
+// ? Старт секции home__attention
+.attention {
+	padding-top: rem(40);
+	padding-bottom: rem(50);
+	background: url("@img/noise.jpg") repeat;
+	// background-color: #b8a0bf;
+	// .attention__container
+	&__container {
+	}
+	// .attention__content
+	&__content {
+	}
+	// .attention__title
+	&__title {
+		color: rgba(255, 255, 255, 0.3);
+		color: #00020f; // убрать
+		margin-bottom: rem(37);
+	}
+	// .attention__advertising
+	&__advertising {
+	}
+	// .attention__service
+	&__service {
+	}
+}
+
+//========================================================================================================================================================
+// ? Старт секции attention__service
+.service {
+	color: #ffffff;
+	// .service__box
+	&__box {
+		padding-top: rem(49);
+		padding-bottom: rem(49);
+	}
+	// .service__row
+	&__row {
+		display: flex;
+		margin: 0 rem(-30);
+		margin: 0 auto;
+		justify-content: center;
+		gap: rem(38);
+		@media (max-width:$tablet){
+			flex-wrap: wrap;
+		}
+	}
+	// .service__column
+	&__column {
+		position: relative;
+		flex: 0 1 33.3333%;
+		flex-direction: column;
+		height: 100%;
+		padding: 0 rem(30);
+		text-align: center;
+		padding-top: rem(70);
+		padding-bottom: rem(45);
+		max-width: rem(532);
+		border-radius: rem(25);
+		transition: all 0.5s ease;
+		background-color: #634e92;
+		&:hover {
+			background: url("@img/rnoise.jpg") repeat;
+			filter: drop-shadow(rem(4) rem(4) rem(4) rgba(112, 0, 0, 0.34));
+		}
+		@media (max-width:$tablet){
+			flex: 0 1 50%;
+			width: 100%;
+		}
+	}
+	// .service__title
+	&__title {
+		font-weight: 700;
+		font-size: rem(36);
+		@include adaptiveValue("font-size", 36, 20);
+		line-height: math.div(44, 36);
+		text-transform: uppercase;
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
+	}
+	// .service__text
+	&__text {
+		font-weight: 500;
+		font-size: rem(20);
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(24, 20);
+		text-transform: uppercase;
+	}
+}
+
+// ? Финиш секции attention__service
+//===================================================================
+// ? Старт секции attention__advertising
+.advertising {
+	@include adaptiveValue("padding-top", 25, 0);
+	background: #545454;
+	background: -moz-linear-gradient(left, #545454 0%, #ffffff 100%);
+	background: -webkit-linear-gradient(left, #545454 0%, #ffffff 100%);
+	background: linear-gradient(to right, #545454 0%, #ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#545454', endColorstr='#ffffff',GradientType=1 );
+	//border-radius: rem(100);
+	@include adaptiveValue("border-radius", 100, 30);
+	z-index: 5;
+	// .advertising__box
+	&__box {
+		@include adaptiveValue("padding-top", 70, 30);
+		@include adaptiveValue("padding-bottom", 75, 30);
+		padding-left: rem(15);
+		padding-right: rem(15);
+		max-width: rem(1557);
+		margin: 0 auto;
+	}
+	// .advertising__title
+	&__title {
+		font-weight: 700;
+		font-size: rem(48);
+		@include adaptiveValue("font-size", 48, 22);
+		line-height: math.div(59, 48);
+		text-transform: uppercase;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 68, 10);
+		}
+	}
+	// .advertising__content
+	&__content {
+		display: flex;
+		gap: rem(20);
+		align-items: center;
+		@media (max-width:$tablet){
+			display: block;
+		}
+	}
+	// .advertising__column
+	&__column {
+		flex: 0 1 50%;
+	}
+	// .advertising__list
+	&__list {
+		flex: 0 1 50%;
+		@media (max-width:$tablet){
+			margin-top: rem(20);
+		}
+	}
+	// .advertising__sentence
+	&__sentence {
+		max-width: rem(694);
+		margin: 0 auto;
+		color: $mainColor;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 20);
+		}
+	}
+	// .advertising__subtitle
+	&__subtitle {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 32, 20);
+		line-height: math.div(39, 32);
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	// .advertising__text
+	&__text {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(24, 20);
+	}
+}
+
+.card-styles {
+	// .card-styles__row
+	&__row {
+	}
+	// .card-styles__column
+	&__column {
+		// .card-styles__column_1
+		&_1 {
+		}
+		// .card-styles__column_2
+		&_2 {
+		}
+	}
+	// .card-styles__image-ibg
+	&__image-ibg {
+		// .card-styles__image-ibg_1
+		&_1 {
+			margin-bottom: rem(10); // ? не работает
+		}
+		// .card-styles__image-ibg_2
+		&_2 {
+		}
+		// .card-styles__image-ibg_3
+		&_3 {
+		}
+	}
+}
+
+// ? Финиш секции attention__advertising
 //========================================================================================================================================================
 // ? Старт секции home__styles  styles-home
 .styles-home {
@@ -74,12 +275,6 @@
 		margin: 0 rem(-20);
 		//row-gap: rem(40);
 		@include adaptiveValue("row-gap", 40, 15);
-		@media (max-width: $tablet) {
-			//display: block;
-		}
-		@media (max-width: $mobile) {
-			//display: block;
-		}
 	}
 	// .styles-home__column
 	&__column {
@@ -129,7 +324,7 @@
 		&_1 {
 			flex: 0 1 math.div(270, 547) * 100%;
 			border-radius: rem(50) 0 0 rem(50);
-	}
+		}
 		// .card-styles__column_2
 		&_2 {
 			flex: 0 1 math.div(270, 547) * 100%;
