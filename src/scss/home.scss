@@ -63,12 +63,6 @@
 	}
 	// .styles-home__title
 	&__title {
-		font-weight: 300;
-		font-size: rem(80);
-		@include adaptiveValue("font-size", 80, 40);
-		line-height: math.div(98, 80);
-		text-transform: uppercase;
-		color: rgba(0, 0, 0, 0.38);
 		&:not(:last-child) {
 			margin-bottom: rem(24);
 		}
