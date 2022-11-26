@@ -50,7 +50,7 @@
 // ? Старт секции home__styles  styles-home
 .styles-home {
 	background: url("@img/repeat.jpg");
-	background: #bed5df;
+	//background: #bed5df;
 	padding: rem(67) rem(0) rem(55) rem(0);
 	@include adaptiveValue("padding-top", 67, 30);
 	@include adaptiveValue("padding-bottom", 55, 25);
@@ -83,7 +83,7 @@
 		@media (max-width: $tablet) {
 			//display: block;
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			//display: block;
 		}
 	}
@@ -93,10 +93,10 @@
 		flex: 0 1 33.333%;
 		padding: 0 rem(20);
 		@include adaptiveValue("gap", 40, 10);
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			flex: 0 1 50%;
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			flex: 0 1 100%;
 		}
 		//flex-wrap: wrap;
@@ -124,25 +124,40 @@
 		display: flex;
 		flex-wrap: wrap;
 		text-align: center;
-		//max-width: rem(1725);
-		//margin: 0 auto;
 		justify-content: space-between;
+		// border-radius: rem(50);
+		// overflow: hidden;
 	}
 	// .card-styles__column
 	&__column {
+		overflow: hidden;
 		// .card-styles__column_1
 		&_1 {
 			flex: 0 1 math.div(270, 547) * 100%;
-		}
+			border-radius: rem(50) 0 0 rem(50);
+	}
 		// .card-styles__column_2
 		&_2 {
 			flex: 0 1 math.div(270, 547) * 100%;
+			border-radius: 0 rem(50) rem(50) 0;
 		}
 		// .card-styles__column_3
 		&_3 {
 		}
+		// .card-styles__column_4
 		&_4 {
+			flex: 0 1 math.div(270, 547) * 100%;
+			border-radius: rem(50) 0 0 0;
+		}
+		// .card-styles__column_4
+		&_5 {
+			flex: 0 1 math.div(270, 547) * 100%;
+			border-radius: 0 rem(50) 0 0;
+			overflow: hidden;
+		}
+		&_6 {
 			flex: 0 1 100%;
+			border-radius: 0 0 rem(50) rem(50);
 		}
 	}
 	// .card-styles__image
@@ -180,7 +195,7 @@
 		line-height: math.div(39, 32);
 		color: $mainColor;
 		@include adaptiveValue("margin-top", 20, 5);
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			font-size: rem(20);
 		}
 	}
@@ -193,9 +208,6 @@
 	background: url("@img/repeat.jpg");
 	// .home__start
 	&__start {
-		flex: 0 0 100%;
-		max-width: rem(1725);
-		width: 100%;
 	}
 	// .home__registration
 	&__registration {
@@ -207,10 +219,10 @@
 	align-items: center;
 	justify-content: center;
 	padding: rem(40) rem(15);
-	background: #d5dfbe; // убрать
 	margin: 0 auto;
 	@media (max-width: $tablet) {
 		display: block;
+		padding: rem(30) rem(0);
 	}
 	// .start-home__picture
 	&__picture {
