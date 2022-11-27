@@ -4,7 +4,7 @@
 }
 // ? master
 .home {
-	padding: rem(160) rem(15) rem(0) rem(15);
+	padding-top: rem(160);
 	@media (max-width: $tablet) {
 		padding-top: rem(120);
 	}
@@ -51,9 +51,10 @@
 //===================================================================
 // ? Старт секции home__attention
 .attention {
+	background: url("@img/noise.jpg") repeat;
 	padding-top: rem(40);
 	padding-bottom: rem(50);
-	background: url("@img/noise.jpg") repeat;
+	//background: url("@img/noise.jpg") repeat;
 	// background-color: #b8a0bf;
 	// .attention__container
 	&__container {
@@ -64,7 +65,7 @@
 	// .attention__title
 	&__title {
 		color: rgba(255, 255, 255, 0.3);
-		color: #00020f; // убрать
+		//color: #00020f; // убрать
 		margin-bottom: rem(37);
 	}
 	// .attention__advertising
@@ -73,8 +74,275 @@
 	// .attention__service
 	&__service {
 	}
+	// .attention__works
+	&__works {
+	}
+}
+//========================================================================================================================================================
+// ? Старт секции attention__works works
+.works {
+	// .works__box
+	&__box {
+	}
+	// .works__row
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	// .works__col
+	@media (min-width: $tablet) {
+		&__col {
+			position: relative;
+			flex: 0 0 73.8551%;
+			max-width: 73.8551%;
+			// padding: 0 rem(15);
+		}
+		// .works__aside
+		&__aside {
+			position: relative;
+			flex: 0 0 26, 1449%;
+			max-width: 26, 1449%;
+		}
+	}
 }
 
+//=+++++++++++++++++++++++++++++++++
+.col-article {
+	// .col-article__row
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 rem(-20);
+	}
+	// .col-article__col
+	&__col {
+		flex: 0 1 33.33333%;
+		padding: 0 rem(20);
+		background-color: #634e92;
+	}
+}
+
+.col-card {
+	// .col-card__content
+	&__content {
+	}
+	// .col-card__header-swiper
+	&__header-swiper {
+	}
+	// .col-card__body
+	&__body {
+	}
+}
+
+.swiper {
+	border: 1px solid #000000;
+	filter: drop-shadow(2px 2px 10px rgba(199, 42, 42, 0.25));
+	border-radius: 25px;
+	overflow: hidden;
+	// .swiper__image-ibg
+	&__image {
+	}
+	// .swiper__image-ibg
+	&__image-ibg {
+	}
+}
+
+.body-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	//max-width: rem(334);
+	margin: 0 auto;
+	color: #ffffff;
+	background: url("@img/noise.jpg");
+	filter: drop-shadow(2px 2px 10px rgba(199, 42, 42, 0.25));
+	border-radius: 0px 0px 25px 25px;
+	// .body-card__header
+	&__header {
+		display: flex;
+		max-width: rem(334);
+		margin: 0 auto;
+		justify-content: space-evenly;
+		//padding: 0 rem(33);
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+	// .body-card__text
+	&__text {
+		display: inline-flex;
+		font-size: rem(14);
+		line-height: math.div(17, 14);
+		border: rem(1) solid #000000;
+		span {
+			font-weight: 700;
+		}
+	}
+	// .body-card__image
+	&__image {
+		width: rem(120);
+		height: rem(120);
+		border-radius: 50%;
+		border: rem(5) solid $mainColor;
+		overflow: hidden;
+		object-fit: cover;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+	}
+	// .body-card__center
+	&__center {
+		max-width: rem(334);
+		margin: 0 auto;
+		flex-direction: column;
+		height: 100%;
+	}
+	// .body-card__name
+	&__name {
+		display: inline-flex;
+		font-weight: 900;
+		font-size: rem(20);
+		line-height: math.div(24, 20);
+		border: rem(1) solid #000000;
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	// .body-card__block-text
+	&__block-text {
+		flex-direction: column;
+		display: inline-flex;
+		font-size: rem(14);
+		line-height: math.div(17, 14);
+		border: rem(1) solid #000000;
+		span {
+			font-weight: 700;
+		}
+		margin-bottom: rem(10);
+	}
+	&__about-text {
+		flex-direction: column;
+		display: inline-flex;
+		font-size: rem(14);
+		line-height: math.div(17, 14);
+		border: rem(1) solid #000000;
+	}
+	// .body-card__about
+	&__about {
+	}
+	// .body-card__footer
+	&__footer {
+		display: flex;
+		max-width: rem(334);
+		margin: 0 auto;
+		align-items: center;
+		margin-bottom: rem(20);
+	}
+	// .body-card__price
+	&__price {
+		font-size: rem(14);
+		line-height: math.div(17, 14);
+		span {
+			font-weight: 700;
+		}
+	}
+	// .body-card__icon-like
+	&__icon-like {
+		width: rem(24);
+		height: rem(24);
+		margin-right: rem(27);
+		margin-left: rem(75);
+	}
+	// .body-card__styles-list
+	&__styles-list {
+		display: flex;
+		height: rem(24);
+		align-items: center;
+	}
+	// .body-card__style
+	&__style {
+		display: flex;
+		width: rem(24);
+		height: rem(24);
+		align-items: center;
+		justify-content: center;
+		background-color: $mainColor;
+		background-color: #141550;
+		box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
+		border-radius: rem(50);
+		transition: background-color 0.5s ease;
+		img {
+			width: rem(16);
+			height: rem(16);
+		}
+		&:hover {
+			background-color: $redColor;
+		}
+		// .body-card__style_1
+		&_1 {
+		}
+		// .body-card__style_2
+		&_2 {
+		}
+		// .body-card__style_3
+		&_3 {
+		}
+		// .body-card__style_4
+		&_4 {
+		}
+		// .body-card__style_col
+		&_col {
+		}
+	}
+	// .body-card__col
+	&__col {
+	}
+	// .body-card__amount
+	&__amount {
+	}
+}
+
+// ==++++++++++++++++++++++++++++
+.aside {
+	color: #fff;
+	background: rgb(2, 31, 15); // убрать
+	height: auto;
+	// .aside__content
+	&__content {
+		max-width: rem(400);
+	}
+	// .aside__title
+	&__title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 36, 24);
+		line-height: math.div(44, 36);
+		text-transform: uppercase;
+		span {
+			color: $redColor;
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 25, 15);
+		}
+	}
+	// .aside__text
+	&__text {
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(20, 16);
+		& p:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 15, 10);
+		}
+	}
+	// .aside__button
+	&__button {
+		box-shadow: rem(1) rem(1) rem(4) rgba(0, 0, 0, 0.25);
+		border-radius: rem(6);
+		@include adaptiveValue("margin-top", 25, 15);
+	}
+}
+
+// ? Финиш секции attention__works works
 //========================================================================================================================================================
 // ? Старт секции attention__service
 .service {
@@ -90,8 +358,9 @@
 		margin: 0 rem(-30);
 		margin: 0 auto;
 		justify-content: center;
-		gap: rem(38);
-		@media (max-width:$tablet){
+		//gap: rem(38);
+		@include adaptiveValue("gap", 38, 20);
+		@media (max-width: $tablet) {
 			flex-wrap: wrap;
 		}
 	}
@@ -103,8 +372,8 @@
 		height: 100%;
 		padding: 0 rem(30);
 		text-align: center;
-		padding-top: rem(70);
-		padding-bottom: rem(45);
+		@include adaptiveValue("padding-top", 70, 30);
+		@include adaptiveValue("padding-bottom", 45, 20);
 		max-width: rem(532);
 		border-radius: rem(25);
 		transition: all 0.5s ease;
@@ -113,20 +382,20 @@
 			background: url("@img/rnoise.jpg") repeat;
 			filter: drop-shadow(rem(4) rem(4) rem(4) rgba(112, 0, 0, 0.34));
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			flex: 0 1 50%;
 			width: 100%;
 		}
 	}
 	// .service__title
-	&__title {
+	&__subtitle {
 		font-weight: 700;
 		font-size: rem(36);
 		@include adaptiveValue("font-size", 36, 20);
 		line-height: math.div(44, 36);
 		text-transform: uppercase;
 		&:not(:last-child) {
-			margin-bottom: rem(30);
+			@include adaptiveValue("margin-bottom", 30, 15);
 		}
 	}
 	// .service__text
@@ -177,7 +446,7 @@
 		display: flex;
 		gap: rem(20);
 		align-items: center;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			display: block;
 		}
 	}
@@ -188,12 +457,13 @@
 	// .advertising__list
 	&__list {
 		flex: 0 1 50%;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			margin-top: rem(20);
 		}
 	}
 	// .advertising__sentence
 	&__sentence {
+		display: flex;
 		max-width: rem(694);
 		margin: 0 auto;
 		color: $mainColor;
@@ -212,6 +482,7 @@
 	}
 	// .advertising__text
 	&__text {
+		display: flex;
 		font-weight: 500;
 		@include adaptiveValue("font-size", 20, 16);
 		line-height: math.div(24, 20);
