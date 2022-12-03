@@ -54,8 +54,6 @@
 	background: url("@img/noise.jpg") repeat;
 	padding-top: rem(40);
 	padding-bottom: rem(50);
-	//background: url("@img/noise.jpg") repeat;
-	// background-color: #b8a0bf;
 	// .attention__container
 	&__container {
 	}
@@ -64,22 +62,23 @@
 	}
 	// .attention__title
 	&__title {
+		font-weight: 300;
+		font-size: rem(80);
+		line-height: math.div( 98, 80);
 		color: rgba(255, 255, 255, 0.3);
-		//color: #00020f; // убрать
 		margin-bottom: rem(37);
-	}
-	// .attention__advertising
-	&__advertising {
-	}
-	// .attention__service
-	&__service {
 	}
 	// .attention__works
 	&__works {
 	}
+	// .attention__service
+	&__service {
+	}
+	// .attention__advertising
+	&__advertising {
+	}
 }
-//========================================================================================================================================================
-// ? Старт секции attention__works works
+
 .works {
 	// .works__box
 	&__box {
@@ -87,57 +86,39 @@
 	// .works__row
 	&__row {
 		display: flex;
-		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
-		margin: 0 rem(-20);
+		gap: rem(44);
+
 	}
 	// .works__col
-	@media (min-width: $tablet) {
-		&__col {
-			position: relative;
-			flex: 0 0 73.8551%;
-			max-width: 73.8551%;
-			padding-left: rem(20);
-			background: #ffffff;
-		}
-		// .works__aside
-		&__aside {
-			position: relative;
-			flex: 0 0 26, 1449%;
-			max-width: 26, 1449%;
-			padding-right: rem(20);
-			background: #94e1ff;
-		}
+	&__col {
+		position: relative;
+		flex: 0 0 74.07%;
+	}
+	// .works__aside
+	&__aside {
+		position: relative;
+		flex: 0 0 23, 26%;
+		background: #94e1ff;
 	}
 }
 
-//=+++++++++++++++++++++++++++++++++
-.col-article {
+.col-article {	
 	// .col-article__row
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 rem(-20);
+		gap: rem(40);
+		justify-content: space-between;
 	}
 	// .col-article__col
 	&__col {
-		flex: 0 1 33.33333%;
-		padding: 0 rem(20);
-		background-color: #634e92;
-	}
-}
-
-.col-card {
-	// .col-card__content
-	&__content {
+		flex: 0 1 33.3333%;
 		max-width: rem(398);
-	}
-	// .col-card__header-swiper
-	&__header-swiper {
-	}
-	// .col-card__body
-	&__body {
+		display: flex;
+		justify-content: center;
+		background: url('@img/rnoise.jpg');
 	}
 }
 
@@ -147,95 +128,100 @@
 	filter: drop-shadow(2px 2px 10px rgba(199, 42, 42, 0.25));
 	border-radius: 25px;
 	overflow: hidden;
-	// .swiper__image-ibg
+	// .swiper__image
 	&__image {
-	}
-	// .swiper__image-ibg
-	&__image-ibg {
-	}
-}
-//==*****************************************
-.col-card {
-	// .col-card__item
-	&__item {
 	}
 }
 
-.item-card {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	max-width: rem(398);
-	width: 100%;
-	margin: 0 auto;
-	color: #ffffff;
-	background: url("@img/noise.jpg");
+.col-card {
+	// display: block;
+	color: #fff;
+	background: url("@img/noise-smaile.jpg");
 	filter: drop-shadow(2px 2px 10px rgba(199, 42, 42, 0.25));
-	border-radius: 0px 0px 25px 25px;
-	// .item-card__image
+	border-radius: rem(25);
+
+	// col-card__header-swiper
+	&__header-swiper {
+		filter: drop-shadow(2px 2px 10px rgba(199, 42, 42, 0.25));
+		border-radius: rem(25);
+		overflow: hidden;
+		object-fit: cover;	
+		max-height: rem(220);	
+	}
+
+	// .col-card__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		max-width: rem(398);
+		width: 100%;
+		text-align: center;
+		position: relative;
+	}
+
+	// .col-card__image
 	&__image {
 		position: absolute;
-		top: rem(-85);
-		left: rem(127);
+		top: 15%;
+		left: 50%;
+		transform: translate(-50%, 50%);
 		border-radius: 50%;
 		border: rem(5) solid $mainColor;
 		overflow: hidden;
 		object-fit: cover;
 		align-items: center;
 		justify-content: center;
-		text-align: center;
 		img {
+			z-index: 5;
 			width: rem(120);
 			height: rem(120);
 		}
 	}
-	// .item-card__header
+	// .col-card__header
 	&__header {
 		display: flex;
+		max-width: rem(332);
 		width: 100%;
-		justify-content: center;
+		justify-content: space-between;
+		margin: 0 auto;
 		gap: rem(170);
 		&:not(:last-child) {
 			margin-bottom: rem(15);
 		}
 	}
-	// .item-card__text
+	// .col-card__text
 	&__text {
-		line-height: math.div(17, 14);
-		border: rem(1) solid #000000;
-		align-self: flex-end;
-		padding-bottom: rem(12);
-		padding-top: rem(15);
+		line-height: math.div(17, 14); //align-self: flex-end;
+		margin-bottom: rem(12);
+		margin-top: rem(15);
 		span {
 			font-weight: 700;
 		}
 	}
-	// .item-card__name
+	// .col-card__name
 	&__name {
 		text-align: center;
 		font-weight: 900;
 		font-size: rem(20);
 		line-height: math.div(24, 20);
-		border: rem(1) solid #000000;
 		&:not(:last-child) {
 			margin-bottom: rem(10);
 		}
 	}
-	// .item-card__about
+	// .col-card__about
 	&__about {
 		flex: 1 1 auto;
-		max-width: rem(334);
+		max-width: rem(332);
 		margin: 0 auto;
 		text-align: center;
 		font-size: rem(14);
 		line-height: math.div(17, 14);
-		border: rem(1) solid #000000;
 		span {
 			font-weight: 700;
 		}
 		margin-bottom: rem(10);
 	}
-	// .item-card__footer
+	// .col-card__footer
 	&__footer {
 		display: flex;
 		margin: 0 auto;
@@ -243,7 +229,7 @@
 		align-items: center;
 		margin-bottom: rem(20);
 	}
-	// .item-card__price
+	// .col-card__price
 	&__price {
 		font-size: rem(14);
 		line-height: math.div(17, 14);
@@ -251,40 +237,43 @@
 			font-weight: 700;
 		}
 	}
-	// .item-card__icon-like
+	// .col-card__icon-like
 	&__icon-like {
 		width: rem(24);
 		height: rem(24);
 		margin-right: rem(27);
-		margin-left: rem(75);
+		@include adaptiveValue("margin-left", 75, 25);
 	}
-	// .item-card__styles-list
+	// .col-card__styles-list
 	&__styles-list {
 		display: flex;
 		height: rem(24);
 		align-items: center;
 	}
-	// .item-card__style
+	// .col-card__style
 	&__style {
 		display: flex;
-		width: rem(24);
-		height: rem(24);
+		width: rem(35);
+		height: rem(35);
+		margin-left: rem(-10);
 		align-items: center;
 		justify-content: center;
 		background-color: $mainColor;
-		background-color: #141550;
 		box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
 		border-radius: rem(50);
 		transition: background-color 0.5s ease;
+		z-index: 2;
 		img {
 			width: rem(16);
 			height: rem(16);
 		}
 		&:hover {
 			background-color: $redColor;
+			z-index: 2;
 		}
 		// .body-card__style_1
 		&_1 {
+			margin-left: 0;
 		}
 		// .body-card__style_2
 		&_2 {
@@ -299,257 +288,8 @@
 		&_col {
 		}
 	}
-	// .item-card__amount
+	// .col-card__amount
 	&__amount {
-	}
-}
-
-//=*********************************
-.body-card {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	//max-width: rem(334);
-	margin: 0 auto;
-	color: #ffffff;
-	background: url("@img/noise.jpg");
-	filter: drop-shadow(2px 2px 10px rgba(199, 42, 42, 0.25));
-	border-radius: 0px 0px 25px 25px;
-	// .body-card__header
-	&__header {
-		display: flex;
-		max-width: rem(334);
-		margin: 0 auto;
-		//justify-content: space-evenly;
-		//padding: 0 rem(33);
-		gap: rem(170);
-		&:not(:last-child) {
-			margin-bottom: rem(15);
-		}
-	}
-	// .body-card__text
-	&__text {
-		//display: inline-flex;
-		// font-size: rem(14);
-		// line-height: math.div(17, 14);
-		// border: rem(1) solid #000000;
-		// align-self: flex-end;
-		// padding-bottom: rem(12);
-		// padding-top: rem(15);
-		// span {
-		// 	font-weight: 700;
-		// }
-	}
-	// .body-card__image
-	&__image {
-		position: absolute;
-		top: rem(-85);
-		left: rem(120);
-
-		border-radius: 50%;
-		border: rem(5) solid $mainColor;
-		overflow: hidden;
-		object-fit: cover;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		img {
-			width: rem(120);
-			height: rem(120);
-		}
-	}
-	// .body-card__center
-	&__center {
-		max-width: rem(334);
-		margin: 0 auto;
-		// flex-direction: column;
-		height: 100%;
-		// flex: 1 1 auto;
-	}
-	// .body-card__name
-	&__name {
-		font-weight: 900;
-		font-size: rem(20);
-		line-height: math.div(24, 20);
-		border: rem(1) solid #000000;
-		&:not(:last-child) {
-			margin-bottom: rem(10);
-		}
-	}
-	// .body-card__block-text
-	&__block-text {
-		// flex: 1 1 auto;
-		// font-size: rem(14);
-		// line-height: math.div(17, 14);
-		// border: rem(1) solid #000000;
-		// span {
-		// 	font-weight: 700;
-		// }
-		// margin-bottom: rem(10);
-	}
-	&__about-text {
-		// flex-direction: column;
-		// display: inline-flex;
-		// font-size: rem(14);
-		// line-height: math.div(17, 14);
-		// border: rem(1) solid #000000;
-	}
-	// .body-card__about
-	&__about {
-	}
-	// .body-card__footer
-	&__footer {
-		// display: flex;
-		// max-width: rem(334);
-		// margin: 0 auto;
-		// align-items: center;
-		// margin-bottom: rem(20);
-	}
-	// .body-card__price
-	&__price {
-		font-size: rem(14);
-		line-height: math.div(17, 14);
-		span {
-			font-weight: 700;
-		}
-	}
-	// .body-card__icon-like
-	&__icon-like {
-		width: rem(24);
-		height: rem(24);
-		margin-right: rem(27);
-		margin-left: rem(75);
-	}
-	// .body-card__styles-list
-	&__styles-list {
-		display: flex;
-		height: rem(24);
-		align-items: center;
-	}
-	// .body-card__style
-	&__style {
-		display: flex;
-		width: rem(24);
-		height: rem(24);
-		align-items: center;
-		justify-content: center;
-		background-color: $mainColor;
-		background-color: #141550;
-		box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.25);
-		border-radius: rem(50);
-		transition: background-color 0.5s ease;
-		img {
-			width: rem(16);
-			height: rem(16);
-		}
-		&:hover {
-			background-color: $redColor;
-		}
-		// .body-card__style_1
-		&_1 {
-		}
-		// .body-card__style_2
-		&_2 {
-		}
-		// .body-card__style_3
-		&_3 {
-		}
-		// .body-card__style_4
-		&_4 {
-		}
-		// .body-card__style_col
-		&_col {
-		}
-	}
-	// .body-card__col
-	&__col {
-	}
-	// .body-card__amount
-	&__amount {
-	}
-}
-
-//==**=*=*=*=*=*=*=*=*=*=**********************************
-
-.box {
-	background: url("@img/noise.jpg");
-	filter: drop-shadow(2px 2px 10px rgba(199, 42, 42, 0.25));
-	border-radius: 0px 0px 25px 25px;
-	// .box__cards
-	&__cards {
-		
-	}
-	// .box__row
-	&__row {
-		max-width: rem(1274);
-		margin: 0 rem(-20);
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 auto;
-
-	}
-	// .box__column
-	&__column {
-		background-color:#305b60;
-		display: flex;
-		padding: 0px 20px;
-		flex: 0 1 33.33333%;
-		max-width: rem(398);
-		width: 100%;	
-	}
-	// .box__item
-	&__item {
-		//background-color:#313324;
-		color: #ffffff;
-		display: flex;
-		/*эти две строки чтобы прибить кнопку к низу и еще позволим блоку с текстом увеличиваться flex: 1 1 auto*/
-		flex-direction: column;
-		max-width: rem(328);
-	}
-	// .box__header
-	&__header {
-		display: flex;
-		width: 100%;
-		justify-content: center;
-		gap: rem(170);
-		&:not(:last-child) {
-			margin-bottom: rem(15);
-		}
-	}
-	// .box__text
-	&__text {
-		display: inline-flex;
-		line-height: math.div(17, 14);
-		border: rem(1) solid #000000;
-		align-self: flex-end;
-		margin-bottom: rem(12);
-		margin-top: rem(15);
-		span {
-			font-weight: 700;
-		}
-	}
-	// .box__name
-	&__name {
-		font-weight: 900;
-		font-size: rem(20);
-		line-height: math.div(24, 20);
-		border: rem(1) solid #000000;
-		&:not(:last-child) {
-			margin-bottom: rem(10);
-		}
-	}
-	// .box__text
-	&__about {
-		flex: 1 1 auto;
-		flex-direction: column;
-		font-size: rem(14);
-		line-height: math.div(17, 14);
-		border: rem(1) solid #000000;
-		margin-bottom: rem(10);
-	}
-	// .box__footer
-	&__footer {
 	}
 }
 
@@ -590,7 +330,6 @@
 		@include adaptiveValue("margin-top", 25, 15);
 	}
 }
-
 // ? Финиш секции attention__works works
 //========================================================================================================================================================
 // ? Старт секции attention__service
@@ -607,7 +346,6 @@
 		margin: 0 rem(-30);
 		margin: 0 auto;
 		justify-content: center;
-		//gap: rem(38);
 		@include adaptiveValue("gap", 38, 20);
 		@media (max-width: $tablet) {
 			flex-wrap: wrap;
@@ -626,10 +364,10 @@
 		max-width: rem(532);
 		border-radius: rem(25);
 		transition: all 0.5s ease;
-		background-color: #634e92;
+		background: url("@img/rnoise.svg") repeat;
+		filter: drop-shadow(4px 4px 4px rgba(112, 0, 0, 0.34));
 		&:hover {
-			background: url("@img/rnoise.jpg") repeat;
-			filter: drop-shadow(rem(4) rem(4) rem(4) rgba(112, 0, 0, 0.34));
+			background: url("@img//rnoise-hover.svg") repeat;
 		}
 		@media (max-width: $tablet) {
 			flex: 0 1 50%;
@@ -925,11 +663,11 @@
 
 .start-home {
 	padding: rem(40) rem(15);
+	margin: 0 auto;
 	&__box {
 		display: flex;
 		flex-basis: 0.86%;
 		max-width: rem(1480);
-		margin: 0 auto;
 		align-items: center;
 		@media (max-width: $tablet) {
 			display: block;
