@@ -1,51 +1,54 @@
 //========================================================================================================================================================
 //========================================================================================================================================================
 .page {
-	background: url("@img/repeat.jpg");
+	background: url("@img/repeat.jpg") repeat;
 }
 // ? master
 .master {
 	padding: rem(160) rem(15) rem(60) rem(15);
-	@media (max-width:$tablet){
+	@media (max-width: $tablet) {
 		padding-top: rem(120);
 	}
-	@media (max-width:$mobile){
-		padding-top: rem(190);  
+	@media (max-width: $mobile) {
+		padding-top: rem(190);
 	}
-	@media (max-width:$mobileSmall){
-		padding-top: rem(220);  
+	@media (max-width: $mobileSmall) {
+		padding-top: rem(220);
 	}
 	// .master__body
 	&__body {
-		display: flex;
-		justify-content: space-between;
-		column-gap: rem(40);
-		@media (max-width: $tablet) {
-			display: block;
-		}
-		&:not(:last-child) {
-			margin-bottom: rem(132);
-		}
-		@media (max-width: rem(1200)) {
-			&:not(:last-child) {
-				margin-bottom: rem(50);
-			}
-		}
+	}
+	&__box {
 	}
 	// .master__start
 	&__start {
 		flex: 0 0 100%;
-		max-width: rem(1725);
+		//max-width: rem(1725);
 		width: 100%;
 	}
 }
 //==+++++++++++++++++++++++++++++++++++
 // ? Старт секции master__body body-master
 .body-master {
+	@include adaptiveValue("padding-bottom", 65, 20);
+	display: flex;
+	justify-content: space-between;
+	column-gap: rem(40);
+	@media (max-width: $tablet) {
+		display: block;
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(132);
+	}
+	@media (max-width: rem(1200)) {
+		&:not(:last-child) {
+			margin-bottom: rem(50);
+		}
+	}
 	// .body-master__about-master
 	&__about-master {
-		flex: 0 0 23.19%;
-		max-width: 23.19%;
+		flex: 0 0 23.26%;
+		// max-width: 23.26%;
 		@media (max-width: $tablet) {
 			flex: 0 1 100%;
 			max-width: 100%;
@@ -53,15 +56,17 @@
 	}
 	// .body-master__content
 	&__content {
-		flex: 0 0 74.21%;
-		max-width: 74.21%;
+		flex: 0 0 74.42%;
+		// max-width: 74.42%;
 		margin: 0 auto;
+
 		@media (max-width: $tablet) {
 			flex: 0 1 100%;
 			max-width: 100%;
 		}
 	}
 }
+//==+++++++++++++++++++++++++++++++++++
 // ? about-master
 .about-master {
 	// .about-master__image
@@ -318,7 +323,7 @@
 	}
 	// .body-portfolio__image-ibg
 	&__image-ibg {
-		position: relative;
+		//position: relative;
 		padding: rem(0) rem(0) 110.61% rem(0);
 		overflow: hidden;
 		border-radius: rem(10);
@@ -452,21 +457,33 @@
 //========================================================================================================================================================
 // ? Старт секции master__start start-master
 .start-master {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto;
-	@include adaptiveValue("gap", 60, 0);
-	@media (max-width: $tablet) {
-		display: block;
+	@include adaptiveValue("padding-top", 65, 20);
+	// master__container
+	&__container {
+		margin: 0 auto;
+	}
+	// master__box
+	&__box {
+		display: flex;
+		flex-basis: 0.86%;
+		max-width: rem(1480);
+		margin: 0 auto;
+		align-items: center;
+		@media (max-width: $tablet) {
+			display: block;
+		}
 	}
 	// .start-master__picture
 	&__picture {
-		flex: 0 1 44.46%;
+		flex: 0 1 51.82%;
+		max-width: rem(767);
+		margin: 0 auto;
 	}
 	// .start-master__registration
 	&__registration {
-		flex: 0 1 41.33%;
+		flex: 0 1 48.18%;
+		max-width: rem(713);
+		
 	}
 }
 
@@ -474,8 +491,8 @@
 	display: flex;
 	// .picture__image-ibg
 	&__image-ibg {
-		position: relative;
-		min-height: 150px;
+		// position: relative;
+		//min-height: 150px;
 		width: 100%;
 		padding: rem(0) rem(0) 68.84% rem(0);
 		overflow: hidden;
@@ -487,6 +504,18 @@
 			top: 0;
 			left: 0;
 			object-fit: cover;
+		}
+		&:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: transparent;
+			background-image: linear-gradient(to top, #00020f, #634e92);
+			opacity: 0.5;
 		}
 	}
 	// .picture__text

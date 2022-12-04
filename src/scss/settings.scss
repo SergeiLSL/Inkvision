@@ -1,5 +1,5 @@
 .page {
-	background: url("@img/repeat.jpg");
+	background: url("@img/repeat.jpg") repeat;
 	// .page__setting
 	&__setting {
 	}
@@ -27,15 +27,15 @@
 	// .setting__tabs
 	&__tabs {
 		display: flex;
-		column-gap: rem(46);
+		column-gap: rem(40);
 		@media (max-width: $tablet) {
 			display: block;
 		}
 	}
 	// .setting__box-navigation
 	&__box-navigation {
-		flex: 0 1 31.42%;
-		background: url("@img/repeat-form.jpg");
+		flex: 0 1 31.52%;
+		background: url("@img/repeat-form.jpg") repeat;
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 		//padding: rem(20) rem(14) rem(20) rem(26);
@@ -45,7 +45,7 @@
 		}
 	}
 	&__box-content {
-		flex: 0 1 65.68%;
+		flex: 0 1 65.88%;
 		padding: rem(0) rem(0) rem(20) rem(0);
 	}
 	// .setting__navigation
@@ -386,9 +386,6 @@
 //++++++++++++++++++++
 
 
-
-
-
 //========================================================================================================================================================
 //content-tabs__box-specialization
 // ? START box-specialization
@@ -614,8 +611,7 @@
 		width: rem(114);
 		position: relative;
 		cursor: pointer;
-		transition: all 0.5s ease;
-		// background: url("../img/loading.gif") center / 50px no-repeat;
+		transition: all 0.5s ease;		
 		& img {
 			border-radius: 50%;
 			position: absolute;

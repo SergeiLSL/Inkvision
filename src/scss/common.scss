@@ -31,6 +31,14 @@
 	}
 }
 
+.title-home {
+	font-weight: 300;
+	font-size: rem(80);
+	@include adaptiveValue("font-size", 80, 40);
+	line-height: math.div(98, 80);
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.38);
+}
 //========================================================================================================================================================
 //? Формы
 form * {
@@ -47,7 +55,7 @@ form * {
 	font-size: rem(22);
 	align-self: start;
 	right: 0.2rem;
-	top: 0.2rem;
+	top: 0.2rem;	
 }
 
 .item {
@@ -306,7 +314,7 @@ form * {
 	width: 100%;
 	//margin-bottom: rem(20);
 	// .checkbox__input
-	&__input {
+	&__input {		
 		position: absolute;
 		width: 0;
 		height: 0;
