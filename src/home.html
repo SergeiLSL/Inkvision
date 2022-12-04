@@ -6,7 +6,7 @@
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		@@include('html/_header-home.htm',{})
 		<main class="page">
 			<div class="page__home home">
 				<div class="home__content">
@@ -103,9 +103,30 @@
 									</div>
 								</div>
 
-
 								<div class="contact__column-find find-contact">
-
+									<div class="find-contact__content">
+										<div class="find-contact__box">
+											<a href="#"><div class="find-contact__title">
+												НАЙДИ
+											</div></a>
+											<a href="#"><div class="find-contact__subtitle">
+												СВОЕГО ТАТУ-МАСТЕРА
+											</div></a>
+											<a href="#"><div class="find-contact__text">
+												Профессионалы твоего города в паре кликов от тебя
+											</div></a>
+											<!-- Город -->
+											<div class="find-contact__item item">
+												<input data-validate class="find-contact__input input" type="text"
+													data-error="Город вы живете?" data-required="homecity"
+													placeholder="Город" name=form[homecity]>
+												<span class="find-contact__aicon aicon">
+													<div class="_icon-city find-contact__icon icon">
+													</div>
+												</span>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
