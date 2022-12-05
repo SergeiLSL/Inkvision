@@ -38,6 +38,7 @@ button,
 textarea {
 	font-family: $fontFamily;
 	font-size: inherit;
+	box-sizing: border-box;
 }
 button {
 	cursor: pointer;
@@ -52,7 +53,7 @@ a:visited {
 	text-decoration: none;
 }
 a:hover {
-	text-decoration: none;	
+	text-decoration: none;
 }
 ul li {
 	list-style: none;

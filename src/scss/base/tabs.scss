@@ -2,6 +2,7 @@
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
+		flex-direction: column;
 	}
 	// .tabs__title
 	&__title {
