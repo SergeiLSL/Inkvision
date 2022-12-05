@@ -372,7 +372,7 @@
 //===================================================================
 // ? Старт секции home__attention
 .attention {
-	background: url("@img/noise.jpg") repeat;
+	background: url("@img/noise.jpg");
 	padding-top: rem(40);
 	padding-bottom: rem(50);
 	// .attention__container
@@ -1078,7 +1078,7 @@
 .registration-home {
 	// .registration-home__content
 	&__content {
-		background: url("@img//wnoise-card.jpg");
+		background: url("@img//wnoise.jpg");
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 	}
