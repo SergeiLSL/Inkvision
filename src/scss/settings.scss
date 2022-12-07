@@ -1,13 +1,17 @@
 .page {
-	//background: url("@img/repeat.jpg");
+	background: url("@img/wnoise.jpg");
 	// .page__setting
 	&__setting {
 	}
 }
 // ? setting
 .setting {	
+	//background: url("@img/wnoise.jpg");
 	// .setting__container
 	&__container {
+	}
+	// .setting__body
+	&__body {
 		padding: rem(110) rem(15) rem(30) rem(15);
 		// @include adaptiveValue("padding-top", 150, 20);
 		@media (max-width: $tablet) {
@@ -21,9 +25,6 @@
 		}
 		@include adaptiveValue("padding-bottom", 30, 15);
 	}
-	// .setting__body
-	&__body {
-	}
 	// .setting__tabs
 	&__tabs {
 		display: flex;
@@ -35,7 +36,7 @@
 	// .setting__box-navigation
 	&__box-navigation {
 		flex: 0 1 31.52%;
-		background: url("@img/repeat-form.jpg");
+		background: url("@img/wnoise.jpg");
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 		//padding: rem(20) rem(14) rem(20) rem(26);
@@ -126,7 +127,7 @@
 	// .content-tabs__body
 	&__body {
 		max-width: rem(1134);
-		background: url("@img/repeat-form.jpg");
+		background: url("@img/wnoise.jpg");
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 		padding: rem(20);

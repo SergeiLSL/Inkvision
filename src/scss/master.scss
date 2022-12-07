@@ -1,10 +1,11 @@
 //========================================================================================================================================================
 //========================================================================================================================================================
 .page {
-	//background: url("@img/wnoise.jpg");
+
 }
 // ? master
 .master {
+	background: url("@img/wnoise.jpg");
 	padding: rem(160) rem(15) rem(60) rem(15);
 	@media (max-width: $tablet) {
 		padding-top: rem(120);
@@ -245,7 +246,6 @@
 	}
 	// .content-master__title
 	&__title {
-		//display: flex;
 		max-width: rem(426);
 		width: 100%;
 		font-weight: 900;
@@ -561,7 +561,7 @@
 }
 
 .registration {
-	background: url("@img/repeat-form.jpg");
+	background: url("@img/wnoise.jpg");
 	border-radius: rem(25);
 	filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 	// .registration__box
