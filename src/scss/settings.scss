@@ -12,7 +12,7 @@
 	}
 	// .setting__body
 	&__body {
-		padding: rem(110) rem(15) rem(30) rem(15);
+		padding: rem(110) rem(0) rem(30) rem(0);
 		// @include adaptiveValue("padding-top", 150, 20);
 		@media (max-width: $tablet) {
 			padding-top: rem(130);
@@ -208,6 +208,9 @@
 	&__appearance {
 		display: flex;
 		gap: rem(50);
+		@media (max-width:$mobile){
+			display: block;
+		}
 	}
 	// .form-person__gender
 	&__gender {
@@ -261,13 +264,12 @@
 
 .r-all {
 	background: #f6f7f7;
-	//border: solid 2px #ffbffb;
-	//border-radius: 10px;
 	position: relative;
 	display: flex;
 	//margin: 20px 0;
 	max-width: rem(400);
 	width: 100%;
+
 }
 .r-all .r-group {
 	width: calc(100% - 20px);
@@ -359,8 +361,7 @@
 		display: inline-flex;
 		width: 100%;
 		min-height: rem(50);
-		border-radius: rem(10);
-		//justify-content: center;
+		border-radius: rem(10);		
 		align-items: center;
 		font-size: rem(16);
 		line-height: math.div(20, 16);
@@ -368,6 +369,7 @@
 		background: #ffffff;
 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 		padding: 0 rem(20);
+		margin-right: rem(20);
 	}
 	// .file__preview
 	&__preview {

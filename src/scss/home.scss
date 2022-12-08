@@ -457,8 +457,6 @@
 
 .swiper {
 	box-sizing: border-box;
-	// border: 1px solid #000000;
-	// filter: drop-shadow(2px 2px 10px rgba(199, 42, 42, 0.25));
 	border-radius: 25px;
 	overflow: hidden;
 	// .swiper__image
@@ -472,6 +470,7 @@
 	// .col-card__header-swiper
 	&__header-swiper {
 		position: relative;
+		//display:none;
 	}
 	// .col-card__wrapper
 	&__wrapper {
@@ -512,7 +511,6 @@
 	// col-card__header-swiper
 	&__header-swiper {
 		border-radius: rem(25) rem(25) 0 0;
-
 		object-fit: cover;
 		max-height: rem(220); //высота слайдера
 	}
@@ -1089,7 +1087,7 @@
 .registration-home {
 	// .registration-home__content
 	&__content {
-		background: url("@img/repeat-form.jpg");
+		background: url("@img/wnoise.jpg");
 		border-radius: rem(25);
 		filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.25));
 	}

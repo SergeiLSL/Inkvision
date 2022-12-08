@@ -58,6 +58,13 @@ form * {
 	top: 0.2rem;	
 }
 
+._icon-psw-view:before {
+    content: "\e915";
+    color: #b7bbb7;
+    font-size: 1.25rem;
+    padding: 0 rem(15);
+}
+
 .item {
 	position: relative;
 	display: flex;

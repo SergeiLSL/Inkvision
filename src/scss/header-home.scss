@@ -3,6 +3,19 @@
 	font-size: rem(50);
 	color: yellow;
 }
+
+.header {
+	position: absolute;
+	&._header-scroll {
+		position: fixed;
+		top: -200%;
+	}
+	&._header-show {
+		transition: top 0.3s ease 0s;
+		top: 0;
+	}
+}
+
 .header {
 	background-color: #000;
 	color: #fff;
