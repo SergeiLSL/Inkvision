@@ -439,7 +439,8 @@
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
-		gap: rem(40);
+		//gap: rem(40);
+		@include adaptiveValue("gap", 40, 10);
 		justify-content: space-between;
 		@media (max-width: rem(1750)) {
 			justify-content: center;
@@ -452,6 +453,13 @@
 		display: flex;
 		justify-content: center;
 		// background: url("@img/rnoise.jpg");
+		@media (max-width: rem(1120)){
+			flex: 0 1 50%;
+		}
+		@media (max-width: rem(750)){
+			flex: 0 1 100%;			
+		}
+		@include adaptiveValue("max-width", 398, 290);
 	}
 }
 
@@ -476,20 +484,19 @@
 	&__wrapper {
 	}
 	// .col-card__slide
-	&__slide {
-		display: flex;
-		max-width: rem(398);
-		height: rem(411);
-		@media (max-width:$mobileSmall){
-			//max-width: rem(270);  
-		}
+	&__slide-ibg {
+		padding: rem(0) rem(0) 110.61% rem(0);
+		overflow: hidden;
+		border-radius: rem(10);
+		margin: 0 auto;
 		img {
-			max-width: rem(398);
-			height: rem(411);
+			border-radius: rem(10);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
 			object-fit: cover;
-			// @media (max-width:$mobileSmall){
-			// 	max-width: rem(270);  
-			// }
 		}
 	}
 	&__button {
@@ -550,7 +557,6 @@
 		width: 100%;
 		justify-content: space-between;
 		margin: 0 auto;
-		gap: rem(170);
 		&:not(:last-child) {
 			margin-bottom: rem(15);
 		}
@@ -558,8 +564,7 @@
 	// .col-card__text
 	&__text {
 		line-height: math.div(17, 14);
-		margin-bottom: rem(12);
-		margin-top: rem(15);
+		margin: rem(15) rem(10) rem(12) rem(15);
 		span {
 			font-weight: 700;
 		}
