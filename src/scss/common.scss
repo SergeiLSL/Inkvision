@@ -561,3 +561,50 @@ form * {
 .select._active.select__options {
 	display: block;
 }
+
+//========================================================================================================================================================
+// вывод списка городов в странице главная (home.html)
+.autocomplete {
+	position: relative;
+	width: 100%;
+	margin: 20px 0;
+}
+.autocomplete input {
+	width: 100%;
+	padding: 12px 22px;
+	font-size: 16px;
+	line-height: 1;
+	border: 2px solid #BFE2FF;  
+	color: #000;
+}
+.autocomplete-list {
+	position: absolute;
+	margin-top: 10px;
+	z-index: 100;
+	width: 100%;
+	background: #ffffff;
+	border: 2px solid #BFE2FF;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+	padding: 0;
+	max-height: 260px;
+	overflow: auto;
+	display: none;
+}
+.autocomplete-list.show {
+	display: block;
+}
+.autocomplete-list li {
+	cursor: pointer;
+	padding: 8px 16px;
+	color: #337AB7;
+	transition: all 0.1s;
+}
+.autocomplete-list li:hover,
+.autocomplete-list li:active,
+.autocomplete-list li.selected:hover {
+	background: #337AB7;
+	color: #FFF;
+}
+.autocomplete-list li.selected {
+	color: #020814;
+}

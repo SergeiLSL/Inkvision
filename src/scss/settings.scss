@@ -1,12 +1,8 @@
 .page {
 	background: url("@img/wnoise.jpg");
-	// .page__setting
-	&__setting {
-	}
 }
 // ? setting
 .setting {	
-	//background: url("@img/wnoise.jpg");
 	// .setting__container
 	&__container {
 	}
@@ -792,9 +788,6 @@
 	&__item {
 	}
 	&__error {
-		// .item {
-		// 	margin-bottom: rem(40);
-		// }
 	}
 	// .form-pass__input
 	&__input {
@@ -817,13 +810,6 @@
 	}
 	// .form-pass__viewpass
 	&__viewpass {
-		// position: absolute;
-		// top: rem(11);
-		// right: rem(10);
-		// width: rem(26);
-		// height: rem(22);
-		// object-fit: cover;
-		// display: inline-block;
 	}
 	// .form-pass__buttons
 	&__buttons {
